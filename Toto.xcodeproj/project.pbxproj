@@ -56,15 +56,31 @@
 		87E7A34B20F50F86005B8BFA /* Toto */ = {
 			isa = PBXGroup;
 			children = (
+				87E7A36020F50FB3005B8BFA /* Classes */,
+				87E7A36120F50FBD005B8BFA /* Resources */,
+			);
+			path = Toto;
+			sourceTree = "<group>";
+		};
+		87E7A36020F50FB3005B8BFA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
 				87E7A34C20F50F86005B8BFA /* AppDelegate.swift */,
 				87E7A34E20F50F86005B8BFA /* FirstViewController.swift */,
 				87E7A35020F50F86005B8BFA /* SecondViewController.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		87E7A36120F50FBD005B8BFA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				87E7A35A20F50F88005B8BFA /* Info.plist */,
 				87E7A35220F50F86005B8BFA /* Main.storyboard */,
 				87E7A35520F50F88005B8BFA /* Assets.xcassets */,
 				87E7A35720F50F88005B8BFA /* LaunchScreen.storyboard */,
-				87E7A35A20F50F88005B8BFA /* Info.plist */,
 			);
-			path = Toto;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,7 +306,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Toto;
+				PRODUCT_BUNDLE_IDENTIFIER = com.toto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -307,7 +323,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Toto;
+				PRODUCT_BUNDLE_IDENTIFIER = com.toto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
