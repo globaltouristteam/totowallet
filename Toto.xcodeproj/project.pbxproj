@@ -116,7 +116,6 @@
 		87E7A5A420F51279005B8BFA /* ENSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A3E020F51277005B8BFA /* ENSManager.swift */; };
 		87E7A5A520F51279005B8BFA /* EthTypedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A3E220F51277005B8BFA /* EthTypedData.swift */; };
 		87E7A5A620F51279005B8BFA /* WalletType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A3E320F51277005B8BFA /* WalletType.swift */; };
-		87E7A5A720F51279005B8BFA /* CoinTicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A3E620F51277005B8BFA /* CoinTicker.swift */; };
 		87E7A5A820F51279005B8BFA /* Keystore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A3E720F51277005B8BFA /* Keystore.swift */; };
 		87E7A5A920F51279005B8BFA /* GetNonceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A3EA20F51277005B8BFA /* GetNonceProvider.swift */; };
 		87E7A5AA20F51279005B8BFA /* NonceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A3EC20F51277005B8BFA /* NonceProvider.swift */; };
@@ -327,7 +326,7 @@
 		87E7A67720F5127A005B8BFA /* WordCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87E7A4F020F51278005B8BFA /* WordCollectionViewCell.xib */; };
 		87E7A67820F5127A005B8BFA /* PassphraseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A4F120F51278005B8BFA /* PassphraseView.swift */; };
 		87E7A67920F5127A005B8BFA /* WordCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A4F220F51278005B8BFA /* WordCollectionViewCell.swift */; };
-		87E7A67A20F5127A005B8BFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A4F320F51278005B8BFA /* AppDelegate.swift */; };
+		87E7A67A20F5127A005B8BFA /* TrustWalletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A4F320F51278005B8BFA /* TrustWalletApp.swift */; };
 		87E7A67B20F5127A005B8BFA /* BackupCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A4F620F51278005B8BFA /* BackupCoordinator.swift */; };
 		87E7A67C20F5127A005B8BFA /* ExportPrivateKeyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A4F720F51278005B8BFA /* ExportPrivateKeyCoordinator.swift */; };
 		87E7A67D20F5127A005B8BFA /* ExportPhraseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A4F820F51278005B8BFA /* ExportPhraseCoordinator.swift */; };
@@ -492,7 +491,6 @@
 		87E7A3E020F51277005B8BFA /* ENSManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSManager.swift; sourceTree = "<group>"; };
 		87E7A3E220F51277005B8BFA /* EthTypedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EthTypedData.swift; sourceTree = "<group>"; };
 		87E7A3E320F51277005B8BFA /* WalletType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletType.swift; sourceTree = "<group>"; };
-		87E7A3E620F51277005B8BFA /* CoinTicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinTicker.swift; sourceTree = "<group>"; };
 		87E7A3E720F51277005B8BFA /* Keystore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keystore.swift; sourceTree = "<group>"; };
 		87E7A3EA20F51277005B8BFA /* GetNonceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetNonceProvider.swift; sourceTree = "<group>"; };
 		87E7A3EC20F51277005B8BFA /* NonceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NonceProvider.swift; sourceTree = "<group>"; };
@@ -704,7 +702,7 @@
 		87E7A4F020F51278005B8BFA /* WordCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WordCollectionViewCell.xib; sourceTree = "<group>"; };
 		87E7A4F120F51278005B8BFA /* PassphraseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassphraseView.swift; sourceTree = "<group>"; };
 		87E7A4F220F51278005B8BFA /* WordCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordCollectionViewCell.swift; sourceTree = "<group>"; };
-		87E7A4F320F51278005B8BFA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		87E7A4F320F51278005B8BFA /* TrustWalletApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrustWalletApp.swift; sourceTree = "<group>"; };
 		87E7A4F620F51278005B8BFA /* BackupCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackupCoordinator.swift; sourceTree = "<group>"; };
 		87E7A4F720F51278005B8BFA /* ExportPrivateKeyCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExportPrivateKeyCoordinator.swift; sourceTree = "<group>"; };
 		87E7A4F820F51278005B8BFA /* ExportPhraseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExportPhraseCoordinator.swift; sourceTree = "<group>"; };
@@ -823,8 +821,7 @@
 			isa = PBXGroup;
 			children = (
 				87E7A34C20F50F86005B8BFA /* AppDelegate.swift */,
-				87E7A34E20F50F86005B8BFA /* FirstViewController.swift */,
-				87E7A35020F50F86005B8BFA /* SecondViewController.swift */,
+				87E7A6AE20F51992005B8BFA /* Views */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -843,37 +840,37 @@
 		87E7A36220F51276005B8BFA /* TrustWallet */ = {
 			isa = PBXGroup;
 			children = (
-				87E7A36320F51276005B8BFA /* UI */,
-				87E7A37F20F51276005B8BFA /* Settings */,
-				87E7A3AD20F51276005B8BFA /* Vendors */,
+				87E7A40820F51277005B8BFA /* COMODO ECC Domain Validation Secure Server CA 2.cer */,
+				87E7A48720F51278005B8BFA /* Trust.entitlements */,
+				87E7A46020F51277005B8BFA /* GoogleService-Info.plist */,
+				87E7A53120F51278005B8BFA /* Info.plist */,
 				87E7A3B420F51277005B8BFA /* LaunchScreen.storyboard */,
 				87E7A3B520F51277005B8BFA /* AppCoordinator.swift */,
-				87E7A3B620F51277005B8BFA /* Deposit */,
-				87E7A3B920F51277005B8BFA /* Core */,
-				87E7A3D920F51277005B8BFA /* EtherClient */,
+				87E7A4F320F51278005B8BFA /* TrustWalletApp.swift */,
 				87E7A40720F51277005B8BFA /* InCoordinator.swift */,
-				87E7A40820F51277005B8BFA /* COMODO ECC Domain Validation Secure Server CA 2.cer */,
-				87E7A40920F51277005B8BFA /* Assets.xcassets */,
-				87E7A40A20F51277005B8BFA /* Lock */,
-				87E7A42220F51277005B8BFA /* Transfer */,
-				87E7A44920F51277005B8BFA /* Foundation */,
-				87E7A45420F51277005B8BFA /* Style */,
-				87E7A45820F51277005B8BFA /* Models */,
-				87E7A46020F51277005B8BFA /* GoogleService-Info.plist */,
-				87E7A46120F51277005B8BFA /* Welcome */,
-				87E7A46B20F51277005B8BFA /* Extensions */,
-				87E7A48720F51278005B8BFA /* Trust.entitlements */,
-				87E7A48820F51278005B8BFA /* Browser */,
-				87E7A4AE20F51278005B8BFA /* Transactions */,
-				87E7A4D220F51278005B8BFA /* Accounts */,
 				87E7A4DC20F51278005B8BFA /* InCoordinator+Navigable.swift */,
-				87E7A4DD20F51278005B8BFA /* Wallet */,
-				87E7A4F320F51278005B8BFA /* AppDelegate.swift */,
-				87E7A4F420F51278005B8BFA /* Export */,
-				87E7A50020F51278005B8BFA /* Tokens */,
 				87E7A53020F51278005B8BFA /* R.generated.swift */,
-				87E7A53120F51278005B8BFA /* Info.plist */,
+				87E7A40920F51277005B8BFA /* Assets.xcassets */,
+				87E7A4D220F51278005B8BFA /* Accounts */,
+				87E7A48820F51278005B8BFA /* Browser */,
+				87E7A3B920F51277005B8BFA /* Core */,
+				87E7A3B620F51277005B8BFA /* Deposit */,
+				87E7A3D920F51277005B8BFA /* EtherClient */,
+				87E7A4F420F51278005B8BFA /* Export */,
+				87E7A46B20F51277005B8BFA /* Extensions */,
+				87E7A44920F51277005B8BFA /* Foundation */,
 				87E7A53220F51278005B8BFA /* Localization */,
+				87E7A40A20F51277005B8BFA /* Lock */,
+				87E7A45820F51277005B8BFA /* Models */,
+				87E7A37F20F51276005B8BFA /* Settings */,
+				87E7A45420F51277005B8BFA /* Style */,
+				87E7A50020F51278005B8BFA /* Tokens */,
+				87E7A4AE20F51278005B8BFA /* Transactions */,
+				87E7A42220F51277005B8BFA /* Transfer */,
+				87E7A36320F51276005B8BFA /* UI */,
+				87E7A3AD20F51276005B8BFA /* Vendors */,
+				87E7A4DD20F51278005B8BFA /* Wallet */,
+				87E7A46120F51277005B8BFA /* Welcome */,
 			);
 			path = TrustWallet;
 			sourceTree = "<group>";
@@ -1164,7 +1161,6 @@
 				87E7A3DB20F51277005B8BFA /* KeyStoreError.swift */,
 				87E7A3DC20F51277005B8BFA /* ENS */,
 				87E7A3E120F51277005B8BFA /* Types */,
-				87E7A3E420F51277005B8BFA /* CoinMarket */,
 				87E7A3E720F51277005B8BFA /* Keystore.swift */,
 				87E7A3E820F51277005B8BFA /* Providers */,
 				87E7A3ED20F51277005B8BFA /* ChainState.swift */,
@@ -1198,22 +1194,6 @@
 			children = (
 				87E7A3E220F51277005B8BFA /* EthTypedData.swift */,
 				87E7A3E320F51277005B8BFA /* WalletType.swift */,
-			);
-			path = Types;
-			sourceTree = "<group>";
-		};
-		87E7A3E420F51277005B8BFA /* CoinMarket */ = {
-			isa = PBXGroup;
-			children = (
-				87E7A3E520F51277005B8BFA /* Types */,
-			);
-			path = CoinMarket;
-			sourceTree = "<group>";
-		};
-		87E7A3E520F51277005B8BFA /* Types */ = {
-			isa = PBXGroup;
-			children = (
-				87E7A3E620F51277005B8BFA /* CoinTicker.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -2012,6 +1992,15 @@
 			path = Localization;
 			sourceTree = "<group>";
 		};
+		87E7A6AE20F51992005B8BFA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				87E7A34E20F50F86005B8BFA /* FirstViewController.swift */,
+				87E7A35020F50F86005B8BFA /* SecondViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		AB88F70F0282AE27710AEAA2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -2258,7 +2247,6 @@
 				87E7A69820F5127A005B8BFA /* EditTokensViewController.swift in Sources */,
 				87E7A55520F51278005B8BFA /* NavigationController.swift in Sources */,
 				87E7A61C20F51279005B8BFA /* UIGestureRecognizer+Closure.swift in Sources */,
-				87E7A5A720F51279005B8BFA /* CoinTicker.swift in Sources */,
 				87E7A58320F51279005B8BFA /* ChangellyBuyWidget.swift in Sources */,
 				87E7A57820F51279005B8BFA /* AddCustomNetworkViewController.swift in Sources */,
 				87E7A5D820F51279005B8BFA /* RequestCoordinator.swift in Sources */,
@@ -2446,7 +2434,7 @@
 				87E7A60720F51279005B8BFA /* Token.swift in Sources */,
 				87E7A56F20F51279005B8BFA /* Config.swift in Sources */,
 				87E7A68C20F5127A005B8BFA /* NFTDetailsViewModel.swift in Sources */,
-				87E7A67A20F5127A005B8BFA /* AppDelegate.swift in Sources */,
+				87E7A67A20F5127A005B8BFA /* TrustWalletApp.swift in Sources */,
 				87E7A69620F5127A005B8BFA /* Debounce.swift in Sources */,
 				87E7A56D20F51279005B8BFA /* Currency.swift in Sources */,
 				87E7A61A20F51279005B8BFA /* NSObject.swift in Sources */,
@@ -2750,7 +2738,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Toto/Info.plist;
+				INFOPLIST_FILE = Toto/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2768,7 +2756,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Toto/Info.plist;
+				INFOPLIST_FILE = Toto/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

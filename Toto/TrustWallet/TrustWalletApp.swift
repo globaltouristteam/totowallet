@@ -4,8 +4,9 @@ import UIKit
 import Lokalise
 import Branch
 
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
+class TrustWalletApp: NSObject, UISplitViewControllerDelegate {
+    static var shared: TrustWalletApp = TrustWalletApp()
+    
     var window: UIWindow?
     var coordinator: AppCoordinator!
     //This is separate coordinator for the protection of the sensitive information.
@@ -13,6 +14,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         return ProtectionCoordinator()
     }()
     let urlNavigatorCoordinator = URLNavigatorCoordinator()
+    
+    override init() {
+        super.init()
+        _ = application(UIApplication.shared, didFinishLaunchingWithOptions: nil)
+        applicationDidBecomeActive(UIApplication.shared)
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
 
