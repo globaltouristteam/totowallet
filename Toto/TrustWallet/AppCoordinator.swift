@@ -33,8 +33,8 @@ class AppCoordinator: NSObject, Coordinator {
         self.keystore = keystore
         self.navigator = navigator
         super.init()
-        window.rootViewController = navigationController
-        window.makeKeyAndVisible()
+        //window.rootViewController = navigationController
+        //window.makeKeyAndVisible()
     }
 
     func start() {

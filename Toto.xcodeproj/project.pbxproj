@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		26F93A6A74907465BD5B6542 /* Pods_Toto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC85183EFD336BCEE3B90203 /* Pods_Toto.framework */; };
 		87E7A34D20F50F86005B8BFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A34C20F50F86005B8BFA /* AppDelegate.swift */; };
-		87E7A34F20F50F86005B8BFA /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A34E20F50F86005B8BFA /* FirstViewController.swift */; };
-		87E7A35120F50F86005B8BFA /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A35020F50F86005B8BFA /* SecondViewController.swift */; };
+		87E7A34F20F50F86005B8BFA /* ToursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A34E20F50F86005B8BFA /* ToursViewController.swift */; };
 		87E7A35420F50F86005B8BFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87E7A35220F50F86005B8BFA /* Main.storyboard */; };
 		87E7A35620F50F88005B8BFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87E7A35520F50F88005B8BFA /* Assets.xcassets */; };
 		87E7A35920F50F88005B8BFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87E7A35720F50F88005B8BFA /* LaunchScreen.storyboard */; };
@@ -377,14 +376,14 @@
 		87E7A6AA20F5127A005B8BFA /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A53020F51278005B8BFA /* R.generated.swift */; };
 		87E7A6AB20F5127A005B8BFA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87E7A53120F51278005B8BFA /* Info.plist */; };
 		87E7A6AC20F5127A005B8BFA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 87E7A53320F51278005B8BFA /* Localizable.strings */; };
+		87E7A6B120F51F00005B8BFA /* Tours.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87E7A6B020F51F00005B8BFA /* Tours.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		575A0E6978445577ADF0037E /* Pods-Toto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Toto.release.xcconfig"; path = "Pods/Target Support Files/Pods-Toto/Pods-Toto.release.xcconfig"; sourceTree = "<group>"; };
 		87E7A34920F50F86005B8BFA /* Toto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Toto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87E7A34C20F50F86005B8BFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		87E7A34E20F50F86005B8BFA /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		87E7A35020F50F86005B8BFA /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		87E7A34E20F50F86005B8BFA /* ToursViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToursViewController.swift; sourceTree = "<group>"; };
 		87E7A35320F50F86005B8BFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		87E7A35520F50F88005B8BFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87E7A35820F50F88005B8BFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -765,6 +764,7 @@
 		87E7A53E20F51278005B8BFA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		87E7A53F20F51278005B8BFA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		87E7A54020F51278005B8BFA /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/Localizable.strings; sourceTree = "<group>"; };
+		87E7A6B020F51F00005B8BFA /* Tours.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tours.storyboard; sourceTree = "<group>"; };
 		B47EA6F118147DC9B6C90F20 /* Pods-Toto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Toto.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Toto/Pods-Toto.debug.xcconfig"; sourceTree = "<group>"; };
 		CC85183EFD336BCEE3B90203 /* Pods_Toto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Toto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -830,9 +830,10 @@
 			isa = PBXGroup;
 			children = (
 				87E7A35A20F50F88005B8BFA /* Info.plist */,
-				87E7A35220F50F86005B8BFA /* Main.storyboard */,
+				87E7A6B020F51F00005B8BFA /* Tours.storyboard */,
 				87E7A35520F50F88005B8BFA /* Assets.xcassets */,
 				87E7A35720F50F88005B8BFA /* LaunchScreen.storyboard */,
+				87E7A35220F50F86005B8BFA /* Main.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1995,10 +1996,17 @@
 		87E7A6AE20F51992005B8BFA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				87E7A34E20F50F86005B8BFA /* FirstViewController.swift */,
-				87E7A35020F50F86005B8BFA /* SecondViewController.swift */,
+				87E7A6AF20F51DF0005B8BFA /* Tours */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		87E7A6AF20F51DF0005B8BFA /* Tours */ = {
+			isa = PBXGroup;
+			children = (
+				87E7A34E20F50F86005B8BFA /* ToursViewController.swift */,
+			);
+			path = Tours;
 			sourceTree = "<group>";
 		};
 		AB88F70F0282AE27710AEAA2 /* Pods */ = {
@@ -2099,6 +2107,7 @@
 				87E7A6AC20F5127A005B8BFA /* Localizable.strings in Resources */,
 				87E7A66820F5127A005B8BFA /* AccountViewCell.xib in Resources */,
 				87E7A35420F50F86005B8BFA /* Main.storyboard in Resources */,
+				87E7A6B120F51F00005B8BFA /* Tours.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2277,7 +2286,6 @@
 				87E7A5F920F51279005B8BFA /* CryptoAddressValidator.swift in Sources */,
 				87E7A5D420F51279005B8BFA /* PaymentCoordinator.swift in Sources */,
 				87E7A58C20F51279005B8BFA /* GasViewModel.swift in Sources */,
-				87E7A35120F50F86005B8BFA /* SecondViewController.swift in Sources */,
 				87E7A62B20F51279005B8BFA /* HistoriesViewModel.swift in Sources */,
 				87E7A60A20F51279005B8BFA /* OnboardingPageViewModel.swift in Sources */,
 				87E7A61720F51279005B8BFA /* UIColor.swift in Sources */,
@@ -2538,7 +2546,7 @@
 				87E7A61320F51279005B8BFA /* DecryptError.swift in Sources */,
 				87E7A6A120F5127A005B8BFA /* TokensFooterView.swift in Sources */,
 				87E7A5A620F51279005B8BFA /* WalletType.swift in Sources */,
-				87E7A34F20F50F86005B8BFA /* FirstViewController.swift in Sources */,
+				87E7A34F20F50F86005B8BFA /* ToursViewController.swift in Sources */,
 				87E7A68E20F5127A005B8BFA /* NonFungibleTokenViewModel.swift in Sources */,
 				87E7A5E120F51279005B8BFA /* SentTransaction.swift in Sources */,
 				87E7A55320F51278005B8BFA /* Button.swift in Sources */,

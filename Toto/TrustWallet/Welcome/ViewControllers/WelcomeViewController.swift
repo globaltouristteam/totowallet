@@ -47,6 +47,14 @@ class WelcomeViewController: UIViewController {
         importWalletButton.accessibilityIdentifier = "import-wallet"
         return importWalletButton
     }()
+    let cancelButton: UIButton = {
+        let cancelButton = Button(size: .large, style: .border)
+        cancelButton.translatesAutoresizingMaskIntoConstraints = false
+        cancelButton.setTitle(NSLocalizedString("Cancel", value: "Cancel", comment: ""), for: .normal)
+        cancelButton.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.semibold)
+        cancelButton.accessibilityIdentifier = "cancel-add-wallet"
+        return cancelButton
+    }()
     let pages: [OnboardingPageViewModel] = [
         OnboardingPageViewModel(
             title: NSLocalizedString("welcome.privateAndSecure.label.title", value: "Private & Secure", comment: ""),
@@ -80,6 +88,7 @@ class WelcomeViewController: UIViewController {
             pageControl,
             createWalletButton,
             importWalletButton,
+            cancelButton,
         ])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
@@ -106,10 +115,14 @@ class WelcomeViewController: UIViewController {
 
             importWalletButton.leadingAnchor.constraint(equalTo: stackView.leadingAnchor),
             importWalletButton.trailingAnchor.constraint(equalTo: stackView.trailingAnchor),
+            
+            cancelButton.leadingAnchor.constraint(equalTo: stackView.leadingAnchor),
+            cancelButton.trailingAnchor.constraint(equalTo: stackView.trailingAnchor),
         ])
 
         createWalletButton.addTarget(self, action: #selector(start), for: .touchUpInside)
         importWalletButton.addTarget(self, action: #selector(importFlow), for: .touchUpInside)
+        cancelButton.addTarget(self, action: #selector(cancelFlow), for: .touchUpInside)
 
         configure(viewModel: viewModel)
     }
@@ -129,5 +142,9 @@ class WelcomeViewController: UIViewController {
 
     @IBAction func importFlow() {
         delegate?.didPressImportWallet(in: self)
+    }
+    
+    @IBAction func cancelFlow() {
+        dismiss(animated: true, completion: nil)
     }
 }
