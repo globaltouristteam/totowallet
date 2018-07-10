@@ -34,8 +34,8 @@ class InCoordinator: Coordinator {
     var tokensCoordinator: TokensCoordinator? {
         return self.coordinators.compactMap { $0 as? TokensCoordinator }.first
     }
-    var tabBarController: UITabBarController? {
-        return self.navigationController.viewControllers.first as? UITabBarController
+    var tabBarController: TotoTabBarController? {
+        return UIApplication.shared.keyWindow?.rootViewController as? TotoTabBarController
     }
     var localSchemeCoordinator: LocalSchemeCoordinator?
     lazy var helpUsCoordinator: HelpUsCoordinator = {
@@ -118,8 +118,8 @@ class InCoordinator: Coordinator {
         transactionCoordinator.start()
         addCoordinator(transactionCoordinator)
 
-        let tabBarController = TabBarController()
-        tabBarController.tabBar.isTranslucent = false
+        //let tabBarController = TabBarController()
+        //tabBarController.tabBar.isTranslucent = false
 
         let browserCoordinator = BrowserCoordinator(session: session, keystore: keystore, navigator: navigator, sharedRealm: sharedRealm)
         browserCoordinator.delegate = self
@@ -151,6 +151,8 @@ class InCoordinator: Coordinator {
         settingsCoordinator.start()
         addCoordinator(settingsCoordinator)
 
+        tabBarController?.addWalletTabs()
+        /*
         tabBarController.viewControllers = [
             browserCoordinator.navigationController,
             walletCoordinator.navigationController,
@@ -160,6 +162,7 @@ class InCoordinator: Coordinator {
 
         navigationController.setViewControllers([tabBarController], animated: false)
         navigationController.setNavigationBarHidden(true, animated: false)
+         */
         addCoordinator(transactionCoordinator)
 
         showTab(.wallet(.none))
@@ -167,9 +170,11 @@ class InCoordinator: Coordinator {
         keystore.recentlyUsedWallet = account
 
         // activate all view controllers.
+        /*
         [Tabs.wallet(.none), Tabs.transactions].forEach {
             let _ = (tabBarController.viewControllers?[$0.index] as? NavigationController)?.viewControllers[0].view
         }
+         */
 
         let localSchemeCoordinator = LocalSchemeCoordinator(
             navigationController: navigationController,

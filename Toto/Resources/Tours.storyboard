@@ -31,21 +31,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Si-Gp-7eM">
-                                <rect key="frame" x="165.5" y="390" width="43" height="30"/>
-                                <state key="normal" title="Wallet"/>
-                                <connections>
-                                    <action selector="btnWalletClicked:" destination="Gx0-y8-H5k" eventType="touchUpInside" id="42E-ZN-wZR"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="Nnx-iN-fra" secondAttribute="centerY" id="0pp-rr-MV7"/>
                             <constraint firstAttribute="centerX" secondItem="Nnx-iN-fra" secondAttribute="centerX" id="4hj-2A-guN"/>
-                            <constraint firstItem="2Si-Gp-7eM" firstAttribute="top" secondItem="aho-6Q-yXg" secondAttribute="bottom" constant="10" id="GcD-6B-nZt"/>
                             <constraint firstItem="aho-6Q-yXg" firstAttribute="centerX" secondItem="Nnx-iN-fra" secondAttribute="centerX" id="JSC-RH-QFy"/>
-                            <constraint firstItem="2Si-Gp-7eM" firstAttribute="centerX" secondItem="lpn-X7-oD1" secondAttribute="centerX" id="gEu-tP-9Fb"/>
                             <constraint firstItem="aho-6Q-yXg" firstAttribute="top" secondItem="Nnx-iN-fra" secondAttribute="bottom" constant="8" symbolic="YES" id="uo8-ND-M0Z"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cXh-3m-hnN"/>

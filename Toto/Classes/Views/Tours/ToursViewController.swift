@@ -9,13 +9,5 @@
 import UIKit
 
 class ToursViewController: UIViewController {
-
-    @IBAction func btnWalletClicked(_ sender: Any) {
-        if EtherKeystore.shared.hasWallets {
-            
-        } else {
-            present(TrustWalletApp.shared.coordinator.navigationController, animated: true, completion: nil)
-        }
-    }
 }
 

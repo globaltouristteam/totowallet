@@ -377,6 +377,7 @@
 		87E7A6AB20F5127A005B8BFA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87E7A53120F51278005B8BFA /* Info.plist */; };
 		87E7A6AC20F5127A005B8BFA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 87E7A53320F51278005B8BFA /* Localizable.strings */; };
 		87E7A6B120F51F00005B8BFA /* Tours.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87E7A6B020F51F00005B8BFA /* Tours.storyboard */; };
+		87E7A6B420F51FE3005B8BFA /* TotoTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A6B320F51FE3005B8BFA /* TotoTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -765,6 +766,7 @@
 		87E7A53F20F51278005B8BFA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		87E7A54020F51278005B8BFA /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/Localizable.strings; sourceTree = "<group>"; };
 		87E7A6B020F51F00005B8BFA /* Tours.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tours.storyboard; sourceTree = "<group>"; };
+		87E7A6B320F51FE3005B8BFA /* TotoTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotoTabBarController.swift; sourceTree = "<group>"; };
 		B47EA6F118147DC9B6C90F20 /* Pods-Toto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Toto.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Toto/Pods-Toto.debug.xcconfig"; sourceTree = "<group>"; };
 		CC85183EFD336BCEE3B90203 /* Pods_Toto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Toto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -1996,6 +1998,7 @@
 		87E7A6AE20F51992005B8BFA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				87E7A6B220F51FBA005B8BFA /* Home */,
 				87E7A6AF20F51DF0005B8BFA /* Tours */,
 			);
 			path = Views;
@@ -2007,6 +2010,14 @@
 				87E7A34E20F50F86005B8BFA /* ToursViewController.swift */,
 			);
 			path = Tours;
+			sourceTree = "<group>";
+		};
+		87E7A6B220F51FBA005B8BFA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				87E7A6B320F51FE3005B8BFA /* TotoTabBarController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		AB88F70F0282AE27710AEAA2 /* Pods */ = {
@@ -2462,6 +2473,7 @@
 				87E7A5E620F51279005B8BFA /* UnconfirmedTransaction.swift in Sources */,
 				87E7A62920F51279005B8BFA /* BigInt.swift in Sources */,
 				87E7A64E20F5127A005B8BFA /* TransactionCellViewModel.swift in Sources */,
+				87E7A6B420F51FE3005B8BFA /* TotoTabBarController.swift in Sources */,
 				87E7A54220F51278005B8BFA /* PrivateKeyRule.swift in Sources */,
 				87E7A55C20F51278005B8BFA /* AddCustomNetworkCoordinator.swift in Sources */,
 				87E7A65520F5127A005B8BFA /* TransactionOperation.swift in Sources */,
