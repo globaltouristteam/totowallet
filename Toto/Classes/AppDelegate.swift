@@ -3,7 +3,7 @@
 //  Toto
 //
 //  Created by Nhuan Vu on 7/10/18.
-//  Copyright © 2018 Nhuan Vu. All rights reserved.
+//  Copyright © 2018 Toto. All rights reserved.
 //
 
 import UIKit
@@ -13,9 +13,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        LogsMgr().configLogger()
         return true
     }
 

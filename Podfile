@@ -5,6 +5,10 @@ source 'https://github.com/CocoaPods/Specs.git'
 target 'Toto' do
   use_frameworks!
 
+  # App
+  pod 'CocoaLumberjack/Swift'
+
+  # Trust wallet
   pod 'BigInt', '~> 3.0'
   pod 'R.swift'
   pod 'JSONRPCKit', :git=> 'https://github.com/bricklife/JSONRPCKit.git'

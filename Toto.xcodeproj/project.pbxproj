@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		26F93A6A74907465BD5B6542 /* Pods_Toto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC85183EFD336BCEE3B90203 /* Pods_Toto.framework */; };
+		8789C95520F6406300307E4C /* Threading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789C95420F6406200307E4C /* Threading.swift */; };
+		8789C95920F640FF00307E4C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789C95820F640FF00307E4C /* Category.swift */; };
+		8789C95B20F6414900307E4C /* ResponseBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789C95A20F6414800307E4C /* ResponseBase.swift */; };
+		8789C95D20F641C400307E4C /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789C95C20F641C400307E4C /* HttpService.swift */; };
+		8789C96220F6427D00307E4C /* LogsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789C95F20F6427D00307E4C /* LogsUtils.swift */; };
+		8789C96320F6427D00307E4C /* LogFormater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789C96020F6427D00307E4C /* LogFormater.swift */; };
+		8789C96420F6427D00307E4C /* LogsMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789C96120F6427D00307E4C /* LogsMgr.swift */; };
+		8789C96620F644B800307E4C /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789C96520F644B800307E4C /* StringUtils.swift */; };
 		87E7A34D20F50F86005B8BFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A34C20F50F86005B8BFA /* AppDelegate.swift */; };
 		87E7A34F20F50F86005B8BFA /* ToursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A34E20F50F86005B8BFA /* ToursViewController.swift */; };
 		87E7A35420F50F86005B8BFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87E7A35220F50F86005B8BFA /* Main.storyboard */; };
@@ -378,10 +386,30 @@
 		87E7A6AC20F5127A005B8BFA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 87E7A53320F51278005B8BFA /* Localizable.strings */; };
 		87E7A6B120F51F00005B8BFA /* Tours.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87E7A6B020F51F00005B8BFA /* Tours.storyboard */; };
 		87E7A6B420F51FE3005B8BFA /* TotoTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A6B320F51FE3005B8BFA /* TotoTabBarController.swift */; };
+		87E7A6BC20F63B89005B8BFA /* NetworkingResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A6B620F63B89005B8BFA /* NetworkingResult.swift */; };
+		87E7A6BD20F63B89005B8BFA /* NetworkingServiceParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A6B720F63B89005B8BFA /* NetworkingServiceParams.swift */; };
+		87E7A6BE20F63B89005B8BFA /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A6B820F63B89005B8BFA /* NetworkingService.swift */; };
+		87E7A6BF20F63B89005B8BFA /* RequestHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A6B920F63B89005B8BFA /* RequestHeader.swift */; };
+		87E7A6C020F63B89005B8BFA /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A6BA20F63B89005B8BFA /* NetworkingManager.swift */; };
+		87E7A6C120F63B89005B8BFA /* QUpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A6BB20F63B89005B8BFA /* QUpError.swift */; };
+		87E7A6CB20F63C28005B8BFA /* Dictionary+Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A6C620F63C28005B8BFA /* Dictionary+Json.swift */; };
+		87E7A6CC20F63C28005B8BFA /* Data+Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A6C720F63C28005B8BFA /* Data+Json.swift */; };
+		87E7A6CD20F63C28005B8BFA /* String+Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A6C820F63C28005B8BFA /* String+Json.swift */; };
+		87E7A6CE20F63C28005B8BFA /* Array+Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A6C920F63C28005B8BFA /* Array+Json.swift */; };
+		87E7A6D320F63CF8005B8BFA /* JsonDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A6D120F63CF8005B8BFA /* JsonDecoder.swift */; };
+		87E7A6D420F63CF8005B8BFA /* JsonObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A6D220F63CF8005B8BFA /* JsonObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		575A0E6978445577ADF0037E /* Pods-Toto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Toto.release.xcconfig"; path = "Pods/Target Support Files/Pods-Toto/Pods-Toto.release.xcconfig"; sourceTree = "<group>"; };
+		8789C95420F6406200307E4C /* Threading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Threading.swift; sourceTree = "<group>"; };
+		8789C95820F640FF00307E4C /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		8789C95A20F6414800307E4C /* ResponseBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseBase.swift; sourceTree = "<group>"; };
+		8789C95C20F641C400307E4C /* HttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
+		8789C95F20F6427D00307E4C /* LogsUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogsUtils.swift; sourceTree = "<group>"; };
+		8789C96020F6427D00307E4C /* LogFormater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogFormater.swift; sourceTree = "<group>"; };
+		8789C96120F6427D00307E4C /* LogsMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogsMgr.swift; sourceTree = "<group>"; };
+		8789C96520F644B800307E4C /* StringUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
 		87E7A34920F50F86005B8BFA /* Toto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Toto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87E7A34C20F50F86005B8BFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87E7A34E20F50F86005B8BFA /* ToursViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToursViewController.swift; sourceTree = "<group>"; };
@@ -767,6 +795,18 @@
 		87E7A54020F51278005B8BFA /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/Localizable.strings; sourceTree = "<group>"; };
 		87E7A6B020F51F00005B8BFA /* Tours.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tours.storyboard; sourceTree = "<group>"; };
 		87E7A6B320F51FE3005B8BFA /* TotoTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotoTabBarController.swift; sourceTree = "<group>"; };
+		87E7A6B620F63B89005B8BFA /* NetworkingResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingResult.swift; sourceTree = "<group>"; };
+		87E7A6B720F63B89005B8BFA /* NetworkingServiceParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingServiceParams.swift; sourceTree = "<group>"; };
+		87E7A6B820F63B89005B8BFA /* NetworkingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
+		87E7A6B920F63B89005B8BFA /* RequestHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestHeader.swift; sourceTree = "<group>"; };
+		87E7A6BA20F63B89005B8BFA /* NetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		87E7A6BB20F63B89005B8BFA /* QUpError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QUpError.swift; sourceTree = "<group>"; };
+		87E7A6C620F63C28005B8BFA /* Dictionary+Json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Json.swift"; sourceTree = "<group>"; };
+		87E7A6C720F63C28005B8BFA /* Data+Json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Json.swift"; sourceTree = "<group>"; };
+		87E7A6C820F63C28005B8BFA /* String+Json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Json.swift"; sourceTree = "<group>"; };
+		87E7A6C920F63C28005B8BFA /* Array+Json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Json.swift"; sourceTree = "<group>"; };
+		87E7A6D120F63CF8005B8BFA /* JsonDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonDecoder.swift; sourceTree = "<group>"; };
+		87E7A6D220F63CF8005B8BFA /* JsonObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonObject.swift; sourceTree = "<group>"; };
 		B47EA6F118147DC9B6C90F20 /* Pods-Toto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Toto.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Toto/Pods-Toto.debug.xcconfig"; sourceTree = "<group>"; };
 		CC85183EFD336BCEE3B90203 /* Pods_Toto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Toto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -789,6 +829,16 @@
 				CC85183EFD336BCEE3B90203 /* Pods_Toto.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8789C95E20F6427D00307E4C /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				8789C95F20F6427D00307E4C /* LogsUtils.swift */,
+				8789C96020F6427D00307E4C /* LogFormater.swift */,
+				8789C96120F6427D00307E4C /* LogsMgr.swift */,
+			);
+			path = Log;
 			sourceTree = "<group>";
 		};
 		87E7A34020F50F86005B8BFA = {
@@ -823,6 +873,7 @@
 			isa = PBXGroup;
 			children = (
 				87E7A34C20F50F86005B8BFA /* AppDelegate.swift */,
+				87E7A6C320F63C1B005B8BFA /* Utils */,
 				87E7A6AE20F51992005B8BFA /* Views */,
 			);
 			path = Classes;
@@ -2020,6 +2071,71 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		87E7A6B520F63B89005B8BFA /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				87E7A6B620F63B89005B8BFA /* NetworkingResult.swift */,
+				87E7A6B720F63B89005B8BFA /* NetworkingServiceParams.swift */,
+				87E7A6B820F63B89005B8BFA /* NetworkingService.swift */,
+				87E7A6B920F63B89005B8BFA /* RequestHeader.swift */,
+				87E7A6BA20F63B89005B8BFA /* NetworkingManager.swift */,
+				87E7A6BB20F63B89005B8BFA /* QUpError.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		87E7A6C220F63B8E005B8BFA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8789C95C20F641C400307E4C /* HttpService.swift */,
+				87E7A6B520F63B89005B8BFA /* Networking */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		87E7A6C320F63C1B005B8BFA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8789C96520F644B800307E4C /* StringUtils.swift */,
+				8789C95420F6406200307E4C /* Threading.swift */,
+				87E7A6C420F63C28005B8BFA /* Json */,
+				8789C95E20F6427D00307E4C /* Log */,
+				87E7A6CF20F63CEA005B8BFA /* Model */,
+				87E7A6C220F63B8E005B8BFA /* Services */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		87E7A6C420F63C28005B8BFA /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				87E7A6C620F63C28005B8BFA /* Dictionary+Json.swift */,
+				87E7A6C720F63C28005B8BFA /* Data+Json.swift */,
+				87E7A6C820F63C28005B8BFA /* String+Json.swift */,
+				87E7A6C920F63C28005B8BFA /* Array+Json.swift */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
+		87E7A6CF20F63CEA005B8BFA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8789C95820F640FF00307E4C /* Category.swift */,
+				8789C95A20F6414800307E4C /* ResponseBase.swift */,
+				87E7A6D020F63CF8005B8BFA /* Base */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		87E7A6D020F63CF8005B8BFA /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				87E7A6D120F63CF8005B8BFA /* JsonDecoder.swift */,
+				87E7A6D220F63CF8005B8BFA /* JsonObject.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		AB88F70F0282AE27710AEAA2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -2060,7 +2176,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0940;
-				ORGANIZATIONNAME = "Nhuan Vu";
+				ORGANIZATIONNAME = Toto;
 				TargetAttributes = {
 					87E7A34820F50F86005B8BFA = {
 						CreatedOnToolsVersion = 9.4;
@@ -2154,6 +2270,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/BigInt/BigInt.framework",
 				"${BUILT_PRODUCTS_DIR}/Branch/Branch.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
 				"${BUILT_PRODUCTS_DIR}/JSONRPCKit/JSONRPCKit.framework",
@@ -2185,6 +2302,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BigInt.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Branch.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSONRPCKit.framework",
@@ -2241,6 +2359,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87E7A6A720F5127A005B8BFA /* TokensHeaderView.swift in Sources */,
+				87E7A6CD20F63C28005B8BFA /* String+Json.swift in Sources */,
 				87E7A5C120F51279005B8BFA /* Wallet.swift in Sources */,
 				87E7A68720F5127A005B8BFA /* EditTokenTableCellViewModel.swift in Sources */,
 				87E7A68820F5127A005B8BFA /* NonFungibleTokenCellViewModel.swift in Sources */,
@@ -2249,12 +2368,14 @@
 				87E7A67020F5127A005B8BFA /* ImportSelectionType.swift in Sources */,
 				87E7A54D20F51278005B8BFA /* Size.swift in Sources */,
 				87E7A55720F51278005B8BFA /* TabBarController.swift in Sources */,
+				8789C95520F6406300307E4C /* Threading.swift in Sources */,
 				87E7A65E20F5127A005B8BFA /* TransactionHeaderView.swift in Sources */,
 				87E7A6A820F5127A005B8BFA /* TokenViewCell.swift in Sources */,
 				87E7A5DE20F51279005B8BFA /* RequestViewModel.swift in Sources */,
 				87E7A60320F51279005B8BFA /* SignTransaction.swift in Sources */,
 				87E7A57420F51279005B8BFA /* AutoLock.swift in Sources */,
 				87E7A62A20F51279005B8BFA /* HistoryViewModel.swift in Sources */,
+				87E7A6C120F63B89005B8BFA /* QUpError.swift in Sources */,
 				87E7A61820F51279005B8BFA /* Decimal.swift in Sources */,
 				87E7A61120F51279005B8BFA /* UIView.swift in Sources */,
 				87E7A5DB20F51279005B8BFA /* Pair.swift in Sources */,
@@ -2309,6 +2430,7 @@
 				87E7A57120F51279005B8BFA /* SettingsAction.swift in Sources */,
 				87E7A65320F5127A005B8BFA /* LocalizedOperationObject.swift in Sources */,
 				87E7A60F20F51279005B8BFA /* UIScrollView.swift in Sources */,
+				8789C96220F6427D00307E4C /* LogsUtils.swift in Sources */,
 				87E7A56320F51278005B8BFA /* NotificationsViewModel.swift in Sources */,
 				87E7A65F20F5127A005B8BFA /* TransactionsEmptyView.swift in Sources */,
 				87E7A5FA20F51279005B8BFA /* DecimalFormatter.swift in Sources */,
@@ -2322,6 +2444,7 @@
 				87E7A5F520F51279005B8BFA /* QRGenerator.swift in Sources */,
 				87E7A59F20F51279005B8BFA /* CastError.swift in Sources */,
 				87E7A5D720F51279005B8BFA /* SendCoordinator.swift in Sources */,
+				87E7A6CC20F63C28005B8BFA /* Data+Json.swift in Sources */,
 				87E7A57D20F51279005B8BFA /* WellDoneViewController.swift in Sources */,
 				87E7A5D220F51279005B8BFA /* PasscodeCharacterView.swift in Sources */,
 				87E7A67620F5127A005B8BFA /* EnterPasswordViewController.swift in Sources */,
@@ -2335,6 +2458,7 @@
 				87E7A54820F51278005B8BFA /* EmptyView.swift in Sources */,
 				87E7A66A20F5127A005B8BFA /* WalletCoordinator.swift in Sources */,
 				87E7A67520F5127A005B8BFA /* PassphraseViewController.swift in Sources */,
+				8789C96320F6427D00307E4C /* LogFormater.swift in Sources */,
 				87E7A55220F51278005B8BFA /* BalanceTitleView.swift in Sources */,
 				87E7A63420F51279005B8BFA /* Favicon.swift in Sources */,
 				87E7A61020F51279005B8BFA /* CALayer.swift in Sources */,
@@ -2395,6 +2519,7 @@
 				87E7A69920F5127A005B8BFA /* WalletViewController.swift in Sources */,
 				87E7A54A20F51278005B8BFA /* HalfModalPresentationController.swift in Sources */,
 				87E7A62020F51279005B8BFA /* UIImage.swift in Sources */,
+				87E7A6BD20F63B89005B8BFA /* NetworkingServiceParams.swift in Sources */,
 				87E7A5B520F51279005B8BFA /* BalanceRequest.swift in Sources */,
 				87E7A5B820F51279005B8BFA /* EtherKeystore.swift in Sources */,
 				87E7A65920F5127A005B8BFA /* Session.swift in Sources */,
@@ -2474,6 +2599,7 @@
 				87E7A62920F51279005B8BFA /* BigInt.swift in Sources */,
 				87E7A64E20F5127A005B8BFA /* TransactionCellViewModel.swift in Sources */,
 				87E7A6B420F51FE3005B8BFA /* TotoTabBarController.swift in Sources */,
+				87E7A6BE20F63B89005B8BFA /* NetworkingService.swift in Sources */,
 				87E7A54220F51278005B8BFA /* PrivateKeyRule.swift in Sources */,
 				87E7A55C20F51278005B8BFA /* AddCustomNetworkCoordinator.swift in Sources */,
 				87E7A65520F5127A005B8BFA /* TransactionOperation.swift in Sources */,
@@ -2486,6 +2612,8 @@
 				87E7A6A020F5127A005B8BFA /* EditTokenTableViewCell.swift in Sources */,
 				87E7A59120F51279005B8BFA /* BranchEventParser.swift in Sources */,
 				87E7A69E20F5127A005B8BFA /* TokensViewController.swift in Sources */,
+				87E7A6CE20F63C28005B8BFA /* Array+Json.swift in Sources */,
+				87E7A6BC20F63B89005B8BFA /* NetworkingResult.swift in Sources */,
 				87E7A69120F5127A005B8BFA /* TokenBalanceOperation.swift in Sources */,
 				87E7A5E220F51279005B8BFA /* ConfigureTransaction.swift in Sources */,
 				87E7A5C620F51279005B8BFA /* LockCreatePasscodeCoordinator.swift in Sources */,
@@ -2501,6 +2629,8 @@
 				87E7A5CC20F51279005B8BFA /* LockCreatePasscodeViewController.swift in Sources */,
 				87E7A58920F51279005B8BFA /* URLNavigatorCoordinator.swift in Sources */,
 				87E7A5B720F51279005B8BFA /* EtherServiceRequest.swift in Sources */,
+				87E7A6D420F63CF8005B8BFA /* JsonObject.swift in Sources */,
+				8789C95B20F6414900307E4C /* ResponseBase.swift in Sources */,
 				87E7A5A920F51279005B8BFA /* GetNonceProvider.swift in Sources */,
 				87E7A59D20F51279005B8BFA /* MirgrationInitializer.swift in Sources */,
 				87E7A5B920F51279005B8BFA /* PasswordGenerator.swift in Sources */,
@@ -2513,13 +2643,17 @@
 				87E7A61F20F51279005B8BFA /* UIButton.swift in Sources */,
 				87E7A62420F51279005B8BFA /* Double.swift in Sources */,
 				87E7A69420F5127A005B8BFA /* ERC20Token.swift in Sources */,
+				87E7A6D320F63CF8005B8BFA /* JsonDecoder.swift in Sources */,
+				8789C95D20F641C400307E4C /* HttpService.swift in Sources */,
 				87E7A5B320F51279005B8BFA /* SendRawTransactionRequest.swift in Sources */,
 				87E7A6AA20F5127A005B8BFA /* R.generated.swift in Sources */,
 				87E7A5CB20F51279005B8BFA /* LockEnterPasscodeViewController.swift in Sources */,
+				87E7A6C020F63B89005B8BFA /* NetworkingManager.swift in Sources */,
 				87E7A5E020F51279005B8BFA /* SendViewModel.swift in Sources */,
 				87E7A63920F51279005B8BFA /* History.swift in Sources */,
 				87E7A59520F51279005B8BFA /* ImageURLFormatter.swift in Sources */,
 				87E7A5C820F51279005B8BFA /* LockCreatePasscodeViewModel.swift in Sources */,
+				87E7A6BF20F63B89005B8BFA /* RequestHeader.swift in Sources */,
 				87E7A57220F51279005B8BFA /* SettingsError.swift in Sources */,
 				87E7A63220F51279005B8BFA /* DappAction.swift in Sources */,
 				87E7A5F020F51279005B8BFA /* SendViewController.swift in Sources */,
@@ -2547,6 +2681,7 @@
 				87E7A5A420F51279005B8BFA /* ENSManager.swift in Sources */,
 				87E7A5FE20F51279005B8BFA /* Styles.swift in Sources */,
 				87E7A59720F51279005B8BFA /* JailbreakChecker.swift in Sources */,
+				8789C96420F6427D00307E4C /* LogsMgr.swift in Sources */,
 				87E7A66520F5127A005B8BFA /* AccountsViewController.swift in Sources */,
 				87E7A5D320F51279005B8BFA /* LockView.swift in Sources */,
 				87E7A57A20F51279005B8BFA /* SupportViewController.swift in Sources */,
@@ -2561,6 +2696,7 @@
 				87E7A34F20F50F86005B8BFA /* ToursViewController.swift in Sources */,
 				87E7A68E20F5127A005B8BFA /* NonFungibleTokenViewModel.swift in Sources */,
 				87E7A5E120F51279005B8BFA /* SentTransaction.swift in Sources */,
+				87E7A6CB20F63C28005B8BFA /* Dictionary+Json.swift in Sources */,
 				87E7A55320F51278005B8BFA /* Button.swift in Sources */,
 				87E7A68620F5127A005B8BFA /* NewTokenViewModel.swift in Sources */,
 				87E7A63D20F51279005B8BFA /* BookmarkViewController.swift in Sources */,
@@ -2581,10 +2717,12 @@
 				87E7A62D20F51279005B8BFA /* BookmarkViewModel.swift in Sources */,
 				87E7A58F20F51279005B8BFA /* TrustRealmConfiguration.swift in Sources */,
 				87E7A58820F51279005B8BFA /* LocalSchemeCoordinator.swift in Sources */,
+				8789C96620F644B800307E4C /* StringUtils.swift in Sources */,
 				87E7A5B220F51279005B8BFA /* GetTransactionCountRequest.swift in Sources */,
 				87E7A5DF20F51279005B8BFA /* ConfirmPaymentViewModel.swift in Sources */,
 				87E7A66320F5127A005B8BFA /* AccountsCoordinator.swift in Sources */,
 				87E7A57520F51279005B8BFA /* ConfigExplorer.swift in Sources */,
+				8789C95920F640FF00307E4C /* Category.swift in Sources */,
 				87E7A64920F5127A005B8BFA /* TrustProvider.swift in Sources */,
 				87E7A68A20F5127A005B8BFA /* TokenViewModel.swift in Sources */,
 				87E7A69A20F5127A005B8BFA /* NewTokenViewController.swift in Sources */,

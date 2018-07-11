@@ -7,6 +7,9 @@ PODS:
   - Branch (0.25.0):
     - Branch/Core (= 0.25.0)
   - Branch/Core (0.25.0)
+  - CocoaLumberjack/Default (3.4.2)
+  - CocoaLumberjack/Swift (3.4.2):
+    - CocoaLumberjack/Default
   - Crashlytics (3.10.4):
     - Fabric (~> 1.7.9)
   - CryptoSwift (0.10.0)
@@ -68,6 +71,7 @@ DEPENDENCIES:
   - APIKit
   - BigInt (~> 3.0)
   - Branch
+  - CocoaLumberjack/Swift
   - Crashlytics (~> 3.10)
   - CryptoSwift (from `https://github.com/krzyzanowskim/CryptoSwift`, branch `master`)
   - Eureka (~> 4.1.1)
@@ -100,6 +104,7 @@ SPEC REPOS:
     - APIKit
     - BigInt
     - Branch
+    - CocoaLumberjack
     - Crashlytics
     - Eureka
     - Fabric
@@ -164,6 +169,7 @@ SPEC CHECKSUMS:
   APIKit: a39ff72ac44efc15513fd1b98800f63c525be61b
   BigInt: 76b5dfdfa3e2e478d4ffdf161aeede5502e2742f
   Branch: 127d29ab0a8866025eece1cf9e950ddb6f7d4070
+  CocoaLumberjack: db7cc9e464771f12054c22ff6947c5a58d43a0fd
   Crashlytics: 915a7787b84f635fb2a81f92a90e265c2c413f76
   CryptoSwift: 6c778d69282bed3b4e975ff97a79d074f20bb011
   Eureka: b88fb930e42c79f8c03c373d0fcdc28c1d6c50ed
@@ -195,6 +201,6 @@ SPEC CHECKSUMS:
   TrustWeb3Provider: efa138f22b8072661875b9875ecd8948a51e58f8
   URLNavigator: 2357a32f3b3787b748bf87deb927761f8b0f7f53
 
-PODFILE CHECKSUM: abff3486db82c3d5eeb69ad94b42548a558f05c4
+PODFILE CHECKSUM: b6714428ae7a89f3de9930551cd5754be93a25ea
 
 COCOAPODS: 1.5.3
