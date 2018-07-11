@@ -22,6 +22,8 @@
 		8789C96F20F65D8000307E4C /* CategoryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789C96E20F65D8000307E4C /* CategoryHeaderView.swift */; };
 		8789C97120F65D9900307E4C /* TourPreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789C97020F65D9900307E4C /* TourPreviewCell.swift */; };
 		8789C97320F66B6600307E4C /* PopularPreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789C97220F66B6600307E4C /* PopularPreviewCell.swift */; };
+		8789C97520F66EE000307E4C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789C97420F66EE000307E4C /* HomeViewModel.swift */; };
+		8789C97820F66F0100307E4C /* TourDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789C97720F66F0100307E4C /* TourDetailsViewController.swift */; };
 		87E7A34D20F50F86005B8BFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A34C20F50F86005B8BFA /* AppDelegate.swift */; };
 		87E7A34F20F50F86005B8BFA /* ToursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A34E20F50F86005B8BFA /* ToursViewController.swift */; };
 		87E7A35420F50F86005B8BFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87E7A35220F50F86005B8BFA /* Main.storyboard */; };
@@ -422,6 +424,8 @@
 		8789C96E20F65D8000307E4C /* CategoryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHeaderView.swift; sourceTree = "<group>"; };
 		8789C97020F65D9900307E4C /* TourPreviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourPreviewCell.swift; sourceTree = "<group>"; };
 		8789C97220F66B6600307E4C /* PopularPreviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularPreviewCell.swift; sourceTree = "<group>"; };
+		8789C97420F66EE000307E4C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		8789C97720F66F0100307E4C /* TourDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourDetailsViewController.swift; sourceTree = "<group>"; };
 		87E7A34920F50F86005B8BFA /* Toto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Toto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87E7A34C20F50F86005B8BFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87E7A34E20F50F86005B8BFA /* ToursViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToursViewController.swift; sourceTree = "<group>"; };
@@ -862,6 +866,31 @@
 				87E7A34E20F50F86005B8BFA /* ToursViewController.swift */,
 			);
 			path = Tours;
+			sourceTree = "<group>";
+		};
+		8789C97620F66EEB00307E4C /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				8789C97720F66F0100307E4C /* TourDetailsViewController.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		8789C97920F66F0F00307E4C /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				8789C96920F65BA900307E4C /* SearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		8789C97B20F66F5100307E4C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8789C96720F65AB400307E4C /* HomeViewController.swift */,
+				8789C97420F66EE000307E4C /* HomeViewModel.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		87E7A34020F50F86005B8BFA = {
@@ -2072,7 +2101,7 @@
 		87E7A6AE20F51992005B8BFA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				87E7A6B220F51FBA005B8BFA /* Home */,
+				87E7A6B220F51FBA005B8BFA /* Root */,
 				87E7A6AF20F51DF0005B8BFA /* Tours */,
 			);
 			path = Views;
@@ -2081,19 +2110,20 @@
 		87E7A6AF20F51DF0005B8BFA /* Tours */ = {
 			isa = PBXGroup;
 			children = (
+				8789C97B20F66F5100307E4C /* Home */,
 				8789C96D20F65D5700307E4C /* Tours */,
-				8789C96720F65AB400307E4C /* HomeViewController.swift */,
-				8789C96920F65BA900307E4C /* SearchViewController.swift */,
+				8789C97620F66EEB00307E4C /* Details */,
+				8789C97920F66F0F00307E4C /* Search */,
 			);
 			path = Tours;
 			sourceTree = "<group>";
 		};
-		87E7A6B220F51FBA005B8BFA /* Home */ = {
+		87E7A6B220F51FBA005B8BFA /* Root */ = {
 			isa = PBXGroup;
 			children = (
 				87E7A6B320F51FE3005B8BFA /* TotoTabBarController.swift */,
 			);
-			path = Home;
+			path = Root;
 			sourceTree = "<group>";
 		};
 		87E7A6B520F63B89005B8BFA /* Networking */ = {
@@ -2707,6 +2737,7 @@
 				87E7A62620F51279005B8BFA /* Bundle.swift in Sources */,
 				87E7A66220F5127A005B8BFA /* TransactionsTableView.swift in Sources */,
 				87E7A58620F51279005B8BFA /* DepositCoordinator.swift in Sources */,
+				8789C97520F66EE000307E4C /* HomeViewModel.swift in Sources */,
 				87E7A65420F5127A005B8BFA /* TransactionsTracker.swift in Sources */,
 				87E7A64B20F5127A005B8BFA /* BalanceBaseViewModel.swift in Sources */,
 				87E7A58020F51279005B8BFA /* PreferencesController.swift in Sources */,
@@ -2720,6 +2751,7 @@
 				87E7A66720F5127A005B8BFA /* AccountViewCell.swift in Sources */,
 				87E7A59820F51279005B8BFA /* ScriptMessageProxy.swift in Sources */,
 				87E7A57620F51279005B8BFA /* SendInputErrors.swift in Sources */,
+				8789C97820F66F0100307E4C /* TourDetailsViewController.swift in Sources */,
 				87E7A5B620F51279005B8BFA /* ImportType.swift in Sources */,
 				87E7A61520F51279005B8BFA /* Data.swift in Sources */,
 				87E7A61320F51279005B8BFA /* DecryptError.swift in Sources */,
