@@ -16,6 +16,12 @@
 		8789C96320F6427D00307E4C /* LogFormater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789C96020F6427D00307E4C /* LogFormater.swift */; };
 		8789C96420F6427D00307E4C /* LogsMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789C96120F6427D00307E4C /* LogsMgr.swift */; };
 		8789C96620F644B800307E4C /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789C96520F644B800307E4C /* StringUtils.swift */; };
+		8789C96820F65AB400307E4C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789C96720F65AB400307E4C /* HomeViewController.swift */; };
+		8789C96A20F65BA900307E4C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789C96920F65BA900307E4C /* SearchViewController.swift */; };
+		8789C96C20F65BCE00307E4C /* Tour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789C96B20F65BCE00307E4C /* Tour.swift */; };
+		8789C96F20F65D8000307E4C /* CategoryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789C96E20F65D8000307E4C /* CategoryHeaderView.swift */; };
+		8789C97120F65D9900307E4C /* TourPreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789C97020F65D9900307E4C /* TourPreviewCell.swift */; };
+		8789C97320F66B6600307E4C /* PopularPreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789C97220F66B6600307E4C /* PopularPreviewCell.swift */; };
 		87E7A34D20F50F86005B8BFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A34C20F50F86005B8BFA /* AppDelegate.swift */; };
 		87E7A34F20F50F86005B8BFA /* ToursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A34E20F50F86005B8BFA /* ToursViewController.swift */; };
 		87E7A35420F50F86005B8BFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87E7A35220F50F86005B8BFA /* Main.storyboard */; };
@@ -410,6 +416,12 @@
 		8789C96020F6427D00307E4C /* LogFormater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogFormater.swift; sourceTree = "<group>"; };
 		8789C96120F6427D00307E4C /* LogsMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogsMgr.swift; sourceTree = "<group>"; };
 		8789C96520F644B800307E4C /* StringUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
+		8789C96720F65AB400307E4C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		8789C96920F65BA900307E4C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		8789C96B20F65BCE00307E4C /* Tour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tour.swift; sourceTree = "<group>"; };
+		8789C96E20F65D8000307E4C /* CategoryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHeaderView.swift; sourceTree = "<group>"; };
+		8789C97020F65D9900307E4C /* TourPreviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourPreviewCell.swift; sourceTree = "<group>"; };
+		8789C97220F66B6600307E4C /* PopularPreviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularPreviewCell.swift; sourceTree = "<group>"; };
 		87E7A34920F50F86005B8BFA /* Toto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Toto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87E7A34C20F50F86005B8BFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87E7A34E20F50F86005B8BFA /* ToursViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToursViewController.swift; sourceTree = "<group>"; };
@@ -839,6 +851,17 @@
 				8789C96120F6427D00307E4C /* LogsMgr.swift */,
 			);
 			path = Log;
+			sourceTree = "<group>";
+		};
+		8789C96D20F65D5700307E4C /* Tours */ = {
+			isa = PBXGroup;
+			children = (
+				8789C96E20F65D8000307E4C /* CategoryHeaderView.swift */,
+				8789C97220F66B6600307E4C /* PopularPreviewCell.swift */,
+				8789C97020F65D9900307E4C /* TourPreviewCell.swift */,
+				87E7A34E20F50F86005B8BFA /* ToursViewController.swift */,
+			);
+			path = Tours;
 			sourceTree = "<group>";
 		};
 		87E7A34020F50F86005B8BFA = {
@@ -2058,7 +2081,9 @@
 		87E7A6AF20F51DF0005B8BFA /* Tours */ = {
 			isa = PBXGroup;
 			children = (
-				87E7A34E20F50F86005B8BFA /* ToursViewController.swift */,
+				8789C96D20F65D5700307E4C /* Tours */,
+				8789C96720F65AB400307E4C /* HomeViewController.swift */,
+				8789C96920F65BA900307E4C /* SearchViewController.swift */,
 			);
 			path = Tours;
 			sourceTree = "<group>";
@@ -2120,6 +2145,7 @@
 		87E7A6CF20F63CEA005B8BFA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8789C96B20F65BCE00307E4C /* Tour.swift */,
 				8789C95820F640FF00307E4C /* Category.swift */,
 				8789C95A20F6414800307E4C /* ResponseBase.swift */,
 				87E7A6D020F63CF8005B8BFA /* Base */,
@@ -2362,6 +2388,7 @@
 				87E7A6CD20F63C28005B8BFA /* String+Json.swift in Sources */,
 				87E7A5C120F51279005B8BFA /* Wallet.swift in Sources */,
 				87E7A68720F5127A005B8BFA /* EditTokenTableCellViewModel.swift in Sources */,
+				8789C97320F66B6600307E4C /* PopularPreviewCell.swift in Sources */,
 				87E7A68820F5127A005B8BFA /* NonFungibleTokenCellViewModel.swift in Sources */,
 				87E7A63E20F51279005B8BFA /* BrowserViewController.swift in Sources */,
 				87E7A59C20F51279005B8BFA /* SharedMigrationInitializer.swift in Sources */,
@@ -2448,6 +2475,7 @@
 				87E7A57D20F51279005B8BFA /* WellDoneViewController.swift in Sources */,
 				87E7A5D220F51279005B8BFA /* PasscodeCharacterView.swift in Sources */,
 				87E7A67620F5127A005B8BFA /* EnterPasswordViewController.swift in Sources */,
+				8789C96A20F65BA900307E4C /* SearchViewController.swift in Sources */,
 				87E7A59320F51279005B8BFA /* TrustNetwork.swift in Sources */,
 				87E7A5E520F51279005B8BFA /* InCoordinatorError.swift in Sources */,
 				87E7A55820F51278005B8BFA /* ErrorView.swift in Sources */,
@@ -2467,6 +2495,7 @@
 				87E7A56E20F51279005B8BFA /* RPCServers.swift in Sources */,
 				87E7A5ED20F51279005B8BFA /* TransactionConfiguration.swift in Sources */,
 				87E7A67420F5127A005B8BFA /* ImportWalletViewController.swift in Sources */,
+				8789C97120F65D9900307E4C /* TourPreviewCell.swift in Sources */,
 				87E7A5CE20F51279005B8BFA /* ProtectionCoordinator.swift in Sources */,
 				87E7A5A120F51279005B8BFA /* ENSRecord.swift in Sources */,
 				87E7A54F20F51278005B8BFA /* NetworkStateView.swift in Sources */,
@@ -2476,6 +2505,7 @@
 				87E7A54620F51278005B8BFA /* InfoHeaderView.swift in Sources */,
 				87E7A57920F51279005B8BFA /* NetworksViewController.swift in Sources */,
 				87E7A59220F51279005B8BFA /* AppTracker.swift in Sources */,
+				8789C96C20F65BCE00307E4C /* Tour.swift in Sources */,
 				87E7A56A20F51279005B8BFA /* Preferences.swift in Sources */,
 				87E7A69520F5127A005B8BFA /* TokensLayout.swift in Sources */,
 				87E7A58D20F51279005B8BFA /* URLNavigable.swift in Sources */,
@@ -2497,6 +2527,7 @@
 				87E7A69D20F5127A005B8BFA /* NFTokenViewController.swift in Sources */,
 				87E7A63120F51279005B8BFA /* BrowserURLParser.swift in Sources */,
 				87E7A62C20F51279005B8BFA /* BookmarksViewModel.swift in Sources */,
+				8789C96820F65AB400307E4C /* HomeViewController.swift in Sources */,
 				87E7A55E20F51278005B8BFA /* SupportViewModel.swift in Sources */,
 				87E7A6A620F5127A005B8BFA /* NonFungibleTokenViewCell.swift in Sources */,
 				87E7A5A320F51279005B8BFA /* ENSClient.swift in Sources */,
@@ -2640,6 +2671,7 @@
 				87E7A55B20F51278005B8BFA /* SettingsCoordinator.swift in Sources */,
 				87E7A63B20F51279005B8BFA /* CookiesStore.swift in Sources */,
 				87E7A5FC20F51279005B8BFA /* StringFormatter.swift in Sources */,
+				8789C96F20F65D8000307E4C /* CategoryHeaderView.swift in Sources */,
 				87E7A61F20F51279005B8BFA /* UIButton.swift in Sources */,
 				87E7A62420F51279005B8BFA /* Double.swift in Sources */,
 				87E7A69420F5127A005B8BFA /* ERC20Token.swift in Sources */,

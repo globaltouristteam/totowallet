@@ -1,5 +1,5 @@
 //
-//  Category.swift
+//  PopularPreviewCell.swift
 //  Toto
 //
 //  Created by Nhuan Vu on 7/11/18.
@@ -8,10 +8,9 @@
 
 import UIKit
 
-class Category: JsonObject {
-    var tours: [Tour] = []
+class PopularPreviewCell: UICollectionViewCell {
     
-    func isPopular() -> Bool {
-        return false
+    func config(with category: Category) {
+        
     }
 }

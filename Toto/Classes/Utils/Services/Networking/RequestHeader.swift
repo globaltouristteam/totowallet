@@ -30,7 +30,3 @@ public class SecureHeader: RequestHeader {
         return headers
     }
 }
-
-public class QUpMapHeader: RequestHeader {
-
-}
