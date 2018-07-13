@@ -23,6 +23,6 @@ class CategoryHeaderView: UICollectionReusableView {
     }
     
     func config(with category: Category) {
-        
+        lblTitle.text = category.name
     }
 }

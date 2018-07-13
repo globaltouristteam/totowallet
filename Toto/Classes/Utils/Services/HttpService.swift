@@ -20,22 +20,22 @@ class HttpService: NetworkingService {
         callServer(ResponseBase<Category>.self, params, serviceCompletionBlock: completionBlock)
     }
     
-    public func getTours(_ completionBlock: JsonObjectCompletionHandler<ResponseBase<Category>>?) {
+    public func getTours(_ completionBlock: JsonObjectCompletionHandler<ResponseBase<Tour>>?) {
         let params = NetworkingServiceParams()
         params.requestMethod = .get
         params.requestURL = serverUrl() + "/tour_list"
         params.json = false
         
-        callServer(ResponseBase<Category>.self, params, serviceCompletionBlock: completionBlock)
+        callServer(ResponseBase<Tour>.self, params, serviceCompletionBlock: completionBlock)
     }
     
-    public func search(_ completionBlock: JsonObjectCompletionHandler<ResponseBase<Category>>?) {
+    public func search(_ completionBlock: JsonObjectCompletionHandler<ResponseBase<Tour>>?) {
         let params = NetworkingServiceParams()
         params.requestMethod = .get
         params.requestURL = serverUrl() + "/search"
         params.json = false
         
-        callServer(ResponseBase<Category>.self, params, serviceCompletionBlock: completionBlock)
+        callServer(ResponseBase<Tour>.self, params, serviceCompletionBlock: completionBlock)
     }
 
 }

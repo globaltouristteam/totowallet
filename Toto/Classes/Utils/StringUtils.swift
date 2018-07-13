@@ -8,6 +8,17 @@
 
 import Foundation
 
+func localizedString(forKey key: String) -> String {
+    let bundle = Bundle.main
+    var result = bundle.localizedString(forKey: key, value: nil, table: nil)
+    
+    if result == key {
+        result = bundle.localizedString(forKey: key, value: nil, table: "Toto")
+    }
+    
+    return result
+}
+
 public class StringUtils {
 
     /// Check string null or empty

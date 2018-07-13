@@ -7,6 +7,7 @@ target 'Toto' do
 
   # App
   pod 'CocoaLumberjack/Swift'
+  pod 'PKHUD'
 
   # Trust wallet
   pod 'BigInt', '~> 3.0'

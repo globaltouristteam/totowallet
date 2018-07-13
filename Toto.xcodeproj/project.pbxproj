@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		26F93A6A74907465BD5B6542 /* Pods_Toto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC85183EFD336BCEE3B90203 /* Pods_Toto.framework */; };
+		877D69CF20F8FBDF009FE9DA /* UIViewController+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877D69CE20F8FBDF009FE9DA /* UIViewController+Loading.swift */; };
+		877D69D120F90450009FE9DA /* UIImageView+Cached.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877D69D020F90450009FE9DA /* UIImageView+Cached.swift */; };
+		877D69D320F90697009FE9DA /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877D69D220F90696009FE9DA /* ImageUtils.swift */; };
+		877D69D620F91619009FE9DA /* Toto.strings in Resources */ = {isa = PBXBuildFile; fileRef = 877D69D820F91619009FE9DA /* Toto.strings */; };
 		8789C95520F6406300307E4C /* Threading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789C95420F6406200307E4C /* Threading.swift */; };
 		8789C95920F640FF00307E4C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789C95820F640FF00307E4C /* Category.swift */; };
 		8789C95B20F6414900307E4C /* ResponseBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789C95A20F6414800307E4C /* ResponseBase.swift */; };
@@ -22,7 +26,6 @@
 		8789C96F20F65D8000307E4C /* CategoryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789C96E20F65D8000307E4C /* CategoryHeaderView.swift */; };
 		8789C97120F65D9900307E4C /* TourPreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789C97020F65D9900307E4C /* TourPreviewCell.swift */; };
 		8789C97320F66B6600307E4C /* PopularPreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789C97220F66B6600307E4C /* PopularPreviewCell.swift */; };
-		8789C97520F66EE000307E4C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789C97420F66EE000307E4C /* HomeViewModel.swift */; };
 		8789C97820F66F0100307E4C /* TourDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789C97720F66F0100307E4C /* TourDetailsViewController.swift */; };
 		87E7A34D20F50F86005B8BFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A34C20F50F86005B8BFA /* AppDelegate.swift */; };
 		87E7A34F20F50F86005B8BFA /* ToursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A34E20F50F86005B8BFA /* ToursViewController.swift */; };
@@ -410,6 +413,22 @@
 
 /* Begin PBXFileReference section */
 		575A0E6978445577ADF0037E /* Pods-Toto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Toto.release.xcconfig"; path = "Pods/Target Support Files/Pods-Toto/Pods-Toto.release.xcconfig"; sourceTree = "<group>"; };
+		877D69CE20F8FBDF009FE9DA /* UIViewController+Loading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Loading.swift"; sourceTree = "<group>"; };
+		877D69D020F90450009FE9DA /* UIImageView+Cached.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Cached.swift"; sourceTree = "<group>"; };
+		877D69D220F90696009FE9DA /* ImageUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUtils.swift; sourceTree = "<group>"; };
+		877D69D720F91619009FE9DA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Toto.strings; sourceTree = "<group>"; };
+		877D69D920F91629009FE9DA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Toto.strings; sourceTree = "<group>"; };
+		877D69DA20F91633009FE9DA /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Toto.strings; sourceTree = "<group>"; };
+		877D69DB20F91635009FE9DA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Toto.strings"; sourceTree = "<group>"; };
+		877D69DC20F91636009FE9DA /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Toto.strings; sourceTree = "<group>"; };
+		877D69DD20F91636009FE9DA /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Toto.strings; sourceTree = "<group>"; };
+		877D69DE20F91637009FE9DA /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Toto.strings; sourceTree = "<group>"; };
+		877D69DF20F91637009FE9DA /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Toto.strings"; sourceTree = "<group>"; };
+		877D69E020F91638009FE9DA /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Toto.strings"; sourceTree = "<group>"; };
+		877D69E120F91639009FE9DA /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Toto.strings; sourceTree = "<group>"; };
+		877D69E220F9163A009FE9DA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Toto.strings; sourceTree = "<group>"; };
+		877D69E320F9163A009FE9DA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Toto.strings; sourceTree = "<group>"; };
+		877D69E420F9163C009FE9DA /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/Toto.strings; sourceTree = "<group>"; };
 		8789C95420F6406200307E4C /* Threading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Threading.swift; sourceTree = "<group>"; };
 		8789C95820F640FF00307E4C /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		8789C95A20F6414800307E4C /* ResponseBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseBase.swift; sourceTree = "<group>"; };
@@ -424,7 +443,6 @@
 		8789C96E20F65D8000307E4C /* CategoryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHeaderView.swift; sourceTree = "<group>"; };
 		8789C97020F65D9900307E4C /* TourPreviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourPreviewCell.swift; sourceTree = "<group>"; };
 		8789C97220F66B6600307E4C /* PopularPreviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularPreviewCell.swift; sourceTree = "<group>"; };
-		8789C97420F66EE000307E4C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		8789C97720F66F0100307E4C /* TourDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourDetailsViewController.swift; sourceTree = "<group>"; };
 		87E7A34920F50F86005B8BFA /* Toto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Toto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87E7A34C20F50F86005B8BFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -847,6 +865,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		877D69CD20F8FBD7009FE9DA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				877D69D220F90696009FE9DA /* ImageUtils.swift */,
+				877D69D020F90450009FE9DA /* UIImageView+Cached.swift */,
+				877D69CE20F8FBDF009FE9DA /* UIViewController+Loading.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		8789C95E20F6427D00307E4C /* Log */ = {
 			isa = PBXGroup;
 			children = (
@@ -888,7 +916,6 @@
 			isa = PBXGroup;
 			children = (
 				8789C96720F65AB400307E4C /* HomeViewController.swift */,
-				8789C97420F66EE000307E4C /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -939,6 +966,7 @@
 				87E7A35520F50F88005B8BFA /* Assets.xcassets */,
 				87E7A35720F50F88005B8BFA /* LaunchScreen.storyboard */,
 				87E7A35220F50F86005B8BFA /* Main.storyboard */,
+				877D69D820F91619009FE9DA /* Toto.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -2151,6 +2179,7 @@
 		87E7A6C320F63C1B005B8BFA /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				877D69CD20F8FBD7009FE9DA /* View */,
 				8789C96520F644B800307E4C /* StringUtils.swift */,
 				8789C95420F6406200307E4C /* Threading.swift */,
 				87E7A6C420F63C28005B8BFA /* Json */,
@@ -2287,6 +2316,7 @@
 				87E7A58420F51279005B8BFA /* LaunchScreen.storyboard in Resources */,
 				87E7A5C420F51279005B8BFA /* Assets.xcassets in Resources */,
 				87E7A35620F50F88005B8BFA /* Assets.xcassets in Resources */,
+				877D69D620F91619009FE9DA /* Toto.strings in Resources */,
 				87E7A6AC20F5127A005B8BFA /* Localizable.strings in Resources */,
 				87E7A66820F5127A005B8BFA /* AccountViewCell.xib in Resources */,
 				87E7A35420F50F86005B8BFA /* Main.storyboard in Resources */,
@@ -2335,6 +2365,7 @@
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/QRCodeReaderViewController/QRCodeReaderViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
@@ -2367,6 +2398,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCodeReaderViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
@@ -2420,6 +2452,7 @@
 				87E7A68720F5127A005B8BFA /* EditTokenTableCellViewModel.swift in Sources */,
 				8789C97320F66B6600307E4C /* PopularPreviewCell.swift in Sources */,
 				87E7A68820F5127A005B8BFA /* NonFungibleTokenCellViewModel.swift in Sources */,
+				877D69D120F90450009FE9DA /* UIImageView+Cached.swift in Sources */,
 				87E7A63E20F51279005B8BFA /* BrowserViewController.swift in Sources */,
 				87E7A59C20F51279005B8BFA /* SharedMigrationInitializer.swift in Sources */,
 				87E7A67020F5127A005B8BFA /* ImportSelectionType.swift in Sources */,
@@ -2548,6 +2581,7 @@
 				87E7A63C20F51279005B8BFA /* HistoryStore.swift in Sources */,
 				87E7A60120F51279005B8BFA /* EthereumUnit.swift in Sources */,
 				87E7A68420F5127A005B8BFA /* TokensBalanceService.swift in Sources */,
+				877D69D320F90697009FE9DA /* ImageUtils.swift in Sources */,
 				87E7A63A20F51279005B8BFA /* BookmarksStore.swift in Sources */,
 				87E7A55F20F51278005B8BFA /* HelpUsViewModel.swift in Sources */,
 				87E7A67B20F5127A005B8BFA /* BackupCoordinator.swift in Sources */,
@@ -2737,7 +2771,6 @@
 				87E7A62620F51279005B8BFA /* Bundle.swift in Sources */,
 				87E7A66220F5127A005B8BFA /* TransactionsTableView.swift in Sources */,
 				87E7A58620F51279005B8BFA /* DepositCoordinator.swift in Sources */,
-				8789C97520F66EE000307E4C /* HomeViewModel.swift in Sources */,
 				87E7A65420F5127A005B8BFA /* TransactionsTracker.swift in Sources */,
 				87E7A64B20F5127A005B8BFA /* BalanceBaseViewModel.swift in Sources */,
 				87E7A58020F51279005B8BFA /* PreferencesController.swift in Sources */,
@@ -2794,6 +2827,7 @@
 				87E7A64D20F5127A005B8BFA /* TransactionDetailsViewModel.swift in Sources */,
 				87E7A5C220F51279005B8BFA /* InCoordinator.swift in Sources */,
 				87E7A62520F51279005B8BFA /* Realm+Extensions.swift in Sources */,
+				877D69CF20F8FBDF009FE9DA /* UIViewController+Loading.swift in Sources */,
 				87E7A63520F51279005B8BFA /* Bookmark.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2801,6 +2835,26 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		877D69D820F91619009FE9DA /* Toto.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				877D69D720F91619009FE9DA /* en */,
+				877D69D920F91629009FE9DA /* de */,
+				877D69DA20F91633009FE9DA /* ar */,
+				877D69DB20F91635009FE9DA /* zh-Hans */,
+				877D69DC20F91636009FE9DA /* ja */,
+				877D69DD20F91636009FE9DA /* es */,
+				877D69DE20F91637009FE9DA /* it */,
+				877D69DF20F91637009FE9DA /* zh-Hant */,
+				877D69E020F91638009FE9DA /* pt-BR */,
+				877D69E120F91639009FE9DA /* vi */,
+				877D69E220F9163A009FE9DA /* ru */,
+				877D69E320F9163A009FE9DA /* fr */,
+				877D69E420F9163C009FE9DA /* th */,
+			);
+			name = Toto.strings;
+			sourceTree = "<group>";
+		};
 		87E7A35220F50F86005B8BFA /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

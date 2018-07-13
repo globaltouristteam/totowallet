@@ -10,13 +10,26 @@ import UIKit
 
 let kTourLimit = 2
 
-class ToursViewController: UICollectionViewController {
+class ToursViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     var showAll: Bool = true
-    var data: [Category] = []
+    var data: [Category] = [] {
+        didSet {
+            collectionView?.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
+    }
+    
+    // MARK: Setup
+    func setupView() {
+        if let layout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.minimumInteritemSpacing = 8
+            layout.minimumLineSpacing = 8
+        }
     }
     
     // MARK: - UICollectionViewControllerDelegate, UICollectionViewControllerDatasource
@@ -25,6 +38,10 @@ class ToursViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        let category = data[section]
+        if category.isPopular && !showAll {
+            return 1
+        }
         if showAll {
             return data[section].tours.count
         } else {
@@ -36,11 +53,17 @@ class ToursViewController: UICollectionViewController {
         
         switch kind {
         case UICollectionElementKindSectionHeader:
+            let category = data[indexPath.section]
             let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader,
                                                                          withReuseIdentifier: "CategoryHeaderView",
                                                                          for: indexPath) as! CategoryHeaderView
-            header.config(with: data[indexPath.section])
+            header.config(with: category)
             header.delegate = self
+            if category.isPopular && !showAll {
+                header.backgroundColor = .white
+            } else {
+                header.backgroundColor = .clear
+            }
             return header
             
         default:
@@ -48,9 +71,20 @@ class ToursViewController: UICollectionViewController {
         }
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        var height = (collectionView.frame.width - 32) / (16 / 9)
+        height += 70 + 75 + 1
+        
+        let category = data[indexPath.section]
+        if category.isPopular && !showAll {
+            height += 16 // Padding
+        }
+        return CGSize(width: collectionView.frame.width, height: height)
+    }
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let category = data[indexPath.section]
-        if category.isPopular() {
+        if category.isPopular && !showAll {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PopularPreviewCell", for: indexPath) as! PopularPreviewCell
             cell.config(with: category)
             return cell
@@ -64,8 +98,11 @@ class ToursViewController: UICollectionViewController {
 
 extension ToursViewController: CategoryHeaderViewDelegate {
     func didClickSeeAll(at view: CategoryHeaderView) {
+        guard let index = collectionView?.visibleSupplementaryViews(ofKind: UICollectionElementKindSectionHeader).index(of: view) else { return }
+        let category = data[index]
         let controller = storyboard?.instantiateViewController(withIdentifier: "ToursViewController") as! ToursViewController
-        controller.data = data
+        controller.title = category.name
+        controller.data = [category]
         controller.showAll = true
         navigationController?.pushViewController(controller, animated: true)
     }
