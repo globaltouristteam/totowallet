@@ -14,10 +14,26 @@ class TourDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        if let id = tour.id {
+            loadData(with: id)
+        }
     }
     
     func setupView() {
         hidesBottomBarWhenPushed = true
         title = tour.title
+    }
+    
+    func loadData(with tour: String) {
+        showLoading()
+        HttpService.shared.getTourDetails(tour) { [weak self] (tour, error) in
+            guard let `self` = self else { return }
+            self.hideLoading()
+            if let tour = tour {
+                self.tour = tour
+            } else {
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
     }
 }

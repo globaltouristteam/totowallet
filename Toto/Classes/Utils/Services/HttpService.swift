@@ -49,4 +49,19 @@ class HttpService: NetworkingService {
         callServer(ResponseBase<Tour>.self, params, serviceCompletionBlock: completionBlock)
     }
 
+    public func getTourDetails(_ id: String, completionBlock: JsonObjectCompletionHandler<Tour>?) {
+        let params = NetworkingServiceParams()
+        params.requestMethod = .get
+        params.requestURL = serverUrl() + "/tour_details/\(id)"
+        params.json = false
+        
+        callServer(ResponseBase<Tour>.self, params) { (tours, error) in
+            if let tour = tours?.list?.first {
+                completionBlock?(tour, nil)
+            } else {
+                completionBlock?(nil, error)
+            }
+        }
+    }
+
 }
