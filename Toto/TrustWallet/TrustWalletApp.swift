@@ -17,7 +17,6 @@ class TrustWalletApp: NSObject, UISplitViewControllerDelegate {
     
     override init() {
         super.init()
-        _ = application(UIApplication.shared, didFinishLaunchingWithOptions: nil)
         applicationDidBecomeActive(UIApplication.shared)
     }
     
