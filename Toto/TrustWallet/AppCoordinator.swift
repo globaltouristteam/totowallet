@@ -66,8 +66,8 @@ class AppCoordinator: NSObject, Coordinator {
             navigator: navigator.navigator
         )
         coordinator.delegate = self
-        coordinator.start()
         addCoordinator(coordinator)
+        coordinator.start()
 
         // Activate last event on first sign in
         guard let event = navigator.branch.lastEvent else { return }
@@ -107,6 +107,8 @@ class AppCoordinator: NSObject, Coordinator {
         CookiesStore.delete()
         navigationController.dismiss(animated: true, completion: nil)
         resetToWelcomeScreen()
+        let tabbar = UIApplication.shared.keyWindow?.rootViewController as? TotoTabBarController
+        tabbar?.addEmptyTabs()
     }
 
     func didRegisterForRemoteNotificationsWithDeviceToken(deviceToken: Data) {

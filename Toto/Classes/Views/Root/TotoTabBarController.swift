@@ -36,6 +36,7 @@ class TotoTabBarController: UITabBarController {
             controllers.append(c)
         }
         viewControllers = controllers
+        presentedViewController?.dismiss(animated: true, completion: nil)
     }
     
     func addEmptyTabs() {
@@ -62,6 +63,7 @@ class TotoTabBarController: UITabBarController {
         controllers.append(settings)
         
         viewControllers = controllers
+        selectedIndex = 0
     }
 }
 

@@ -188,6 +188,7 @@ class InCoordinator: Coordinator {
 
     func showTab(_ selectTab: Tabs) {
         guard let viewControllers = tabBarController?.viewControllers else { return }
+        guard viewControllers.count > selectTab.index else { return }
         guard let nav = viewControllers[selectTab.index] as? UINavigationController else { return }
 
         switch selectTab {
