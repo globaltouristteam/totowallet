@@ -195,6 +195,7 @@ class InCoordinator: Coordinator {
         case .browser(let url):
             if let url = url {
                 browserCoordinator?.openURL(url)
+                return
             }
         case .wallet(let action):
             switch action {

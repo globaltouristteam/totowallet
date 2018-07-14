@@ -8,6 +8,7 @@ import RealmSwift
 import URLNavigator
 import WebKit
 import Branch
+import SafariServices
 
 protocol BrowserCoordinatorDelegate: class {
     func didSentTransaction(transaction: SentTransaction, in coordinator: BrowserCoordinator)
@@ -137,8 +138,10 @@ class BrowserCoordinator: NSObject, Coordinator {
     }
 
     func openURL(_ url: URL) {
-        rootViewController.browserViewController.goTo(url: url)
-        handleToolbar(for: url)
+        //rootViewController.browserViewController.goTo(url: url)
+        //handleToolbar(for: url)
+        let safari = SFSafariViewController(url: url)
+        NavigationManager.shared.topViewController().present(safari, animated: true, completion: nil)
     }
 
     func handleToolbar(for url: URL) {
