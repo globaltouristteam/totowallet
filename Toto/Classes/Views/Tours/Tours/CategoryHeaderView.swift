@@ -24,5 +24,7 @@ class CategoryHeaderView: UICollectionReusableView {
     
     func config(with category: Category) {
         lblTitle.text = category.name
+        lblTitle.textAlignment = category.isPopular ? .center : .natural
+        btnSeeAll.isHidden = category.isPopular
     }
 }

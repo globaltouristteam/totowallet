@@ -49,6 +49,14 @@ class ToursViewController: UICollectionViewController, UICollectionViewDelegateF
         }
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        if showAll {
+            return CGSize(width: collectionView.frame.width, height: 8)
+        } else {
+            return CGSize(width: collectionView.frame.width, height: 60)
+        }
+    }
+    
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         switch kind {
@@ -64,6 +72,7 @@ class ToursViewController: UICollectionViewController, UICollectionViewDelegateF
             } else {
                 header.backgroundColor = .clear
             }
+            header.isHidden = showAll
             return header
             
         default:

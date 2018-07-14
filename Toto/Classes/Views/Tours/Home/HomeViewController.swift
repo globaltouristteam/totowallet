@@ -17,6 +17,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = localizedString(forKey: "title_app")
         loadData()
     }
     

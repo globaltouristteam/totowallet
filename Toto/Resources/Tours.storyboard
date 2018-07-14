@@ -237,7 +237,7 @@
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="whp-B6-MAI">
-                                                                <rect key="frame" x="16" y="0.0" width="309" height="330"/>
+                                                                <rect key="frame" x="16" y="0.0" width="309" height="292"/>
                                                                 <subviews>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SbP-jp-Rys">
                                                                         <rect key="frame" x="0.0" y="0.0" width="309" height="174"/>
@@ -368,7 +368,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AE1-w3-8xR">
-                                    <rect key="frame" x="16" y="30" width="47" height="24"/>
+                                    <rect key="frame" x="16" y="30" width="343" height="24"/>
                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -388,6 +388,7 @@
                                 <constraint firstItem="AE1-w3-8xR" firstAttribute="leading" secondItem="MHe-NU-fEP" secondAttribute="leading" constant="16" id="8GN-We-6Vg"/>
                                 <constraint firstAttribute="trailingMargin" secondItem="57I-xj-uYD" secondAttribute="trailing" constant="16" id="PvK-hd-TXG"/>
                                 <constraint firstItem="57I-xj-uYD" firstAttribute="centerY" secondItem="MHe-NU-fEP" secondAttribute="centerY" multiplier="1.4" id="R2K-px-R3n"/>
+                                <constraint firstAttribute="trailing" secondItem="AE1-w3-8xR" secondAttribute="trailing" constant="16" id="kXe-kJ-Dfe"/>
                             </constraints>
                             <connections>
                                 <outlet property="btnSeeAll" destination="57I-xj-uYD" id="DAN-s5-qDD"/>
@@ -419,16 +420,103 @@
             </objects>
             <point key="canvasLocation" x="3444" y="101"/>
         </scene>
-        <!--View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="xzC-24-J35">
             <objects>
-                <viewController id="iPG-2U-x8l" sceneMemberID="viewController">
+                <viewController id="iPG-2U-x8l" customClass="SearchViewController" customModule="Toto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JeR-O7-CK0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="oOg-Cm-jmc">
+                                <rect key="frame" x="32" y="96" width="311" height="208"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Duration" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2BI-1d-gBA" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                                        <rect key="frame" x="0.0" y="0.0" width="311" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Tl9-ts-KTp"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="iconText" value="🕒"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iconWidth">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iconMarginBottom">
+                                                <real key="value" value="-1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Departure" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jAw-jC-7hL" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                                        <rect key="frame" x="0.0" y="56" width="311" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="58Y-6f-itM"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="iconText" value="🛫"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iconWidth">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iconMarginBottom">
+                                                <real key="value" value="-1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Destination" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T2c-gE-z5d" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                                        <rect key="frame" x="0.0" y="112" width="311" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="eH5-3D-7lB"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iconWidth">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="iconText" value="📍"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iconMarginBottom">
+                                                <real key="value" value="-1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpf-LD-b2Q">
+                                        <rect key="frame" x="0.0" y="168" width="311" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="La0-uz-ILp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Search"/>
+                                        <connections>
+                                            <action selector="btnSearchClicked" destination="iPG-2U-x8l" eventType="touchUpInside" id="SYL-Lc-90u"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" priority="999" constant="350" id="VxB-nW-RRI"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oOg-Cm-jmc" firstAttribute="top" secondItem="8Cq-x7-WBC" secondAttribute="top" constant="32" id="8kf-J1-Ly7"/>
+                            <constraint firstItem="oOg-Cm-jmc" firstAttribute="leading" secondItem="8Cq-x7-WBC" secondAttribute="leading" constant="32" id="97D-jY-vhC"/>
+                            <constraint firstItem="8Cq-x7-WBC" firstAttribute="trailing" secondItem="oOg-Cm-jmc" secondAttribute="trailing" constant="32" id="lEY-lR-oSD"/>
+                            <constraint firstItem="oOg-Cm-jmc" firstAttribute="centerX" secondItem="JeR-O7-CK0" secondAttribute="centerX" id="mHY-dS-Myj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="8Cq-x7-WBC"/>
                     </view>
+                    <connections>
+                        <outlet property="btnSearch" destination="dpf-LD-b2Q" id="U8U-4D-BXI"/>
+                        <outlet property="tfDeparture" destination="jAw-jC-7hL" id="rzY-2y-lFX"/>
+                        <outlet property="tfDestination" destination="T2c-gE-z5d" id="OHL-u8-nCy"/>
+                        <outlet property="tfDuration" destination="2BI-1d-gBA" id="NIB-90-aGZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0vI-ho-VMd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

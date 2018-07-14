@@ -29,12 +29,23 @@ class HttpService: NetworkingService {
         callServer(ResponseBase<Tour>.self, params, serviceCompletionBlock: completionBlock)
     }
     
-    public func search(_ completionBlock: JsonObjectCompletionHandler<ResponseBase<Tour>>?) {
+    public func search(duration: String?, departure: String?, destination: String?, _ completionBlock: JsonObjectCompletionHandler<ResponseBase<Tour>>?) {
         let params = NetworkingServiceParams()
         params.requestMethod = .get
         params.requestURL = serverUrl() + "/search"
         params.json = false
-        
+        var data: [String: String] = [:]
+        if let duration = duration {
+            data["day"] = duration
+        }
+        if let departure = departure {
+            data["depart"] = departure
+        }
+        if let destination = destination {
+            data["des"] = destination
+        }
+        params.requestParams = data
+
         callServer(ResponseBase<Tour>.self, params, serviceCompletionBlock: completionBlock)
     }
 

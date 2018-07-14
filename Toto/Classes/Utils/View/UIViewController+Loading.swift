@@ -25,4 +25,8 @@ extension UIViewController {
     public func hideLoading() {
         HUD.hide()
     }
+    
+    public func showToast(_ message: String) {
+        HUD.flash(.label(message), onView: view)
+    }
 }

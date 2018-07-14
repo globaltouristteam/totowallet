@@ -23,6 +23,7 @@ class TotoTabBarController: UITabBarController {
     func addWalletTabs() {
         var controllers: [UIViewController] = []
         if let tours = viewControllers?.first {
+            tours.title = localizedString(forKey: "title_app")
             controllers.append(tours)
         }
         if let c = TrustWalletApp.shared.coordinator.inCoordinator?.tokensCoordinator?.navigationController {
@@ -40,6 +41,7 @@ class TotoTabBarController: UITabBarController {
     func addEmptyTabs() {
         var controllers: [UIViewController] = []
         if let tours = viewControllers?.first {
+            tours.title = localizedString(forKey: "title_app")
             controllers.append(tours)
         }
         

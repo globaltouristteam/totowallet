@@ -8,6 +8,8 @@ target 'Toto' do
   # App
   pod 'CocoaLumberjack/Swift'
   pod 'PKHUD'
+  pod 'SkyFloatingLabelTextField'
+  pod 'AMTextFieldPickerExtension'
 
   # Trust wallet
   pod 'BigInt', '~> 3.0'
