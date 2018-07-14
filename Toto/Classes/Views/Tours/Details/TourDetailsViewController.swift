@@ -9,5 +9,15 @@
 import UIKit
 
 class TourDetailsViewController: UIViewController {
+    var tour: Tour!
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupView()
+    }
+    
+    func setupView() {
+        hidesBottomBarWhenPushed = true
+        title = tour.title
+    }
 }

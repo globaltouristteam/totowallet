@@ -8,8 +8,13 @@
 
 import UIKit
 
+protocol PopularPreviewCellDelegate: class {
+    func didSelectTour(_ tour: Tour)
+}
+
 class PopularPreviewCell: UICollectionViewCell, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
+    weak var delegate: PopularPreviewCellDelegate?
     @IBOutlet var collectionView: UICollectionView!
 
     var category: Category = Category()
@@ -35,5 +40,9 @@ class PopularPreviewCell: UICollectionViewCell, UICollectionViewDelegateFlowLayo
         cell.viewContainer.layer.borderColor = UIColor.lightGray.cgColor
         cell.viewContainer.layer.borderWidth = 0.5
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.didSelectTour(category.tours[indexPath.row])
     }
 }

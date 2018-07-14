@@ -209,7 +209,7 @@
                                     <outlet property="lblPrice" destination="dxE-9a-D47" id="54q-dE-gfK"/>
                                     <outlet property="lblTitle" destination="ajJ-is-Cv8" id="zej-jg-Xh8"/>
                                     <outlet property="viewContainer" destination="tAC-i7-cpm" id="USb-6z-mcw"/>
-                                    <segue destination="4Fw-Xh-bRd" kind="show" id="iD1-PX-aRo"/>
+                                    <segue destination="4Fw-Xh-bRd" kind="show" identifier="TourDetails" id="iD1-PX-aRo"/>
                                 </connections>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="PopularPreviewCell" id="0ol-zs-YuE" customClass="PopularPreviewCell" customModule="Toto" customModuleProvider="target">

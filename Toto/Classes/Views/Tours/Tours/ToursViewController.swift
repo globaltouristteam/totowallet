@@ -26,9 +26,28 @@ class ToursViewController: UICollectionViewController, UICollectionViewDelegateF
     
     // MARK: Setup
     func setupView() {
+        hidesBottomBarWhenPushed = true
         if let layout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.minimumInteritemSpacing = 8
             layout.minimumLineSpacing = 8
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        switch segue.destination {
+        case let details as TourDetailsViewController:
+            if let tour = sender as? Tour {
+                details.tour = tour
+            } else if let cell = sender as? TourPreviewCell {
+                if let index = collectionView?.indexPath(for: cell) {
+                    details.tour = data[index.section].tours[index.row]
+                }
+            }
+            break
+        default:
+            break
         }
     }
     
@@ -96,6 +115,7 @@ class ToursViewController: UICollectionViewController, UICollectionViewDelegateF
         if category.isPopular && !showAll {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PopularPreviewCell", for: indexPath) as! PopularPreviewCell
             cell.config(with: category)
+            cell.delegate = self
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TourPreviewCell", for: indexPath) as! TourPreviewCell
@@ -107,8 +127,7 @@ class ToursViewController: UICollectionViewController, UICollectionViewDelegateF
 
 extension ToursViewController: CategoryHeaderViewDelegate {
     func didClickSeeAll(at view: CategoryHeaderView) {
-        guard let index = collectionView?.visibleSupplementaryViews(ofKind: UICollectionElementKindSectionHeader).index(of: view) else { return }
-        let category = data[index]
+        guard let category = data.first(where: { $0.name == view.lblTitle.text}) else { return }
         let controller = storyboard?.instantiateViewController(withIdentifier: "ToursViewController") as! ToursViewController
         controller.title = category.name
         controller.data = [category]
@@ -117,3 +136,8 @@ extension ToursViewController: CategoryHeaderViewDelegate {
     }
 }
 
+extension ToursViewController: PopularPreviewCellDelegate {
+    func didSelectTour(_ tour: Tour) {
+        performSegue(withIdentifier: "TourDetails", sender: tour)
+    }
+}
