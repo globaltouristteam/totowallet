@@ -146,6 +146,6 @@ extension ToursViewController: CategoryHeaderViewDelegate {
 
 extension ToursViewController: PopularPreviewCellDelegate {
     func didSelectTour(_ tour: Tour) {
-        performSegue(withIdentifier: "TourDetails", sender: tour)
+        //performSegue(withIdentifier: "TourDetails", sender: tour)
     }
 }
