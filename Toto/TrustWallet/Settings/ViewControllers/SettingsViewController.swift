@@ -140,7 +140,7 @@ class SettingsViewController: FormViewController, Coordinator {
             +++ Section()
 
             <<< currencyRow()
-            <<< browserRow()
+            //<<< browserRow()
 
             +++ Section(NSLocalizedString("settings.joinCommunity.label.title", value: "Join Community", comment: ""))
 
