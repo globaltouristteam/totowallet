@@ -35,7 +35,7 @@ class InCoordinator: Coordinator {
         return self.coordinators.compactMap { $0 as? TokensCoordinator }.first
     }
     var tabBarController: TotoTabBarController? {
-        return UIApplication.shared.keyWindow?.rootViewController as? TotoTabBarController
+        return (UIApplication.shared.keyWindow?.rootViewController as? NavigationController)?.viewControllers.first as? TotoTabBarController
     }
     var localSchemeCoordinator: LocalSchemeCoordinator?
     lazy var helpUsCoordinator: HelpUsCoordinator = {
@@ -55,7 +55,7 @@ class InCoordinator: Coordinator {
         navigator: Navigator = Navigator(),
         events: [BranchEvent] = []
     ) {
-        self.navigationController = navigationController
+        self.navigationController = UIApplication.shared.keyWindow?.rootViewController as! NavigationController
         self.initialWallet = wallet
         self.keystore = keystore
         self.config = config

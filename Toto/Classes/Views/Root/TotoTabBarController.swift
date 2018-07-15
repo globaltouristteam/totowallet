@@ -13,6 +13,8 @@ class TotoTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         delegate = self
+        
+        TrustWalletApp.shared.application(UIApplication.shared, didFinishLaunchingWithOptions: nil)
         if EtherKeystore.shared.hasWallets {
             addWalletTabs()
         } else {
@@ -23,7 +25,11 @@ class TotoTabBarController: UITabBarController {
     func addWalletTabs() {
         var controllers: [UIViewController] = []
         if let tours = viewControllers?.first {
-            tours.title = localizedString(forKey: "title_app")
+            tours.tabBarItem = UITabBarItem(
+                title: localizedString(forKey: "title_app"),
+                image: #imageLiteral(resourceName: "tab_tours"),
+                selectedImage: nil
+            )
             controllers.append(tours)
         }
         if let c = TrustWalletApp.shared.coordinator.inCoordinator?.tokensCoordinator?.navigationController {
@@ -43,6 +49,11 @@ class TotoTabBarController: UITabBarController {
         var controllers: [UIViewController] = []
         if let tours = viewControllers?.first {
             tours.title = localizedString(forKey: "title_app")
+            tours.tabBarItem = UITabBarItem(
+                title: localizedString(forKey: "title_app"),
+                image: #imageLiteral(resourceName: "tab_tours"),
+                selectedImage: nil
+            )
             controllers.append(tours)
         }
         

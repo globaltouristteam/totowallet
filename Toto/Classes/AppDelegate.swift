@@ -18,7 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         LogsMgr().configLogger()
         
-        _ = TrustWalletApp.shared.application(UIApplication.shared, didFinishLaunchingWithOptions: nil)
         return true
     }
 

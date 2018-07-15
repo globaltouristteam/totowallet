@@ -107,7 +107,7 @@ class AppCoordinator: NSObject, Coordinator {
         CookiesStore.delete()
         navigationController.dismiss(animated: true, completion: nil)
         resetToWelcomeScreen()
-        let tabbar = UIApplication.shared.keyWindow?.rootViewController as? TotoTabBarController
+        let tabbar = (UIApplication.shared.keyWindow?.rootViewController as? NavigationController)?.viewControllers.first as? TotoTabBarController
         tabbar?.addEmptyTabs()
     }
 
