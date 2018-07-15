@@ -33,6 +33,14 @@ class ToursViewController: UICollectionViewController, UICollectionViewDelegateF
         }
     }
     
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        // disable page details
+        if identifier == "TourDetails" {
+            return false
+        }
+        return true
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         
@@ -105,7 +113,7 @@ class ToursViewController: UICollectionViewController, UICollectionViewDelegateF
         
         let category = data[indexPath.section]
         if category.isPopular && !showAll {
-            height += 16 // Padding
+            height += 8 + 37 + 8 // Padding + page control
         }
         return CGSize(width: collectionView.frame.width, height: height)
     }
