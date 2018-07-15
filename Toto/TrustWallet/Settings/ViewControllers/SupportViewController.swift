@@ -26,6 +26,7 @@ class SupportViewController: FormViewController {
 
         form +++ Section()
 
+/*
             <<< link(
                 title: NSLocalizedString("settings.faq.button.title", value: "FAQ", comment: ""),
                 value: "https://trustwalletapp.com/faq.html",
@@ -43,6 +44,7 @@ class SupportViewController: FormViewController {
                 value: "https://trustwalletapp.com/terms.html",
                 image: R.image.settings_terms()
             )
+*/
 
             <<< AppFormAppearance.button { button in
                 button.title = NSLocalizedString("settings.emailUsReadFAQ.button.title", value: "Email Us (Read FAQ first)", comment: "")

@@ -40,7 +40,8 @@ class WalletViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.titleView = segmentController
+        //self.navigationItem.titleView = segmentController
+        title = NSLocalizedString("Tokens", value: "Tokens", comment: "")
         setupView()
     }
 

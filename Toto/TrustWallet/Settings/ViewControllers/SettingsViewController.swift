@@ -147,7 +147,7 @@ class SettingsViewController: FormViewController, Coordinator {
             <<< linkProvider(type: .twitter)
             <<< linkProvider(type: .telegram)
             <<< linkProvider(type: .facebook)
-            <<< linkProvider(type: .discord)
+            //<<< linkProvider(type: .discord)
 
             +++ Section(NSLocalizedString("settings.support.label.title", value: "Support", comment: ""))
 

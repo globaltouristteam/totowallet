@@ -26,6 +26,7 @@ class AboutViewController: FormViewController {
 
         form +++ Section()
 
+/*
             <<< link(
                 title: NSLocalizedString("settings.sourceCode.button.title", value: "Source Code", comment: ""),
                 value: "https://github.com/TrustWallet/trust-wallet-ios",
@@ -37,9 +38,18 @@ class AboutViewController: FormViewController {
                 value: "https://github.com/TrustWallet/trust-wallet-ios/issues/new",
                 image: R.image.settings_bug()
             )
-
+*/
+ 
             +++ Section(NSLocalizedString("Powered By", value: "Powered By", comment: ""))
 
+            <<< link(
+                title: NSLocalizedString("TrustWallet", value: "TrustWallet", comment: ""),
+                value: "https://trustwalletapp.com/",
+                image: R.image.launch_screen_logo()
+                
+            )
+
+/*
             <<< link(
                 title: NSLocalizedString("Infura", value: "Infura", comment: ""),
                 value: "https://infura.io/",
@@ -52,6 +62,7 @@ class AboutViewController: FormViewController {
                 value: "https://opensea.io/",
                 image: R.image.opensea()
             )
+ */
     }
 
     private func link(
