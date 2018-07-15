@@ -15,6 +15,9 @@ public struct Constants {
     public static let telegramUsername = "globaltouristgroup"
     public static let facebookUsername = "globaltouristtoken"
 
+    public static let appStoreDeepLink = "itms-apps://itunes.apple.com/app/id1288339409"
+    public static let appStoreHttpLink = "https://itunes.apple.com/us/app/totowallet/id1288339409"
+
     // support
     public static let supportEmail = "support@globaltourist.io"
     public static let donationAddress = "0x9f8284ce2cf0c8ce10685f537b1fff418104a317"
