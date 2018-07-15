@@ -113,7 +113,7 @@ class TokensViewModel: NSObject {
 
     func cellViewModel(for path: IndexPath) -> TokenViewCellViewModel {
         let token = tokens[path.row]
-        return TokenViewCellViewModel(token: token, ticker: store.coinTicker(for: token))
+        return TokenViewCellViewModel(token: token, ticker: store.coinTicker(for: token), config: config)
     }
 
     func updateEthBalance() {

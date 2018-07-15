@@ -9,6 +9,7 @@ class TokenViewCell: UITableViewCell {
     static let identifier = "TokenViewCell"
 
     let titleLabel = UILabel()
+    let contractLabel = UILabel()
     let amountLabel = UILabel()
     let currencyAmountLabel = UILabel()
     let symbolImageView = TokenImageView()
@@ -25,6 +26,11 @@ class TokenViewCell: UITableViewCell {
         titleLabel.lineBreakMode = .byTruncatingMiddle
         titleLabel.adjustsFontSizeToFitWidth = true
         titleLabel.minimumScaleFactor = 0.7
+        
+        contractLabel.translatesAutoresizingMaskIntoConstraints = false
+        contractLabel.lineBreakMode = .byTruncatingMiddle
+        contractLabel.adjustsFontSizeToFitWidth = true
+        contractLabel.minimumScaleFactor = 0.7
 
         symbolImageView.translatesAutoresizingMaskIntoConstraints = false
         symbolImageView.contentMode = .scaleAspectFit
@@ -38,10 +44,10 @@ class TokenViewCell: UITableViewCell {
         currencyAmountLabel.translatesAutoresizingMaskIntoConstraints = false
         currencyAmountLabel.textAlignment = .right
 
-        let leftStackView = UIStackView(arrangedSubviews: [titleLabel])
+        let leftStackView = UIStackView(arrangedSubviews: [titleLabel, contractLabel])
         leftStackView.translatesAutoresizingMaskIntoConstraints = false
         leftStackView.axis = .vertical
-        leftStackView.spacing = 12
+        leftStackView.spacing = 5
 
         let rightBottomStackView = UIStackView(arrangedSubviews: [currencyAmountLabel, percentChange])
         rightBottomStackView.translatesAutoresizingMaskIntoConstraints = false
@@ -62,6 +68,8 @@ class TokenViewCell: UITableViewCell {
         symbolImageView.setContentHuggingPriority(.defaultLow, for: .horizontal)
         titleLabel.setContentHuggingPriority(.defaultLow, for: .horizontal)
         titleLabel.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
+        contractLabel.setContentHuggingPriority(.defaultLow, for: .horizontal)
+        contractLabel.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
 
         rightStackView.setContentHuggingPriority(.required, for: .horizontal)
         stackView.setContentHuggingPriority(.required, for: .horizontal)
@@ -93,6 +101,10 @@ class TokenViewCell: UITableViewCell {
         titleLabel.text = viewModel.title
         titleLabel.textColor = viewModel.titleTextColor
         titleLabel.font = viewModel.titleFont
+        
+        contractLabel.text = viewModel.contractText
+        contractLabel.textColor = viewModel.contractTextColor
+        contractLabel.font = viewModel.contractFont
 
         amountLabel.text = viewModel.amount
         amountLabel.textColor = TokensLayout.cell.amountTextColor

@@ -10,13 +10,16 @@ struct TokenViewCellViewModel {
 
     let token: TokenObject
     let ticker: CoinTicker?
+    let config: Config?
 
     init(
         token: TokenObject,
-        ticker: CoinTicker?
+        ticker: CoinTicker?,
+        config: Config? = nil
     ) {
         self.token = token
         self.ticker = ticker
+        self.config = config
     }
 
     var title: String {
@@ -80,5 +83,30 @@ struct TokenViewCellViewModel {
 
     var imageUrl: URL? {
         return URL(string: token.imagePath)
+    }
+    
+    // MARK: Contract
+    var contractTextColor: UIColor {
+        return UIColor.darkGray
+    }
+    
+    var contractFont: UIFont {
+        return UIFont.systemFont(ofSize: 14, weight: .medium)
+    }
+
+    private var isAvailableForChange: Bool {
+        guard let config = config else { return true }
+        // One version had an option to disable ETH token. Adding functionality to enable it back.
+        if token.contract == TokensDataStore.etherToken(for: config).contract && token.isDisabled == true {
+            return false
+        }
+        return token.contract == TokensDataStore.etherToken(for: config).contract ? true : false
+    }
+    
+    var contractText: String? {
+        if !isAvailableForChange {
+            return token.contract
+        }
+        return .none
     }
 }
