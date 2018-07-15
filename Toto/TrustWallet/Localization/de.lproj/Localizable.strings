@@ -151,7 +151,7 @@
 "Name" = "Name";
 "send.action.copy.transaction.title" = "Transaktions-ID kopieren";
 "settings.dappbroser.button.title" = "DApps Browser";
-"settings.emailUsReadFAQ.button.title" = "Schreiben Sie uns eine Email (Lies zuerst die FAQ)";
+"settings.emailUsReadFAQ.button.title" = "Schreiben Sie uns eine Email";
 "settings.faq.button.title" = "FAQ";
 "settings.learnMore.label.title" = "Mehr erfahren";
 "settings.wallets.balance" = "Balance: %@ ETH";

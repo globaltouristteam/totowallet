@@ -151,7 +151,7 @@
 "Name" = "名称";
 "send.action.copy.transaction.title" = "复制交易 ID";
 "settings.dappbroser.button.title" = "DApps 浏览器";
-"settings.emailUsReadFAQ.button.title" = "邮件我们 (请先阅读FAQ)";
+"settings.emailUsReadFAQ.button.title" = "邮件我们";
 "settings.faq.button.title" = "常见问题";
 "settings.learnMore.label.title" = "了解更多";
 "settings.wallets.balance" = "余额: %@";

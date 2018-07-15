@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>ToTo Wallet</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -15,26 +17,21 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>0.1</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
-	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Used to scan QRCode</string>
 	<key>NSFaceIDUsageDescription</key>
 	<string>Access your wallet</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Sending QR Code to your contacts</string>
-	<key>branch_key</key>
-	<dict>
-		<key>live</key>
-		<string>key_live_lfvIpVeI9TFWxPCqwU8rZnogFqhnzs4D</string>
-		<key>test</key>
-		<string>key_test_odFMiPaHXUB4zNECuK28kdboCqgkAF3K</string>
-	</dict>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
@@ -62,5 +59,12 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>branch_key</key>
+	<dict>
+		<key>live</key>
+		<string>key_live_lfvIpVeI9TFWxPCqwU8rZnogFqhnzs4D</string>
+		<key>test</key>
+		<string>key_test_odFMiPaHXUB4zNECuK28kdboCqgkAF3K</string>
+	</dict>
 </dict>
 </plist>

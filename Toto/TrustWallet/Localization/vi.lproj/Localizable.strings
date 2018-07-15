@@ -151,7 +151,7 @@
 "Name" = "Tên";
 "send.action.copy.transaction.title" = "Sao chép ID giao dịch";
 "settings.dappbroser.button.title" = "Trình duyệt DApps";
-"settings.emailUsReadFAQ.button.title" = "Gửi Email cho chúng tôi (hãy đọc FAQ trước)";
+"settings.emailUsReadFAQ.button.title" = "Gửi Email cho chúng tôi";
 "settings.faq.button.title" = "Câu hỏi thường gặp";
 "settings.learnMore.label.title" = "Tìm hiểu thêm";
 "settings.wallets.balance" = "Số dư: %@ ETH";
