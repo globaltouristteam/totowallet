@@ -151,7 +151,7 @@
 "Name" = "名称";
 "send.action.copy.transaction.title" = "トランザクション ID をコピー";
 "settings.dappbroser.button.title" = "DAppsブラウザ";
-"settings.emailUsReadFAQ.button.title" = "メールで問い合わせる(よくある質問をまずお読みください)";
+"settings.emailUsReadFAQ.button.title" = "メールで問い合わせる";
 "settings.faq.button.title" = "よくある質問";
 "settings.learnMore.label.title" = "さらに詳しく知る";
 "settings.wallets.balance" = "残高: %@ ETH";

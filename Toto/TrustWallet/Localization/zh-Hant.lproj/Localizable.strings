@@ -152,7 +152,7 @@
 "Name" = "名稱";
 "send.action.copy.transaction.title" = "複製交易 ID";
 "settings.dappbroser.button.title" = "DApps 瀏覽器";
-"settings.emailUsReadFAQ.button.title" = "郵件我們 (請先閱讀 FAQ)";
+"settings.emailUsReadFAQ.button.title" = "郵件我們";
 "settings.faq.button.title" = "常見問題";
 "settings.learnMore.label.title" = "了解更多";
 "settings.wallets.balance" = "餘額: %@";
