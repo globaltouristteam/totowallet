@@ -42,7 +42,7 @@ class HomeViewController: UIViewController {
 
     // MARK: - Data
     func loadData() {
-        showLoading()
+        displayLoading()
         HttpService.shared.getCategories { (categories, error) in
             if let error = error {
                 self.processLoadDataError(error)

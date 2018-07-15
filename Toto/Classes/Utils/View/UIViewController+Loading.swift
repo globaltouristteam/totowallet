@@ -7,26 +7,13 @@
 //
 
 import UIKit
-import PKHUD
+import MBProgressHUD
 
 extension UIViewController {
-    public func showLoading(in seconds: TimeInterval? = nil, fullScreen: Bool = false) {
-        if let seconds = seconds {
-            HUD.flash(.progress, delay: seconds)
-        } else {
-            var view = self.view
-            if fullScreen && self.navigationController != nil {
-                view = self.navigationController?.view
-            }
-            HUD.show(.progress, onView: view)
-        }
-    }
-    
-    public func hideLoading() {
-        HUD.hide()
-    }
-    
     public func showToast(_ message: String) {
-        HUD.flash(.label(message), onView: view)
+        let hud = MBProgressHUD.showAdded(to: view, animated: true)
+        hud.label.text = message
+        hud.mode = .text
+        hud.hide(animated: true, afterDelay: 1)
     }
 }

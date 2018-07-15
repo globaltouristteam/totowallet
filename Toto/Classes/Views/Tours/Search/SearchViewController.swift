@@ -65,7 +65,7 @@ class SearchViewController: UIViewController {
     }
     
     @IBAction func btnSearchClicked() {
-        showLoading()
+        displayLoading()
         HttpService.shared.search(duration: data[.duration]?[tfDuration.text ?? ""],
                                   departure: data[.departure]?[tfDeparture.text ?? ""],
                                   destination: data[.destination]?[tfDestination.text ?? ""]) { [weak self] (tours, error) in

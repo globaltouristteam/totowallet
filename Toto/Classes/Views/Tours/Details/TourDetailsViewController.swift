@@ -25,7 +25,7 @@ class TourDetailsViewController: UIViewController {
     }
     
     func loadData(with tour: String) {
-        showLoading()
+        displayLoading()
         HttpService.shared.getTourDetails(tour) { [weak self] (tour, error) in
             guard let `self` = self else { return }
             self.hideLoading()
