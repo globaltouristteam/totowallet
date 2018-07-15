@@ -34,10 +34,12 @@ enum Currency: String {
     case TRY
     case TWD
     case ZAR
+    case VND
     case USD
 
     static let allValues = [
         USD,
+        VND,
         EUR,
         GBP,
         AUD,

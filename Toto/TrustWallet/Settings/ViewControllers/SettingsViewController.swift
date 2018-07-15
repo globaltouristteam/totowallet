@@ -236,7 +236,7 @@ class SettingsViewController: FormViewController, Coordinator {
             selectorController.enableDeselection = false
             selectorController.sectionKeyForValue = { option in
                 switch option {
-                case .USD, .EUR, .GBP, .AUD, .RUB: return Values.currencyPopularKey
+                case .USD, .VND, .EUR, .GBP, .AUD, .RUB: return Values.currencyPopularKey
                 default: return Values.currencyAllKey
                 }
             }
