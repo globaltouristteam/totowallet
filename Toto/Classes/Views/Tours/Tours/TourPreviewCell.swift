@@ -39,9 +39,6 @@ class TourPreviewCell: UICollectionViewCell {
         numberFormater.locale = Locale.current
         numberFormater.numberStyle = .decimal
         numberFormater.usesGroupingSeparator = true
-        
-        tour.price2 = "120000"
-        tour.price = "90000"
 
         if let price2 = tour.price2, let oldPrice = Int(price2), oldPrice > 0 {
             if let string = numberFormater.string(from: oldPrice as NSNumber) {

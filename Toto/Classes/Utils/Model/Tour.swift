@@ -41,6 +41,7 @@ class Tour: JsonObject {
     var titleSeo: String?
     var totalRate: String?
     var vanchuyen: String?
+    var imagesList: [String]?
     
     enum CodingKeys: String, CodingKey {
         case catId = "cat_id"
@@ -74,6 +75,7 @@ class Tour: JsonObject {
         case titleSeo = "title_seo"
         case totalRate = "total_rate"
         case vanchuyen = "vanchuyen"
+        case imagesList = "imagesList"
     }
     
     override init() {
@@ -114,6 +116,7 @@ class Tour: JsonObject {
         titleSeo = try values.decodeIfPresent(String.self, forKey: .titleSeo)
         totalRate = try values.decodeIfPresent(String.self, forKey: .totalRate)
         vanchuyen = try values.decodeIfPresent(String.self, forKey: .vanchuyen)
+        imagesList = try values.decodeIfPresent([String].self, forKey: .imagesList)
     }
     
     override func encode(to encoder: Encoder) throws {
@@ -149,6 +152,7 @@ class Tour: JsonObject {
         try container.encodeIfPresent(titleSeo, forKey: .titleSeo)
         try container.encodeIfPresent(totalRate, forKey: .totalRate)
         try container.encodeIfPresent(vanchuyen, forKey: .vanchuyen)
+        try container.encodeIfPresent(imagesList, forKey: .imagesList)
     }
     
 }

@@ -52,15 +52,32 @@ class HttpService: NetworkingService {
     public func getTourDetails(_ id: String, completionBlock: JsonObjectCompletionHandler<Tour>?) {
         let params = NetworkingServiceParams()
         params.requestMethod = .get
-        params.requestURL = serverUrl() + "/tour_details/\(id)"
+        params.requestURL = serverUrl() + "/tour_detail/\(id)"
         params.json = false
         
-        callServer(ResponseBase<Tour>.self, params) { (tours, error) in
-            if let tour = tours?.list?.first {
-                completionBlock?(tour, nil)
-            } else {
-                completionBlock?(nil, error)
+        callServer(params, serviceCompletionBlock: { (result) in
+            completionBlock?(result.data as? Tour, result.error)
+        }) { (response) -> Any? in
+            if let response = response as? [String: Any] {
+                var tour: Tour? = nil
+                if let json = (response["tour"] as? [[String: Any]])?.first {
+                    tour = Tour.from(data: json)
+                }
+                if let json = (response["prices"] as? [[String: Any]])?.first {
+                    tour?.price = json["price"] as? String
+                    tour?.price2 = json["price2"] as? String
+                }
+                if let images = response["images"] as? [[String: Any]] {
+                    tour?.imagesList = []
+                    for item in images {
+                        if let path = item["path"] as? String {
+                            tour?.imagesList?.append(path)
+                        }
+                    }
+                }
+                return tour
             }
+            return response
         }
     }
 

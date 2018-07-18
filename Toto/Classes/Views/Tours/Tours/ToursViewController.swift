@@ -33,14 +33,6 @@ class ToursViewController: UICollectionViewController, UICollectionViewDelegateF
         }
     }
     
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        // disable page details
-        if identifier == "TourDetails" {
-            return false
-        }
-        return true
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         
@@ -146,6 +138,6 @@ extension ToursViewController: CategoryHeaderViewDelegate {
 
 extension ToursViewController: PopularPreviewCellDelegate {
     func didSelectTour(_ tour: Tour) {
-        //performSegue(withIdentifier: "TourDetails", sender: tour)
+        performSegue(withIdentifier: "TourDetails", sender: tour)
     }
 }
