@@ -6,7 +6,7 @@
   Copyright © 2018 Toto. All rights reserved.
 */
 
-"format_days_nights" = "🕒 %@ days %@ nights";
+"format_days_nights" = "%@ days %@ nights";
 "title_popular_tours" = "POPULAR TOURS";
 "title_search" = "Search";
 "title_app" = "TOTO";

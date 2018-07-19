@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		26F93A6A74907465BD5B6542 /* Pods_Toto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC85183EFD336BCEE3B90203 /* Pods_Toto.framework */; };
+		8708E01F2100F09A00DC935B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8708E01E2100F09A00DC935B /* Utils.swift */; };
 		877D69CF20F8FBDF009FE9DA /* UIViewController+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877D69CE20F8FBDF009FE9DA /* UIViewController+Loading.swift */; };
 		877D69D120F90450009FE9DA /* UIImageView+Cached.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877D69D020F90450009FE9DA /* UIImageView+Cached.swift */; };
 		877D69D320F90697009FE9DA /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877D69D220F90696009FE9DA /* ImageUtils.swift */; };
@@ -414,6 +415,7 @@
 
 /* Begin PBXFileReference section */
 		575A0E6978445577ADF0037E /* Pods-Toto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Toto.release.xcconfig"; path = "Pods/Target Support Files/Pods-Toto/Pods-Toto.release.xcconfig"; sourceTree = "<group>"; };
+		8708E01E2100F09A00DC935B /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		877D69CE20F8FBDF009FE9DA /* UIViewController+Loading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Loading.swift"; sourceTree = "<group>"; };
 		877D69D020F90450009FE9DA /* UIImageView+Cached.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Cached.swift"; sourceTree = "<group>"; };
 		877D69D220F90696009FE9DA /* ImageUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUtils.swift; sourceTree = "<group>"; };
@@ -2189,6 +2191,7 @@
 				87E7A6CF20F63CEA005B8BFA /* Model */,
 				87E7A6C220F63B8E005B8BFA /* Services */,
 				877D69CD20F8FBD7009FE9DA /* View */,
+				8708E01E2100F09A00DC935B /* Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -2601,6 +2604,7 @@
 				87E7A6A620F5127A005B8BFA /* NonFungibleTokenViewCell.swift in Sources */,
 				87E7A5A320F51279005B8BFA /* ENSClient.swift in Sources */,
 				87E7A55D20F51278005B8BFA /* PushNotificationsRegistrar.swift in Sources */,
+				8708E01F2100F09A00DC935B /* Utils.swift in Sources */,
 				87E7A54B20F51278005B8BFA /* FloatLabelTextField.swift in Sources */,
 				87E7A59920F51279005B8BFA /* LokaliseInitializer.swift in Sources */,
 				87E7A58B20F51279005B8BFA /* InCoordinatorViewModel.swift in Sources */,
@@ -3020,14 +3024,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C8SMH58642;
+				DEVELOPMENT_TEAM = 6TNVU3682C;
 				INFOPLIST_FILE = Toto/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.globaltourist.totoapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.toto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -3040,14 +3044,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C8SMH58642;
+				DEVELOPMENT_TEAM = 6TNVU3682C;
 				INFOPLIST_FILE = Toto/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.globaltourist.totoapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.toto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

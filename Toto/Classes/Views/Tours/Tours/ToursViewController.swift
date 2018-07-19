@@ -38,6 +38,7 @@ class ToursViewController: UICollectionViewController, UICollectionViewDelegateF
         
         switch segue.destination {
         case let details as TourDetailsViewController:
+            details.hidesBottomBarWhenPushed = true
             if let tour = sender as? Tour {
                 details.tour = tour
             } else if let cell = sender as? TourPreviewCell {

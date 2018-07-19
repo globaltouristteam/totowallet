@@ -39,6 +39,7 @@ class Tour: JsonObject {
     var songayId: String?
     var title: String?
     var titleSeo: String?
+    var desSeo: String?
     var totalRate: String?
     var vanchuyen: String?
     var imagesList: [String]?
@@ -73,6 +74,7 @@ class Tour: JsonObject {
         case songayId = "songay_id"
         case title = "title"
         case titleSeo = "title_seo"
+        case desSeo = "des_seo"
         case totalRate = "total_rate"
         case vanchuyen = "vanchuyen"
         case imagesList = "imagesList"
@@ -114,9 +116,14 @@ class Tour: JsonObject {
         songayId = try values.decodeIfPresent(String.self, forKey: .songayId)
         title = try values.decodeIfPresent(String.self, forKey: .title)
         titleSeo = try values.decodeIfPresent(String.self, forKey: .titleSeo)
+        desSeo = try values.decodeIfPresent(String.self, forKey: .desSeo)
         totalRate = try values.decodeIfPresent(String.self, forKey: .totalRate)
         vanchuyen = try values.decodeIfPresent(String.self, forKey: .vanchuyen)
         imagesList = try values.decodeIfPresent([String].self, forKey: .imagesList)
+        
+        if imagesList == nil || imagesList?.count == 0 {
+            imagesList = [images!]
+        }
     }
     
     override func encode(to encoder: Encoder) throws {
@@ -150,6 +157,7 @@ class Tour: JsonObject {
         try container.encodeIfPresent(songayId, forKey: .songayId)
         try container.encodeIfPresent(title, forKey: .title)
         try container.encodeIfPresent(titleSeo, forKey: .titleSeo)
+        try container.encodeIfPresent(desSeo, forKey: .desSeo)
         try container.encodeIfPresent(totalRate, forKey: .totalRate)
         try container.encodeIfPresent(vanchuyen, forKey: .vanchuyen)
         try container.encodeIfPresent(imagesList, forKey: .imagesList)
