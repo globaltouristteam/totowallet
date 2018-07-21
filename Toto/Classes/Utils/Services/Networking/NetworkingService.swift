@@ -17,7 +17,7 @@ open class NetworkingService {
     }
     
     func serverUrl() -> String {
-        return "https://globaltourist.io/mvp/api"
+        return "https://api.coinmarketcap.com/v2"
     }
 
     public func callServer<T: JsonObject>(_ type: T.Type, _ params: NetworkingServiceParams, serviceCompletionBlock: JsonObjectCompletionHandler<T>?) {
