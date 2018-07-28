@@ -19,11 +19,6 @@ protocol TickersViewDelegate: class {
 class TickersViewController: UITableViewController {
     weak var delegate: TickersViewDelegate?
     var tickers: [Ticker] = []
-    var currency: String! {
-        didSet {
-            tableView.reloadData()
-        }
-    }
     
     var loadingMore: Bool = false
     var endOfList: Bool = false
@@ -61,11 +56,11 @@ class TickersViewController: UITableViewController {
                 }
                 
             case .volume24h:
-                if let r1 = t1.quotes?.with(currency: self.currency).volume24h, let r2 = t2.quotes?.with(currency: self.currency).volume24h {
+                if let r1 = t1.quotes?.with(currency: Utils.currentCurrency()).volume24h, let r2 = t2.quotes?.with(currency: Utils.currentCurrency()).volume24h {
                     return sortAcending ? r1 < r2 :  r1 > r2
                 }
             case .price:
-                if let r1 = t1.quotes?.with(currency: self.currency).price, let r2 = t2.quotes?.with(currency: self.currency).price {
+                if let r1 = t1.quotes?.with(currency: Utils.currentCurrency()).price, let r2 = t2.quotes?.with(currency: Utils.currentCurrency()).price {
                     return sortAcending ? r1 < r2 :  r1 > r2
                 }
             }
@@ -91,7 +86,7 @@ class TickersViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TickerPreviewCell", for: indexPath) as! TickerPreviewCell
-        cell.config(with: tickers[indexPath.row], currency: currency)
+        cell.config(with: tickers[indexPath.row])
         return cell
     }
     

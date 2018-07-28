@@ -17,6 +17,7 @@ class HttpService: NetworkingService {
         params.requestURL = serverUrl() + "/ticker"
         params.json = false
         params.requestParams = [
+            "convert": "BTC",
             "limit": 100,
             "sort": "rank",
             "start": offset

@@ -27,11 +27,6 @@ class HomeViewController: UIViewController {
     
     var sortBy: TickerSort = .rank
     var sortAcending: Bool = true
-    var currency: String = "USD" {
-        didSet {
-            tickersView?.currency = currency
-        }
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,8 +52,10 @@ class HomeViewController: UIViewController {
         switch segue.destination {
         case let tickers as TickersViewController:
             tickersView = tickers
-            tickersView?.currency = currency
             tickersView?.delegate = self
+            
+        case let details as TickerDetailsViewController:
+            details.ticker = sender as! Ticker
 
         default:
             break
@@ -168,7 +165,7 @@ extension HomeViewController: UISearchBarDelegate {
 
 extension HomeViewController: TickersViewDelegate {
     func didSelectTicker(_ ticker: Ticker) {
-        
+        performSegue(withIdentifier: "TickerDetails", sender: ticker)
     }
     
     func didStartLoadMore() {

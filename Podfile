@@ -6,6 +6,7 @@ target 'Toto' do
   use_frameworks!
 
   # App
+  pod 'Charts'
   pod 'CocoaLumberjack/Swift'
   pod 'SkyFloatingLabelTextField'
   pod 'AMTextFieldPickerExtension'

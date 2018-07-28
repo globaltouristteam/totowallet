@@ -20,6 +20,10 @@
 		878373B7210BFE4900DF9115 /* TickerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878373B6210BFE4900DF9115 /* TickerData.swift */; };
 		878373B9210C00C000DF9115 /* TickerPreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878373B8210C00C000DF9115 /* TickerPreviewCell.swift */; };
 		878373BB210C05ED00DF9115 /* TicketResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878373BA210C05ED00DF9115 /* TicketResponse.swift */; };
+		878373BE210C1FFC00DF9115 /* TickerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878373BD210C1FFC00DF9115 /* TickerDetailsViewController.swift */; };
+		878373C0210C250200DF9115 /* TickerGraphCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878373BF210C250200DF9115 /* TickerGraphCell.swift */; };
+		878373C2210C272B00DF9115 /* TickerGraphData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878373C1210C272B00DF9115 /* TickerGraphData.swift */; };
+		878373C4210C588000DF9115 /* TickerInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878373C3210C588000DF9115 /* TickerInfoCell.swift */; };
 		8789C95520F6406300307E4C /* Threading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789C95420F6406200307E4C /* Threading.swift */; };
 		8789C95B20F6414900307E4C /* ResponseBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789C95A20F6414800307E4C /* ResponseBase.swift */; };
 		8789C95D20F641C400307E4C /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789C95C20F641C400307E4C /* HttpService.swift */; };
@@ -438,6 +442,10 @@
 		878373B6210BFE4900DF9115 /* TickerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerData.swift; sourceTree = "<group>"; };
 		878373B8210C00C000DF9115 /* TickerPreviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerPreviewCell.swift; sourceTree = "<group>"; };
 		878373BA210C05ED00DF9115 /* TicketResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketResponse.swift; sourceTree = "<group>"; };
+		878373BD210C1FFC00DF9115 /* TickerDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerDetailsViewController.swift; sourceTree = "<group>"; };
+		878373BF210C250200DF9115 /* TickerGraphCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerGraphCell.swift; sourceTree = "<group>"; };
+		878373C1210C272B00DF9115 /* TickerGraphData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerGraphData.swift; sourceTree = "<group>"; };
+		878373C3210C588000DF9115 /* TickerInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerInfoCell.swift; sourceTree = "<group>"; };
 		8789C95420F6406200307E4C /* Threading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Threading.swift; sourceTree = "<group>"; };
 		8789C95A20F6414800307E4C /* ResponseBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseBase.swift; sourceTree = "<group>"; };
 		8789C95C20F641C400307E4C /* HttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
@@ -875,6 +883,18 @@
 				877D69CE20F8FBDF009FE9DA /* UIViewController+Loading.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		878373BC210C1FE000DF9115 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				878373BD210C1FFC00DF9115 /* TickerDetailsViewController.swift */,
+				878373BF210C250200DF9115 /* TickerGraphCell.swift */,
+				878373C1210C272B00DF9115 /* TickerGraphData.swift */,
+				878373C3210C588000DF9115 /* TickerInfoCell.swift */,
+			);
+			name = Details;
+			path = D;
 			sourceTree = "<group>";
 		};
 		8789C95E20F6427D00307E4C /* Log */ = {
@@ -2122,6 +2142,7 @@
 		87E7A6AF20F51DF0005B8BFA /* Tickers */ = {
 			isa = PBXGroup;
 			children = (
+				878373BC210C1FE000DF9115 /* Details */,
 				8789C97B20F66F5100307E4C /* Home */,
 				8789C96D20F65D5700307E4C /* Tickers */,
 			);
@@ -2344,6 +2365,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/BigInt/BigInt.framework",
 				"${BUILT_PRODUCTS_DIR}/Branch/Branch.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
@@ -2378,6 +2400,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BigInt.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Branch.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
@@ -2542,6 +2565,7 @@
 				87E7A55220F51278005B8BFA /* BalanceTitleView.swift in Sources */,
 				87E7A63420F51279005B8BFA /* Favicon.swift in Sources */,
 				87E7A61020F51279005B8BFA /* CALayer.swift in Sources */,
+				878373BE210C1FFC00DF9115 /* TickerDetailsViewController.swift in Sources */,
 				87E7A68D20F5127A005B8BFA /* TokenViewCellViewModel.swift in Sources */,
 				87E7A68120F5127A005B8BFA /* ExportPrivateKeyViewController.swift in Sources */,
 				87E7A56E20F51279005B8BFA /* RPCServers.swift in Sources */,
@@ -2565,6 +2589,7 @@
 				87E7A56220F51278005B8BFA /* AboutViewModel.swift in Sources */,
 				87E7A54720F51278005B8BFA /* SliderTextFieldRow.swift in Sources */,
 				87E7A63F20F51279005B8BFA /* HistoryViewController.swift in Sources */,
+				878373C2210C272B00DF9115 /* TickerGraphData.swift in Sources */,
 				87E7A63C20F51279005B8BFA /* HistoryStore.swift in Sources */,
 				87E7A60120F51279005B8BFA /* EthereumUnit.swift in Sources */,
 				87E7A68420F5127A005B8BFA /* TokensBalanceService.swift in Sources */,
@@ -2672,6 +2697,7 @@
 				87E7A66C20F5127A005B8BFA /* EnterPasswordViewModel.swift in Sources */,
 				87E7A55120F51278005B8BFA /* FormAppearance.swift in Sources */,
 				878373B1210BFCC200DF9115 /* TickerQuote.swift in Sources */,
+				878373C0210C250200DF9115 /* TickerGraphCell.swift in Sources */,
 				87E7A69320F5127A005B8BFA /* CoinTicker.swift in Sources */,
 				87E7A57020F51279005B8BFA /* PreferenceOption.swift in Sources */,
 				87E7A5DC20F51279005B8BFA /* ConfirmPaymentDetailsViewModel.swift in Sources */,
@@ -2749,6 +2775,7 @@
 				87E7A55920F51278005B8BFA /* SectionHeader.swift in Sources */,
 				87E7A5DD20F51279005B8BFA /* ConfigureTransactionViewModel.swift in Sources */,
 				87E7A54320F51278005B8BFA /* TransactionAppearance.swift in Sources */,
+				878373C4210C588000DF9115 /* TickerInfoCell.swift in Sources */,
 				87E7A68320F5127A005B8BFA /* TokensCoordinator.swift in Sources */,
 				87E7A5EA20F51279005B8BFA /* DAppRequster.swift in Sources */,
 				87E7A61420F51279005B8BFA /* Address.swift in Sources */,

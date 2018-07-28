@@ -23,16 +23,16 @@ class TickerPreviewCell: UITableViewCell {
         lblPrice.layer.cornerRadius = 5
     }
 
-    func config(with ticker: Ticker, currency: String) {
+    func config(with ticker: Ticker) {
         imgLogo.setImage(with: "https://s2.coinmarketcap.com/static/img/coins/32x32/\(ticker.id ?? 0).png")
         lblIndex.text = "\(ticker.rank ?? 0)"
         
         lblName.text = ticker.name
         
-        let quote = ticker.quotes?.with(currency: currency)
+        let quote = ticker.quotes?.with(currency: Utils.currentCurrency())
         let change24h = quote?.percentChange24h ?? 0
-        lbl24h.text = "\(change24h)%"
-        lblPrice.text = "$\(quote?.price ?? 0)"
+        lbl24h.text = Utils.percent(with: change24h)
+        lblPrice.text = Utils.stringWithCurrencySymbol(quote?.price ?? 0)
         
         let color = change24h > 0 ? UIColor.blue : UIColor.red
         lbl24h.textColor = color
