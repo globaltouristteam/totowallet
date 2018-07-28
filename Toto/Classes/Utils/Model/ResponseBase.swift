@@ -15,6 +15,7 @@ public class ResponseBase<T: JsonObject>: JsonObject {
     
     enum CodingKeys: String, CodingKey {
         case list
+        case data
     }
     override init() {
         super.init()
@@ -23,7 +24,7 @@ public class ResponseBase<T: JsonObject>: JsonObject {
     required public init(from decoder: Decoder) throws {
         try super.init(from: decoder)
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        list = try values.decodeIfPresent([T].self, forKeys: [.list])
+        list = try values.decodeIfPresent([T].self, forKeys: [.list, .data])
     }
     override public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)

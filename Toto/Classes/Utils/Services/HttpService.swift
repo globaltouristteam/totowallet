@@ -11,12 +11,17 @@ import UIKit
 class HttpService: NetworkingService {
     static let shared = HttpService()
     
-    public func getTickers(_ completionBlock: JsonObjectCompletionHandler<ResponseBase<JsonObject>>?) {
+    public func getTickers(offset: Int = 0, completionBlock: JsonObjectCompletionHandler<TicketResponse>?) {
         let params = NetworkingServiceParams()
         params.requestMethod = .get
         params.requestURL = serverUrl() + "/ticker"
         params.json = false
-        callServer(ResponseBase<JsonObject>.self, params, serviceCompletionBlock: completionBlock)
+        params.requestParams = [
+            "limit": 100,
+            "sort": "rank",
+            "start": offset
+        ]
+        callServer(TicketResponse.self, params, serviceCompletionBlock: completionBlock)
     }
     
 }

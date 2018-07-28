@@ -14,6 +14,12 @@
 		877D69D320F90697009FE9DA /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877D69D220F90696009FE9DA /* ImageUtils.swift */; };
 		877D69D620F91619009FE9DA /* Toto.strings in Resources */ = {isa = PBXBuildFile; fileRef = 877D69D820F91619009FE9DA /* Toto.strings */; };
 		87823AFD20FA1C6400E9605B /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87823AFC20FA1C6400E9605B /* NavigationManager.swift */; };
+		878373B1210BFCC200DF9115 /* TickerQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878373B0210BFCC200DF9115 /* TickerQuote.swift */; };
+		878373B4210BFE2D00DF9115 /* Ticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878373B2210BFE2C00DF9115 /* Ticker.swift */; };
+		878373B5210BFE2D00DF9115 /* TickerQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878373B3210BFE2C00DF9115 /* TickerQuotes.swift */; };
+		878373B7210BFE4900DF9115 /* TickerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878373B6210BFE4900DF9115 /* TickerData.swift */; };
+		878373B9210C00C000DF9115 /* TickerPreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878373B8210C00C000DF9115 /* TickerPreviewCell.swift */; };
+		878373BB210C05ED00DF9115 /* TicketResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878373BA210C05ED00DF9115 /* TicketResponse.swift */; };
 		8789C95520F6406300307E4C /* Threading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789C95420F6406200307E4C /* Threading.swift */; };
 		8789C95B20F6414900307E4C /* ResponseBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789C95A20F6414800307E4C /* ResponseBase.swift */; };
 		8789C95D20F641C400307E4C /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789C95C20F641C400307E4C /* HttpService.swift */; };
@@ -426,6 +432,12 @@
 		877D69E320F9163A009FE9DA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Toto.strings; sourceTree = "<group>"; };
 		877D69E420F9163C009FE9DA /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/Toto.strings; sourceTree = "<group>"; };
 		87823AFC20FA1C6400E9605B /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
+		878373B0210BFCC200DF9115 /* TickerQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerQuote.swift; sourceTree = "<group>"; };
+		878373B2210BFE2C00DF9115 /* Ticker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ticker.swift; sourceTree = "<group>"; };
+		878373B3210BFE2C00DF9115 /* TickerQuotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TickerQuotes.swift; sourceTree = "<group>"; };
+		878373B6210BFE4900DF9115 /* TickerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerData.swift; sourceTree = "<group>"; };
+		878373B8210C00C000DF9115 /* TickerPreviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerPreviewCell.swift; sourceTree = "<group>"; };
+		878373BA210C05ED00DF9115 /* TicketResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketResponse.swift; sourceTree = "<group>"; };
 		8789C95420F6406200307E4C /* Threading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Threading.swift; sourceTree = "<group>"; };
 		8789C95A20F6414800307E4C /* ResponseBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseBase.swift; sourceTree = "<group>"; };
 		8789C95C20F641C400307E4C /* HttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
@@ -879,6 +891,7 @@
 			isa = PBXGroup;
 			children = (
 				87E7A34E20F50F86005B8BFA /* TickersViewController.swift */,
+				878373B8210C00C000DF9115 /* TickerPreviewCell.swift */,
 			);
 			path = Tickers;
 			sourceTree = "<group>";
@@ -2176,7 +2189,12 @@
 			isa = PBXGroup;
 			children = (
 				8789C95A20F6414800307E4C /* ResponseBase.swift */,
+				878373B2210BFE2C00DF9115 /* Ticker.swift */,
+				878373B6210BFE4900DF9115 /* TickerData.swift */,
+				878373B0210BFCC200DF9115 /* TickerQuote.swift */,
+				878373B3210BFE2C00DF9115 /* TickerQuotes.swift */,
 				87E7A6D020F63CF8005B8BFA /* Base */,
+				878373BA210C05ED00DF9115 /* TicketResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2443,6 +2461,7 @@
 				87E7A63020F51279005B8BFA /* SendTransaction.swift in Sources */,
 				87E7A56720F51279005B8BFA /* CustomRPC.swift in Sources */,
 				87E7A66F20F5127A005B8BFA /* CreateWalletViewModel.swift in Sources */,
+				878373B5210BFE2D00DF9115 /* TickerQuotes.swift in Sources */,
 				87E7A5F320F51279005B8BFA /* TransactionConfigurator.swift in Sources */,
 				87E7A59B20F51279005B8BFA /* SkipBackupFilesInitializer.swift in Sources */,
 				87E7A69820F5127A005B8BFA /* EditTokensViewController.swift in Sources */,
@@ -2459,6 +2478,7 @@
 				87E7A54520F51278005B8BFA /* FieldAppereance.swift in Sources */,
 				87E7A64520F5127A005B8BFA /* URLViewModel.swift in Sources */,
 				87E7A5FF20F51279005B8BFA /* AppStyle.swift in Sources */,
+				878373B7210BFE4900DF9115 /* TickerData.swift in Sources */,
 				87E7A5D120F51279005B8BFA /* SplashView.swift in Sources */,
 				87E7A59020F51279005B8BFA /* BranchEvent.swift in Sources */,
 				87E7A64020F51279005B8BFA /* MasterBrowserViewController.swift in Sources */,
@@ -2584,6 +2604,7 @@
 				87E7A62020F51279005B8BFA /* UIImage.swift in Sources */,
 				87E7A6BD20F63B89005B8BFA /* NetworkingServiceParams.swift in Sources */,
 				87E7A5B520F51279005B8BFA /* BalanceRequest.swift in Sources */,
+				878373B4210BFE2D00DF9115 /* Ticker.swift in Sources */,
 				87E7A5B820F51279005B8BFA /* EtherKeystore.swift in Sources */,
 				87E7A65920F5127A005B8BFA /* Session.swift in Sources */,
 				87E7A63820F51279005B8BFA /* DAppError.swift in Sources */,
@@ -2650,6 +2671,7 @@
 				87E7A56920F51279005B8BFA /* SearchEngine.swift in Sources */,
 				87E7A66C20F5127A005B8BFA /* EnterPasswordViewModel.swift in Sources */,
 				87E7A55120F51278005B8BFA /* FormAppearance.swift in Sources */,
+				878373B1210BFCC200DF9115 /* TickerQuote.swift in Sources */,
 				87E7A69320F5127A005B8BFA /* CoinTicker.swift in Sources */,
 				87E7A57020F51279005B8BFA /* PreferenceOption.swift in Sources */,
 				87E7A5DC20F51279005B8BFA /* ConfirmPaymentDetailsViewModel.swift in Sources */,
@@ -2703,6 +2725,7 @@
 				87E7A55B20F51278005B8BFA /* SettingsCoordinator.swift in Sources */,
 				87E7A63B20F51279005B8BFA /* CookiesStore.swift in Sources */,
 				87E7A5FC20F51279005B8BFA /* StringFormatter.swift in Sources */,
+				878373BB210C05ED00DF9115 /* TicketResponse.swift in Sources */,
 				87E7A61F20F51279005B8BFA /* UIButton.swift in Sources */,
 				87E7A62420F51279005B8BFA /* Double.swift in Sources */,
 				87E7A69420F5127A005B8BFA /* ERC20Token.swift in Sources */,
@@ -2748,6 +2771,7 @@
 				8789C96420F6427D00307E4C /* LogsMgr.swift in Sources */,
 				87E7A66520F5127A005B8BFA /* AccountsViewController.swift in Sources */,
 				87E7A5D320F51279005B8BFA /* LockView.swift in Sources */,
+				878373B9210C00C000DF9115 /* TickerPreviewCell.swift in Sources */,
 				87E7A57A20F51279005B8BFA /* SupportViewController.swift in Sources */,
 				87E7A66720F5127A005B8BFA /* AccountViewCell.swift in Sources */,
 				87E7A59820F51279005B8BFA /* ScriptMessageProxy.swift in Sources */,
