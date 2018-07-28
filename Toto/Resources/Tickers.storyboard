@@ -170,9 +170,14 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Tours" image="first" id="6uI-gd-ssa"/>
                     <navigationItem key="navigationItem" id="yZN-m5-RFr">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="search" id="aH6-vm-Chd"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="search" id="aH6-vm-Chd">
+                            <connections>
+                                <action selector="btnSearchClicked:" destination="Gx0-y8-H5k" id="45d-Xb-kdc"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="btnSearch" destination="aH6-vm-Chd" id="wgX-MJ-kvf"/>
                         <outlet property="viewTryAgain" destination="hiZ-ST-dWt" id="ut0-Oa-vGR"/>
                         <outletCollection property="btnSorts" destination="WCD-L1-1Lq" collectionClass="NSMutableArray" id="DEJ-7z-LUu"/>
                         <outletCollection property="btnSorts" destination="2s2-pW-3r5" collectionClass="NSMutableArray" id="QUk-Br-CHZ"/>
@@ -188,7 +193,7 @@
         <scene sceneID="3hM-VL-Xat">
             <objects>
                 <tableViewController id="9kQ-mh-SVd" customClass="TickersViewController" customModule="Toto" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="AQG-nH-r0B">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="AQG-nH-r0B">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="563"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

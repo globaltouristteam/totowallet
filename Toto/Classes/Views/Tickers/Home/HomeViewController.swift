@@ -21,6 +21,7 @@ class HomeViewController: UIViewController {
     
     var tickers: [Ticker] = []
     
+    @IBOutlet var btnSearch: UIBarButtonItem!
     @IBOutlet var btnSorts: [UIButton]!
     @IBOutlet var viewTryAgain: UIView!
     
@@ -113,6 +114,55 @@ class HomeViewController: UIViewController {
                 btn.setImage(#imageLiteral(resourceName: "arrow_empty"), for: .normal)
             }
         }
+    }
+    // MARK: - Search
+    
+    @IBAction func btnSearchClicked(_ sender: UIBarButtonItem) {
+        navigationItem.rightBarButtonItem = nil
+        addSearchView()
+    }
+    
+    func addSearchView() {
+        let searchBar = UISearchBar()
+        searchBar.placeholder = localizedString(forKey: "title_search")
+        searchBar.delegate = self
+        searchBar.showsCancelButton = true
+        searchBar.becomeFirstResponder()
+        searchBar.enablesReturnKeyAutomatically = false
+        navigationItem.titleView = searchBar
+        
+        tickersView?.endOfList = true
+    }
+    
+    func removeSearchView() {
+        navigationItem.titleView?.removeFromSuperview()
+        navigationItem.titleView = nil
+        navigationItem.rightBarButtonItem = btnSearch
+        tickersView?.endOfList = false
+        if tickers.count != tickersView!.tickers.count {
+            tickersView?.tickers = tickers
+        }
+        tickersView?.sortData(sortBy: sortBy, sortAcending: sortAcending)
+    }
+    
+    func filter(key: String) {
+        let t = tickers.filter({ $0.name?.contains(key) == true })
+        tickersView?.endOfList = true
+        tickersView?.tickers = t
+        tickersView?.sortData(sortBy: sortBy, sortAcending: sortAcending)
+    }
+}
+
+extension HomeViewController: UISearchBarDelegate {
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        removeSearchView()
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        let textFieldText: NSString = (searchBar.text ?? "") as NSString
+        let txtAfterUpdate = textFieldText.replacingCharacters(in: range, with: text)
+        filter(key: txtAfterUpdate)
+        return true
     }
 }
 
