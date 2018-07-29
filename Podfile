@@ -10,6 +10,8 @@ target 'Toto' do
   pod 'CocoaLumberjack/Swift'
   pod 'SkyFloatingLabelTextField'
   pod 'AMTextFieldPickerExtension'
+  pod 'Firebase/Core'
+  pod 'Firebase/AdMob'
 
   # Trust wallet
   pod 'BigInt', '~> 3.0'
