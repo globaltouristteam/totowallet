@@ -21,7 +21,17 @@ class TotoTabBarController: UITabBarController {
             addEmptyTabs()
         }
     }
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        (tabBar as? TotoTabBar)?.updateTotoTab()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        (tabBar as? TotoTabBar)?.updateTotoTab()
+    }
+    
     func addWalletTabs() {
         var controllers: [UIViewController] = []
         if let tours = viewControllers?.first {

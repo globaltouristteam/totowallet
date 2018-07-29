@@ -14,6 +14,7 @@
 		877D69D320F90697009FE9DA /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877D69D220F90696009FE9DA /* ImageUtils.swift */; };
 		877D69D620F91619009FE9DA /* Toto.strings in Resources */ = {isa = PBXBuildFile; fileRef = 877D69D820F91619009FE9DA /* Toto.strings */; };
 		87823AFD20FA1C6400E9605B /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87823AFC20FA1C6400E9605B /* NavigationManager.swift */; };
+		878373CA210DC19B00DF9115 /* TotoTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878373C9210DC19B00DF9115 /* TotoTabBar.swift */; };
 		8789C95520F6406300307E4C /* Threading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789C95420F6406200307E4C /* Threading.swift */; };
 		8789C95920F640FF00307E4C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789C95820F640FF00307E4C /* Category.swift */; };
 		8789C95B20F6414900307E4C /* ResponseBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789C95A20F6414800307E4C /* ResponseBase.swift */; };
@@ -433,6 +434,7 @@
 		877D69E320F9163A009FE9DA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Toto.strings; sourceTree = "<group>"; };
 		877D69E420F9163C009FE9DA /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/Toto.strings; sourceTree = "<group>"; };
 		87823AFC20FA1C6400E9605B /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
+		878373C9210DC19B00DF9115 /* TotoTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotoTabBar.swift; sourceTree = "<group>"; };
 		8789C95420F6406200307E4C /* Threading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Threading.swift; sourceTree = "<group>"; };
 		8789C95820F640FF00307E4C /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		8789C95A20F6414800307E4C /* ResponseBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseBase.swift; sourceTree = "<group>"; };
@@ -2154,6 +2156,7 @@
 			isa = PBXGroup;
 			children = (
 				87E7A6B320F51FE3005B8BFA /* TotoTabBarController.swift */,
+				878373C9210DC19B00DF9115 /* TotoTabBar.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -2611,6 +2614,7 @@
 				87E7A56620F51278005B8BFA /* Constants.swift in Sources */,
 				87E7A54420F51278005B8BFA /* EthereumAddressRule.swift in Sources */,
 				87E7A5A220F51279005B8BFA /* ENSStore.swift in Sources */,
+				878373CA210DC19B00DF9115 /* TotoTabBar.swift in Sources */,
 				87E7A61B20F51279005B8BFA /* NSAttributedString.swift in Sources */,
 				87E7A68520F5127A005B8BFA /* EditTokenViewModel.swift in Sources */,
 				87E7A64820F5127A005B8BFA /* TransactionCoordinator.swift in Sources */,
