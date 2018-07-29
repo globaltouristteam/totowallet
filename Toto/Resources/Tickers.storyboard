@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,10 +30,10 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCD-L1-1Lq">
                                                         <rect key="frame" x="0.0" y="4" width="35" height="32"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                         <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
                                                         <state key="normal" title="#">
-                                                            <color key="titleColor" red="0.20000000000000001" green="0.45882352939999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="titleColor" red="0.1803921568627451" green="0.56862745098039214" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="btnSortClicked:" destination="Gx0-y8-H5k" eventType="touchUpInside" id="GD3-zT-k82"/>
@@ -52,10 +53,10 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2s2-pW-3r5">
                                                         <rect key="frame" x="5" y="4" width="130" height="32"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                         <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
                                                         <state key="normal" title="Name">
-                                                            <color key="titleColor" red="0.20000000000000001" green="0.45882352939999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="titleColor" red="0.1803921568627451" green="0.56862745098039214" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="btnSortClicked:" destination="Gx0-y8-H5k" eventType="touchUpInside" id="L9A-KG-gFc"/>
@@ -74,10 +75,10 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZeA-n6-ho9">
                                                         <rect key="frame" x="0.0" y="4" width="80" height="32"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                         <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
                                                         <state key="normal" title="24h">
-                                                            <color key="titleColor" red="0.20000000000000001" green="0.45882352939999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="titleColor" red="0.1803921568627451" green="0.56862745098039214" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="btnSortClicked:" destination="Gx0-y8-H5k" eventType="touchUpInside" id="fP3-Ln-myW"/>
@@ -97,10 +98,10 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pel-Eg-Aet">
                                                         <rect key="frame" x="0.0" y="4" width="120" height="32"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                         <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
                                                         <state key="normal" title="Price">
-                                                            <color key="titleColor" red="0.20000000000000001" green="0.45882352939999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="titleColor" red="0.1803921568627451" green="0.56862745098039214" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="btnSortClicked:" destination="Gx0-y8-H5k" eventType="touchUpInside" id="qJb-gv-dNc"/>
@@ -207,15 +208,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TickerGraphCell" rowHeight="198" id="rlG-Fl-feW" customClass="TickerGraphCell" customModule="Toto" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="TickerGraphCell" rowHeight="198" id="rlG-Fl-feW" customClass="TickerGraphCell" customModule="Toto" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="198"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rlG-Fl-feW" id="t52-Mb-b2Q">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="197.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dWV-vQ-maf">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="152.5"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dWV-vQ-maf" customClass="LineChartView" customModule="Charts">
+                                            <rect key="frame" x="0.0" y="50" width="375" height="102.5"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NQj-U2-erT">
@@ -328,18 +329,28 @@
                                                 <constraint firstAttribute="bottom" secondItem="xGq-rK-AcB" secondAttribute="bottom" id="fHX-an-DAB"/>
                                             </constraints>
                                         </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vn-36-djp">
+                                            <rect key="frame" x="167.5" y="11" width="39.5" height="19.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="NQj-U2-erT" firstAttribute="leading" secondItem="t52-Mb-b2Q" secondAttribute="leading" id="0Kz-f4-4pt"/>
                                         <constraint firstItem="NQj-U2-erT" firstAttribute="top" secondItem="dWV-vQ-maf" secondAttribute="bottom" id="72U-RB-JFT"/>
-                                        <constraint firstItem="dWV-vQ-maf" firstAttribute="top" secondItem="t52-Mb-b2Q" secondAttribute="top" id="Ras-UW-74n"/>
+                                        <constraint firstItem="4vn-36-djp" firstAttribute="top" secondItem="t52-Mb-b2Q" secondAttribute="topMargin" id="QzF-rs-83b"/>
+                                        <constraint firstItem="dWV-vQ-maf" firstAttribute="top" secondItem="t52-Mb-b2Q" secondAttribute="top" constant="50" id="Ras-UW-74n"/>
                                         <constraint firstAttribute="trailing" secondItem="NQj-U2-erT" secondAttribute="trailing" id="cZw-4f-MUN"/>
+                                        <constraint firstItem="4vn-36-djp" firstAttribute="centerX" secondItem="t52-Mb-b2Q" secondAttribute="centerX" id="hIn-R7-2LG"/>
                                         <constraint firstAttribute="trailing" secondItem="dWV-vQ-maf" secondAttribute="trailing" id="oZX-X4-sIG"/>
                                         <constraint firstAttribute="bottom" secondItem="NQj-U2-erT" secondAttribute="bottom" constant="5" id="pdc-tn-5RJ"/>
                                         <constraint firstItem="dWV-vQ-maf" firstAttribute="leading" secondItem="t52-Mb-b2Q" secondAttribute="leading" id="xtn-Tj-tN8"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="chartView" destination="dWV-vQ-maf" id="Zag-g4-kaz"/>
+                                    <outlet property="lblInfo" destination="4vn-36-djp" id="Sjg-0V-PYg"/>
                                     <outletCollection property="btnRange" destination="C0v-je-szf" collectionClass="NSMutableArray" id="oet-gA-FGG"/>
                                     <outletCollection property="btnRange" destination="Mrg-vA-i7n" collectionClass="NSMutableArray" id="bkq-k3-yjs"/>
                                     <outletCollection property="btnRange" destination="3ts-dJ-yfX" collectionClass="NSMutableArray" id="mcc-Wd-G36"/>
@@ -349,7 +360,7 @@
                                     <outletCollection property="btnRange" destination="hRH-ER-q6X" collectionClass="NSMutableArray" id="uqX-Hq-mPk"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TickerInfoCell" textLabel="NRK-eb-JWr" detailTextLabel="0Vb-ux-kVX" style="IBUITableViewCellStyleValue1" id="ZQY-PR-DLh">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="TickerInfoCell" textLabel="NRK-eb-JWr" detailTextLabel="0Vb-ux-kVX" style="IBUITableViewCellStyleValue1" id="ZQY-PR-DLh">
                                 <rect key="frame" x="0.0" y="226" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZQY-PR-DLh" id="Dhp-zl-vDD">

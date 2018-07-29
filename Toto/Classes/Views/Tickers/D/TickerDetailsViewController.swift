@@ -24,6 +24,9 @@ class TickerDetailsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        
+        tickerGraphData.coin = ticker.websiteSlug!
+        didSwitchTo(range: .oneD, force: true)
     }
     
     // MARK: - Setup
@@ -110,7 +113,7 @@ class TickerDetailsViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case 0:
-            return 250
+            return 300
         case 1:
             return 40
         default:
@@ -123,7 +126,7 @@ class TickerDetailsViewController: UITableViewController {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "TickerGraphCell", for: indexPath) as! TickerGraphCell
             cell.delegate = self
-            cell.config(with: tickerGraphData.current, data: [])
+            cell.config(with: tickerGraphData.current, data: tickerGraphData.currentCached())
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "TickerInfoCell", for: indexPath)
@@ -139,8 +142,21 @@ class TickerDetailsViewController: UITableViewController {
 
 extension TickerDetailsViewController: TickerGraphCellDelegate {
     func didSwitchTo(range: TickerGraphRange) {
-        guard range != tickerGraphData.current else { return }
+        didSwitchTo(range: range, force: false)
+    }
+    
+    func didSwitchTo(range: TickerGraphRange, force: Bool) {
+        guard range != tickerGraphData.current || force else { return }
+        let oldRange = tickerGraphData.current
         tickerGraphData.current = range
-        tableView.reloadRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
+        if tickerGraphData.currentCached().count == 0 {
+            tickerGraphData.getData(range: range) { [weak self] (array) in
+                guard let `self` = self else { return }
+                self.tableView.reloadRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
+            }
+        }
+        if range != oldRange {
+            tableView.reloadRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
+        }
     }
 }

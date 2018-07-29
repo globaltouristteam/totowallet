@@ -34,7 +34,7 @@ class TickerPreviewCell: UITableViewCell {
         lbl24h.text = Utils.percent(with: change24h)
         lblPrice.text = Utils.stringWithCurrencySymbol(quote?.price ?? 0)
         
-        let color = change24h > 0 ? UIColor.blue : UIColor.red
+        let color = change24h > 0 ? Colors.blue : UIColor.red
         lbl24h.textColor = color
         lblPrice.textColor = color
         lblPrice.layer.borderColor = color.cgColor
