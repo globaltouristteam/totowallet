@@ -77,12 +77,12 @@ class TickerDetailsViewController: UITableViewController {
         let itemC1 = TickerDetailItem(title: "% Changed 1h", value: attrC1)
         tickerDetails.append(itemC1)
         
-        let d1 = Utils.percent(with: quote?.percentChange1h ?? 0)
+        let d1 = Utils.percent(with: quote?.percentChange24h ?? 0)
         let attrD1 = createAttr(string: d1, highlight: d1, color: (quote?.percentChange24h ?? 0) >= 0 ? blueColor : redColor)
         let itemD1 = TickerDetailItem(title: "% Changed 1d", value: attrD1)
         tickerDetails.append(itemD1)
         
-        let d7 = Utils.percent(with: quote?.percentChange1h ?? 0)
+        let d7 = Utils.percent(with: quote?.percentChange7d ?? 0)
         let attrD7 = createAttr(string: d7, highlight: d7, color: (quote?.percentChange7d ?? 0) >= 0 ? blueColor : redColor)
         let itemD7 = TickerDetailItem(title: "% Changed 1w", value: attrD7)
         tickerDetails.append(itemD7)
