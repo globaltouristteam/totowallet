@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         LogsMgr().configLogger()
-        
+        GADMobileAds.configure(withApplicationID: "ca-app-pub-4846873668995611~8410935119")
         return true
     }
 

@@ -15,12 +15,12 @@ public struct Constants {
     public static let telegramUsername = "globaltouristgroup"
     public static let facebookUsername = "globaltouristtoken"
 
-    public static let appStoreDeepLink = "itms-apps://itunes.apple.com/app/id1412601957"
-    public static let appStoreHttpLink = "https://itunes.apple.com/us/app/toto-wallet/id1412601957?ls=1&mt=8"
+    public static let appStoreDeepLink = "itms-apps://itunes.apple.com/app/id1419113334"
+    public static let appStoreHttpLink = "https://itunes.apple.com/us/app/crypto-ethereum-wallet/id1419113334?ls=1&mt=8"
 
     // support
     public static let supportEmail = "support@globaltourist.io"
-    public static let donationAddress = "0x7a60d33544Ac9848b6E366BBA66Cf4750696Af17"
+    public static let donationAddress = "0x53D28fAE8F34F6E7302eCC9C60F2D9e54055809f"
 
     public static let dappsBrowserURL = "https://dapps.trustwalletapp.com/"
     public static let dappsOpenSea = "https://opensea.io"
