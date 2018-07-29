@@ -95,7 +95,8 @@ class TickersViewController: UITableViewController {
         delegate?.didSelectTicker(tickers[indexPath.row])
     }
     
-    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {        
+        cell.contentView.backgroundColor = UIColor.darkGray
         if loadingMore || endOfList {
             return
         }

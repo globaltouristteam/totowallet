@@ -34,17 +34,20 @@ class TickerDetailsViewController: UITableViewController {
         title = ticker.name
         tableView.tableFooterView = UIView()
         
+        let blueColor = Utils.hexStringToUIColor(hex:"03c62d")
+        let redColor  = Utils.hexStringToUIColor(hex:"ff0000")
+        
         let quote = ticker.quotes?.with(currency: Utils.currentCurrency())
         let pricePStr = Utils.percent(with: quote?.percentChange24h ?? 0)
         let priceStr = String(format: "%@ (%@)", Utils.stringWithCurrencySymbol(quote?.price ?? 0), pricePStr)
-        let priceAttr = createAttr(string: priceStr, highlight: pricePStr, color: (quote?.percentChange24h ?? 0) >= 0 ? Colors.blue : UIColor.red)
+        let priceAttr = createAttr(string: priceStr, highlight: pricePStr, color: (quote?.percentChange24h ?? 0) >= 0 ? blueColor : redColor)
         let item = TickerDetailItem(title: "Price", value: priceAttr)
         tickerDetails.append(item)
 
         let quoteBTC = ticker.quotes?.with(currency: "BTC")
         let priceBTCPStr = Utils.percent(with: quoteBTC?.percentChange24h ?? 0)
         let priceBTCStr = String(format: "%@ (%@)", Utils.stringWithCurrencySymbol(quoteBTC?.price ?? 0, btc: true), priceBTCPStr)
-        let priceBTCAttr = createAttr(string: priceBTCStr, highlight: priceBTCPStr, color: (quoteBTC?.percentChange24h ?? 0) >= 0 ? Colors.blue : UIColor.red)
+        let priceBTCAttr = createAttr(string: priceBTCStr, highlight: priceBTCPStr, color: (quoteBTC?.percentChange24h ?? 0) >= 0 ? blueColor : redColor)
         let itemBTC = TickerDetailItem(title: "Price BTC", value: priceBTCAttr)
         tickerDetails.append(itemBTC)
         
@@ -70,17 +73,17 @@ class TickerDetailsViewController: UITableViewController {
         }
         
         let c1 = Utils.percent(with: quote?.percentChange1h ?? 0)
-        let attrC1 = createAttr(string: c1, highlight: c1, color: (quote?.percentChange1h ?? 0) >= 0 ? Colors.blue : UIColor.red)
+        let attrC1 = createAttr(string: c1, highlight: c1, color: (quote?.percentChange1h ?? 0) >= 0 ? blueColor : redColor)
         let itemC1 = TickerDetailItem(title: "% Changed 1h", value: attrC1)
         tickerDetails.append(itemC1)
         
         let d1 = Utils.percent(with: quote?.percentChange1h ?? 0)
-        let attrD1 = createAttr(string: d1, highlight: d1, color: (quote?.percentChange24h ?? 0) >= 0 ? Colors.blue : UIColor.red)
+        let attrD1 = createAttr(string: d1, highlight: d1, color: (quote?.percentChange24h ?? 0) >= 0 ? blueColor : redColor)
         let itemD1 = TickerDetailItem(title: "% Changed 1d", value: attrD1)
         tickerDetails.append(itemD1)
         
         let d7 = Utils.percent(with: quote?.percentChange1h ?? 0)
-        let attrD7 = createAttr(string: d7, highlight: d7, color: (quote?.percentChange7d ?? 0) >= 0 ? Colors.blue : UIColor.red)
+        let attrD7 = createAttr(string: d7, highlight: d7, color: (quote?.percentChange7d ?? 0) >= 0 ? blueColor : redColor)
         let itemD7 = TickerDetailItem(title: "% Changed 1w", value: attrD7)
         tickerDetails.append(itemD7)
     }
