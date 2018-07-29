@@ -125,6 +125,16 @@ class WelcomeViewController: UIViewController {
         cancelButton.addTarget(self, action: #selector(cancelFlow), for: .touchUpInside)
 
         configure(viewModel: viewModel)
+        updateButtons()
+        NotificationCenter.default.addObserver(self, selector: #selector(updateButtons), name: .nTotoTabBarUpdated, object: nil)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    @objc func updateButtons() {
+        cancelButton.isHidden = !showFirstTab
     }
 
     func configure(viewModel: WelcomeViewModel) {

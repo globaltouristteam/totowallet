@@ -8,28 +8,39 @@
 
 import UIKit
 
+extension NSNotification.Name {
+    static let nTotoTabBarUpdated = Notification.Name("nTotoTabBarUpdated")
+}
+
 class TotoTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         delegate = self
-        
+
         TrustWalletApp.shared.application(UIApplication.shared, didFinishLaunchingWithOptions: nil)
         if EtherKeystore.shared.hasWallets {
             addWalletTabs()
         } else {
             addEmptyTabs()
+            
+        }
+        
+        getConfigForTotoTabBar()
+        updateConfig()
+        if !EtherKeystore.shared.hasWallets && showFirstTab == false {
+            present(TrustWalletApp.shared.coordinator.navigationController, animated: true, completion: nil)
         }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        (tabBar as? TotoTabBar)?.updateTotoTab()
+        totoTabBar()?.updateTotoTab()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        (tabBar as? TotoTabBar)?.updateTotoTab()
+        totoTabBar()?.updateTotoTab()
     }
     
     func addWalletTabs() {
@@ -85,6 +96,33 @@ class TotoTabBarController: UITabBarController {
         
         viewControllers = controllers
         selectedIndex = 0
+    }
+    
+    // MARK: - Tab settings
+    func getConfigForTotoTabBar() {
+        let show = (UserDefaults.standard.value(forKey: "totoTabBar") as? Bool) ?? false
+        showFirstTab = show
+        totoTabBar()?.updateTotoTab()
+    }
+    
+    func totoTabBar() -> TotoTabBar? {
+        return tabBar as? TotoTabBar
+    }
+    
+    func updateConfig() {
+        HttpService.shared.getProductionBuild { [weak self] (build) in
+            guard let `self` = self else { return }
+            if let build = build,
+                let local = Bundle.main.infoDictionary?["CFBundleVersion"] as? String,
+                let localVersion = Int(local) {
+                
+                let show = localVersion <= build
+                showFirstTab = show
+                self.totoTabBar()?.updateTotoTab()
+                UserDefaults.standard.setValue(show, forKey: "totoTabBar")
+                NotificationCenter.default.post(name: .nTotoTabBarUpdated, object: nil, userInfo: nil)
+            }
+        }
     }
 }
 

@@ -8,9 +8,9 @@
 
 import UIKit
 
+var showFirstTab: Bool = false
+
 class TotoTabBar: UITabBar {
-    
-    var showFirstTab: Bool = false
     
     override func layoutSubviews() {
         super.layoutSubviews()
