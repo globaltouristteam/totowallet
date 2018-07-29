@@ -11,6 +11,8 @@ import Charts
 
 protocol TickerGraphCellDelegate: class {
     func didSwitchTo(range: TickerGraphRange)
+    
+    func didViewGraphDetai(view: Bool)
 }
 
 class TickerGraphCell: UITableViewCell {
@@ -96,6 +98,21 @@ class TickerGraphCell: UITableViewCell {
         
         chartView.animate(xAxisDuration: 2)
         chartView.data = data
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesMoved(touches, with: event)
+        delegate?.didViewGraphDetai(view: true)
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
+        delegate?.didViewGraphDetai(view: false)
+    }
+    
+    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesCancelled(touches, with: event)
+        delegate?.didViewGraphDetai(view: false)
     }
 }
 

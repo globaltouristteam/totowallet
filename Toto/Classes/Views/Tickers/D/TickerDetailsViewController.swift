@@ -159,4 +159,8 @@ extension TickerDetailsViewController: TickerGraphCellDelegate {
             tableView.reloadRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
         }
     }
+    
+    func didViewGraphDetai(view: Bool) {
+        tableView.isScrollEnabled = !view
+    }
 }
