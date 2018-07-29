@@ -216,17 +216,17 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dWV-vQ-maf" customClass="LineChartView" customModule="Charts">
-                                            <rect key="frame" x="0.0" y="50" width="375" height="107.5"/>
+                                            <rect key="frame" x="0.0" y="50" width="375" height="102.5"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NQj-U2-erT">
-                                            <rect key="frame" x="0.0" y="157.5" width="375" height="35"/>
+                                            <rect key="frame" x="0.0" y="152.5" width="375" height="40"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xGq-rK-AcB">
-                                                    <rect key="frame" x="5" y="0.0" width="365" height="35"/>
+                                                    <rect key="frame" x="5" y="0.0" width="365" height="40"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0v-je-szf">
-                                                            <rect key="frame" x="0.0" y="0.0" width="52" height="35"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="52" height="40"/>
                                                             <state key="normal" title="Today">
                                                                 <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             </state>
@@ -238,7 +238,7 @@
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mrg-vA-i7n">
-                                                            <rect key="frame" x="52" y="0.0" width="52" height="35"/>
+                                                            <rect key="frame" x="52" y="0.0" width="52" height="40"/>
                                                             <state key="normal" title="1W">
                                                                 <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             </state>
@@ -250,7 +250,7 @@
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ts-dJ-yfX">
-                                                            <rect key="frame" x="104" y="0.0" width="52.5" height="35"/>
+                                                            <rect key="frame" x="104" y="0.0" width="52.5" height="40"/>
                                                             <state key="normal" title="1M">
                                                                 <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             </state>
@@ -262,7 +262,7 @@
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="imv-tu-wFo">
-                                                            <rect key="frame" x="156.5" y="0.0" width="52.5" height="35"/>
+                                                            <rect key="frame" x="156.5" y="0.0" width="52.5" height="40"/>
                                                             <state key="normal" title="3M">
                                                                 <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             </state>
@@ -274,7 +274,7 @@
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCT-ho-D6I">
-                                                            <rect key="frame" x="209" y="0.0" width="52" height="35"/>
+                                                            <rect key="frame" x="209" y="0.0" width="52" height="40"/>
                                                             <state key="normal" title="6M">
                                                                 <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             </state>
@@ -286,7 +286,7 @@
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ytj-zB-9k5">
-                                                            <rect key="frame" x="261" y="0.0" width="52" height="35"/>
+                                                            <rect key="frame" x="261" y="0.0" width="52" height="40"/>
                                                             <state key="normal" title="1Y">
                                                                 <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             </state>
@@ -298,7 +298,7 @@
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRH-ER-q6X">
-                                                            <rect key="frame" x="313" y="0.0" width="52" height="35"/>
+                                                            <rect key="frame" x="313" y="0.0" width="52" height="40"/>
                                                             <state key="normal" title="All">
                                                                 <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             </state>
@@ -324,7 +324,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="xGq-rK-AcB" secondAttribute="trailing" constant="5" id="0th-l2-Nbw"/>
                                                 <constraint firstItem="xGq-rK-AcB" firstAttribute="leading" secondItem="NQj-U2-erT" secondAttribute="leading" constant="5" id="GhH-mb-HZG"/>
-                                                <constraint firstAttribute="height" constant="35" id="I65-0B-FwB"/>
+                                                <constraint firstAttribute="height" constant="40" id="I65-0B-FwB"/>
                                                 <constraint firstItem="xGq-rK-AcB" firstAttribute="top" secondItem="NQj-U2-erT" secondAttribute="top" id="ZyD-Z0-9Zu"/>
                                                 <constraint firstAttribute="bottom" secondItem="xGq-rK-AcB" secondAttribute="bottom" id="fHX-an-DAB"/>
                                             </constraints>
