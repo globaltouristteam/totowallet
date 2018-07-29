@@ -9,10 +9,7 @@
 import UIKit
 import GoogleMobileAds
 
-let kADSBanner = "ca-app-pub-3940256099942544/6300978111"
-let kADSInterstitial = "ca-app-pub-3940256099942544/8691691433"
-let kADSInterstitialCount = 5 // show after view detail x times
-
+let ADSBanner = "ca-app-pub-3940256099942544/6300978111"
 
 enum TickerSort: Int {
     case rank = 0
@@ -24,7 +21,6 @@ enum TickerSort: Int {
 class HomeViewController: UIViewController {
     
     var adBannerView: GADBannerView?
-    var interstitial: GADInterstitial?
 
     var tickersView: TickersViewController?
     
@@ -44,7 +40,7 @@ class HomeViewController: UIViewController {
         loadData(refresh: true)
         loadAds()
     }
-
+    
     func setupView() {
         title = localizedString(forKey: "title_app")
         updateSortButton()
@@ -66,7 +62,6 @@ class HomeViewController: UIViewController {
             
         case let details as TickerDetailsViewController:
             details.ticker = sender as! Ticker
-            checkLoadInterstitial()
 
         default:
             break
@@ -161,34 +156,17 @@ class HomeViewController: UIViewController {
     }
     
     // MARK: - ADS
-    func checkLoadInterstitial() {
-        var count = UserDefaults.standard.value(forKey: kADSInterstitial) as? Int ?? 0
-        count += 1
-        if count >= kADSInterstitialCount {
-            count = 0
-            if interstitial?.isReady != true {
-                loadInterstitial()
-            }
-        }
-        UserDefaults.standard.set(count, forKey: kADSInterstitial)
-    }
-    
     func loadAds()  {
         if adBannerView == nil {
             adBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
-            adBannerView?.adUnitID = kADSBanner
+            adBannerView?.adUnitID = ADSBanner
             adBannerView?.delegate = self
             adBannerView?.rootViewController = self.navigationController
         }
         adBannerView?.load(GADRequest())
     }
     
-    func loadInterstitial() {
-        interstitial = GADInterstitial(adUnitID: kADSInterstitial)
-        interstitial?.delegate = self
-        let request = GADRequest()
-        interstitial?.load(request)
-    }
+
 }
 
 extension HomeViewController: UISearchBarDelegate {
@@ -222,32 +200,32 @@ extension HomeViewController: TickersViewDelegate {
 extension HomeViewController: GADBannerViewDelegate {
     func adViewDidReceiveAd(_ bannerView: GADBannerView) {
         LogDebug("GADBannerView Received")
-        var frame = bannerView.frame
-        frame.origin.y = UIScreen.main.bounds.height - bannerView.frame.height - (tabBarController?.tabBar.frame.height ?? 0)
-        bannerView.frame = frame
-        view.addSubview(bannerView)
-        
-        tickersView?.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: bannerView.frame.height, right: 0)
+        if let view = navigationController?.view {
+            var frame = bannerView.frame
+            frame.origin.y = UIScreen.main.bounds.height - bannerView.frame.height - (tabBarController?.tabBar.frame.height ?? 0)
+            bannerView.frame = frame
+            
+            view.addSubview(bannerView)
+            
+            tickersView?.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: bannerView.frame.height, right: 0)
+            /*
+             NSLayoutConstraint.activate([
+             bannerView.leftAnchor.constraint(equalTo: view.leftAnchor),
+             bannerView.rightAnchor.constraint(equalTo: view.rightAnchor)
+             ])
+             if #available(iOS 11.0, *) {
+             bannerView.bottomAnchor.constraint(equalTo: navigationController!.bottomLayoutGuide.bottomAnchor)
+             } else {
+             bannerView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+             }
+             */
+        }
     }
     
     func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
         LogDebug("Fail to receive bannder ad with error: \(error)")
         DispatchQueue.main.asyncAfter(deadline: .now() + 20) {
             self.loadAds()
-        }
-    }
-}
-
-extension HomeViewController: GADInterstitialDelegate {
-    func interstitialDidReceiveAd(_ ad: GADInterstitial) {
-        LogDebug("GADInterstitial Received")
-        ad.present(fromRootViewController: self)
-    }
-    
-    func interstitial(_ ad: GADInterstitial, didFailToReceiveAdWithError error: GADRequestError) {
-        LogDebug("Fail to receive interstitial ad with error: \(error)")
-        DispatchQueue.main.asyncAfter(deadline: .now() + 20) {
-            self.loadInterstitial()
         }
     }
 }
