@@ -426,6 +426,7 @@
 		87E7A6CE20F63C28005B8BFA /* Array+Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A6C920F63C28005B8BFA /* Array+Json.swift */; };
 		87E7A6D320F63CF8005B8BFA /* JsonDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A6D120F63CF8005B8BFA /* JsonDecoder.swift */; };
 		87E7A6D420F63CF8005B8BFA /* JsonObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A6D220F63CF8005B8BFA /* JsonObject.swift */; };
+		87F43FDE214D5C010040C0E3 /* TotoTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F43FDD214D5C010040C0E3 /* TotoTabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -875,6 +876,7 @@
 		87E7A6C920F63C28005B8BFA /* Array+Json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Json.swift"; sourceTree = "<group>"; };
 		87E7A6D120F63CF8005B8BFA /* JsonDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonDecoder.swift; sourceTree = "<group>"; };
 		87E7A6D220F63CF8005B8BFA /* JsonObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonObject.swift; sourceTree = "<group>"; };
+		87F43FDD214D5C010040C0E3 /* TotoTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TotoTabBar.swift; sourceTree = "<group>"; };
 		B47EA6F118147DC9B6C90F20 /* Pods-Toto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Toto.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Toto/Pods-Toto.debug.xcconfig"; sourceTree = "<group>"; };
 		CC85183EFD336BCEE3B90203 /* Pods_Toto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Toto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -2225,6 +2227,7 @@
 		87E7A6B220F51FBA005B8BFA /* Root */ = {
 			isa = PBXGroup;
 			children = (
+				87F43FDD214D5C010040C0E3 /* TotoTabBar.swift */,
 				87E7A6B320F51FE3005B8BFA /* TotoTabBarController.swift */,
 			);
 			path = Root;
@@ -2664,6 +2667,7 @@
 				87E7A59220F51279005B8BFA /* AppTracker.swift in Sources */,
 				87E7A56A20F51279005B8BFA /* Preferences.swift in Sources */,
 				87E7A69520F5127A005B8BFA /* TokensLayout.swift in Sources */,
+				87F43FDE214D5C010040C0E3 /* TotoTabBar.swift in Sources */,
 				87E7A58D20F51279005B8BFA /* URLNavigable.swift in Sources */,
 				87E7A5B420F51279005B8BFA /* BlockNumber.swift in Sources */,
 				87E7A64A20F5127A005B8BFA /* TransactionsViewModel.swift in Sources */,
