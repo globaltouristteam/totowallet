@@ -66,6 +66,7 @@ class HomeViewController: UIViewController {
             
         case let details as TickerDetailsViewController:
             details.ticker = sender as! Ticker
+            details.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: adBannerView?.frame.height ?? 0, right: 0)
             checkLoadInterstitial()
 
         default:
@@ -225,7 +226,7 @@ extension HomeViewController: GADBannerViewDelegate {
         var frame = bannerView.frame
         frame.origin.y = UIScreen.main.bounds.height - bannerView.frame.height - (tabBarController?.tabBar.frame.height ?? 0)
         bannerView.frame = frame
-        view.addSubview(bannerView)
+        navigationController?.view.addSubview(bannerView)
         
         tickersView?.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: bannerView.frame.height, right: 0)
     }
