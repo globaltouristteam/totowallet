@@ -9,8 +9,8 @@
 import UIKit
 import GoogleMobileAds
 
-let kADSBanner = "ca-app-pub-3940256099942544/6300978111"
-let kADSInterstitial = "ca-app-pub-3940256099942544/8691691433"
+let kADSBanner = "ca-app-pub-4846873668995611/7229715381"
+let kADSInterstitial = "ca-app-pub-4846873668995611/3781424967"
 let kADSInterstitialCount = 5 // show after view detail x times
 
 
