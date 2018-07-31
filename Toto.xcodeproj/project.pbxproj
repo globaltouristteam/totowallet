@@ -9,6 +9,17 @@
 /* Begin PBXBuildFile section */
 		26F93A6A74907465BD5B6542 /* Pods_Toto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC85183EFD336BCEE3B90203 /* Pods_Toto.framework */; };
 		8708E01F2100F09A00DC935B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8708E01E2100F09A00DC935B /* Utils.swift */; };
+		87609ACF21109E5600FAD85A /* ToursHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87609AC521109E5400FAD85A /* ToursHomeViewController.swift */; };
+		87609AD021109E5600FAD85A /* CategoryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87609AC721109E5400FAD85A /* CategoryHeaderView.swift */; };
+		87609AD121109E5600FAD85A /* TourPreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87609AC821109E5400FAD85A /* TourPreviewCell.swift */; };
+		87609AD221109E5600FAD85A /* PopularPreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87609AC921109E5400FAD85A /* PopularPreviewCell.swift */; };
+		87609AD321109E5600FAD85A /* ToursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87609ACA21109E5400FAD85A /* ToursViewController.swift */; };
+		87609AD421109E5600FAD85A /* TourDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87609ACC21109E5400FAD85A /* TourDetailsViewController.swift */; };
+		87609AD521109E5600FAD85A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87609ACE21109E5400FAD85A /* SearchViewController.swift */; };
+		87609AD821109E7200FAD85A /* Main2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87609AD621109E7100FAD85A /* Main2.storyboard */; };
+		87609ADA21109E9D00FAD85A /* Tours.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87609AD921109E9D00FAD85A /* Tours.storyboard */; };
+		87609ADD21109F2F00FAD85A /* Tour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87609ADB21109F2F00FAD85A /* Tour.swift */; };
+		87609ADE21109F2F00FAD85A /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87609ADC21109F2F00FAD85A /* Category.swift */; };
 		877D69CF20F8FBDF009FE9DA /* UIViewController+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877D69CE20F8FBDF009FE9DA /* UIViewController+Loading.swift */; };
 		877D69D120F90450009FE9DA /* UIImageView+Cached.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877D69D020F90450009FE9DA /* UIImageView+Cached.swift */; };
 		877D69D320F90697009FE9DA /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877D69D220F90696009FE9DA /* ImageUtils.swift */; };
@@ -32,7 +43,7 @@
 		8789C96320F6427D00307E4C /* LogFormater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789C96020F6427D00307E4C /* LogFormater.swift */; };
 		8789C96420F6427D00307E4C /* LogsMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789C96120F6427D00307E4C /* LogsMgr.swift */; };
 		8789C96620F644B800307E4C /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789C96520F644B800307E4C /* StringUtils.swift */; };
-		8789C96820F65AB400307E4C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789C96720F65AB400307E4C /* HomeViewController.swift */; };
+		8789C96820F65AB400307E4C /* TickersHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789C96720F65AB400307E4C /* TickersHomeViewController.swift */; };
 		87E7A34D20F50F86005B8BFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A34C20F50F86005B8BFA /* AppDelegate.swift */; };
 		87E7A34F20F50F86005B8BFA /* TickersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7A34E20F50F86005B8BFA /* TickersViewController.swift */; };
 		87E7A35420F50F86005B8BFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87E7A35220F50F86005B8BFA /* Main.storyboard */; };
@@ -420,6 +431,17 @@
 /* Begin PBXFileReference section */
 		575A0E6978445577ADF0037E /* Pods-Toto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Toto.release.xcconfig"; path = "Pods/Target Support Files/Pods-Toto/Pods-Toto.release.xcconfig"; sourceTree = "<group>"; };
 		8708E01E2100F09A00DC935B /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		87609AC521109E5400FAD85A /* ToursHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToursHomeViewController.swift; sourceTree = "<group>"; };
+		87609AC721109E5400FAD85A /* CategoryHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryHeaderView.swift; sourceTree = "<group>"; };
+		87609AC821109E5400FAD85A /* TourPreviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TourPreviewCell.swift; sourceTree = "<group>"; };
+		87609AC921109E5400FAD85A /* PopularPreviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularPreviewCell.swift; sourceTree = "<group>"; };
+		87609ACA21109E5400FAD85A /* ToursViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToursViewController.swift; sourceTree = "<group>"; };
+		87609ACC21109E5400FAD85A /* TourDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TourDetailsViewController.swift; sourceTree = "<group>"; };
+		87609ACE21109E5400FAD85A /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		87609AD721109E7100FAD85A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main2.storyboard; sourceTree = "<group>"; };
+		87609AD921109E9D00FAD85A /* Tours.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tours.storyboard; sourceTree = "<group>"; };
+		87609ADB21109F2F00FAD85A /* Tour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tour.swift; sourceTree = "<group>"; };
+		87609ADC21109F2F00FAD85A /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		877D69CE20F8FBDF009FE9DA /* UIViewController+Loading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Loading.swift"; sourceTree = "<group>"; };
 		877D69D020F90450009FE9DA /* UIImageView+Cached.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Cached.swift"; sourceTree = "<group>"; };
 		877D69D220F90696009FE9DA /* ImageUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUtils.swift; sourceTree = "<group>"; };
@@ -455,7 +477,7 @@
 		8789C96020F6427D00307E4C /* LogFormater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogFormater.swift; sourceTree = "<group>"; };
 		8789C96120F6427D00307E4C /* LogsMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogsMgr.swift; sourceTree = "<group>"; };
 		8789C96520F644B800307E4C /* StringUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
-		8789C96720F65AB400307E4C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		8789C96720F65AB400307E4C /* TickersHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickersHomeViewController.swift; sourceTree = "<group>"; };
 		87E7A34920F50F86005B8BFA /* Toto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Toto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87E7A34C20F50F86005B8BFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87E7A34E20F50F86005B8BFA /* TickersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickersViewController.swift; sourceTree = "<group>"; };
@@ -877,6 +899,52 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		87609AC321109E5400FAD85A /* Tours */ = {
+			isa = PBXGroup;
+			children = (
+				87609AC421109E5400FAD85A /* Home */,
+				87609AC621109E5400FAD85A /* Tours */,
+				87609ACB21109E5400FAD85A /* Details */,
+				87609ACD21109E5400FAD85A /* Search */,
+			);
+			path = Tours;
+			sourceTree = "<group>";
+		};
+		87609AC421109E5400FAD85A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				87609AC521109E5400FAD85A /* ToursHomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		87609AC621109E5400FAD85A /* Tours */ = {
+			isa = PBXGroup;
+			children = (
+				87609AC721109E5400FAD85A /* CategoryHeaderView.swift */,
+				87609AC821109E5400FAD85A /* TourPreviewCell.swift */,
+				87609AC921109E5400FAD85A /* PopularPreviewCell.swift */,
+				87609ACA21109E5400FAD85A /* ToursViewController.swift */,
+			);
+			path = Tours;
+			sourceTree = "<group>";
+		};
+		87609ACB21109E5400FAD85A /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				87609ACC21109E5400FAD85A /* TourDetailsViewController.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		87609ACD21109E5400FAD85A /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				87609ACE21109E5400FAD85A /* SearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		877D69CD20F8FBD7009FE9DA /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -921,7 +989,7 @@
 		8789C97B20F66F5100307E4C /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				8789C96720F65AB400307E4C /* HomeViewController.swift */,
+				8789C96720F65AB400307E4C /* TickersHomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -969,9 +1037,11 @@
 			children = (
 				87E7A35A20F50F88005B8BFA /* Info.plist */,
 				87E7A6B020F51F00005B8BFA /* Tickers.storyboard */,
+				87609AD921109E9D00FAD85A /* Tours.storyboard */,
 				87E7A35520F50F88005B8BFA /* Assets.xcassets */,
 				87E7A35720F50F88005B8BFA /* LaunchScreen.storyboard */,
 				87E7A35220F50F86005B8BFA /* Main.storyboard */,
+				87609AD621109E7100FAD85A /* Main2.storyboard */,
 				877D69D820F91619009FE9DA /* Toto.strings */,
 			);
 			path = Resources;
@@ -2136,6 +2206,7 @@
 			isa = PBXGroup;
 			children = (
 				87E7A6B220F51FBA005B8BFA /* Root */,
+				87609AC321109E5400FAD85A /* Tours */,
 				87E7A6AF20F51DF0005B8BFA /* Tickers */,
 			);
 			path = Views;
@@ -2211,14 +2282,16 @@
 		87E7A6CF20F63CEA005B8BFA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				87609ADC21109F2F00FAD85A /* Category.swift */,
+				878373C5210D5EF800DF9115 /* GraphItem.swift */,
 				8789C95A20F6414800307E4C /* ResponseBase.swift */,
 				878373B2210BFE2C00DF9115 /* Ticker.swift */,
 				878373B6210BFE4900DF9115 /* TickerData.swift */,
 				878373B0210BFCC200DF9115 /* TickerQuote.swift */,
 				878373B3210BFE2C00DF9115 /* TickerQuotes.swift */,
-				87E7A6D020F63CF8005B8BFA /* Base */,
 				878373BA210C05ED00DF9115 /* TicketResponse.swift */,
-				878373C5210D5EF800DF9115 /* GraphItem.swift */,
+				87609ADB21109F2F00FAD85A /* Tour.swift */,
+				87E7A6D020F63CF8005B8BFA /* Base */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2314,9 +2387,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87609ADA21109E9D00FAD85A /* Tours.storyboard in Resources */,
 				87E7A6A520F5127A005B8BFA /* NonFungibleTokenViewCell.xib in Resources */,
 				87E7A6A320F5127A005B8BFA /* NonFungibleCollectionViewCell.xib in Resources */,
 				87E7A67720F5127A005B8BFA /* WordCollectionViewCell.xib in Resources */,
+				87609AD821109E7200FAD85A /* Main2.storyboard in Resources */,
 				87E7A5C320F51279005B8BFA /* COMODO ECC Domain Validation Secure Server CA 2.cer in Resources */,
 				87E7A6A420F5127A005B8BFA /* EditTokenTableViewCell.xib in Resources */,
 				87E7A60820F51279005B8BFA /* GoogleService-Info.plist in Resources */,
@@ -2470,6 +2545,7 @@
 				87E7A5C120F51279005B8BFA /* Wallet.swift in Sources */,
 				87E7A68720F5127A005B8BFA /* EditTokenTableCellViewModel.swift in Sources */,
 				87E7A68820F5127A005B8BFA /* NonFungibleTokenCellViewModel.swift in Sources */,
+				87609AD021109E5600FAD85A /* CategoryHeaderView.swift in Sources */,
 				877D69D120F90450009FE9DA /* UIImageView+Cached.swift in Sources */,
 				87E7A63E20F51279005B8BFA /* BrowserViewController.swift in Sources */,
 				87E7A59C20F51279005B8BFA /* SharedMigrationInitializer.swift in Sources */,
@@ -2610,7 +2686,7 @@
 				87E7A69D20F5127A005B8BFA /* NFTokenViewController.swift in Sources */,
 				87E7A63120F51279005B8BFA /* BrowserURLParser.swift in Sources */,
 				87E7A62C20F51279005B8BFA /* BookmarksViewModel.swift in Sources */,
-				8789C96820F65AB400307E4C /* HomeViewController.swift in Sources */,
+				8789C96820F65AB400307E4C /* TickersHomeViewController.swift in Sources */,
 				87E7A55E20F51278005B8BFA /* SupportViewModel.swift in Sources */,
 				87E7A6A620F5127A005B8BFA /* NonFungibleTokenViewCell.swift in Sources */,
 				87E7A5A320F51279005B8BFA /* ENSClient.swift in Sources */,
@@ -2644,6 +2720,7 @@
 				87E7A56820F51279005B8BFA /* SplashError.swift in Sources */,
 				87E7A67320F5127A005B8BFA /* EnterPasswordCoordinator.swift in Sources */,
 				87E7A5CA20F51279005B8BFA /* Lock.swift in Sources */,
+				87609AD121109E5600FAD85A /* TourPreviewCell.swift in Sources */,
 				87E7A61D20F51279005B8BFA /* Dictionary.swift in Sources */,
 				87E7A64320F5127A005B8BFA /* BrowserNavigationBar.swift in Sources */,
 				87E7A5BF20F51279005B8BFA /* EtherClient.swift in Sources */,
@@ -2668,10 +2745,12 @@
 				87E7A67920F5127A005B8BFA /* WordCollectionViewCell.swift in Sources */,
 				87E7A69B20F5127A005B8BFA /* TokenViewController.swift in Sources */,
 				87E7A60D20F51279005B8BFA /* OnboardingPage.swift in Sources */,
+				87609AD221109E5600FAD85A /* PopularPreviewCell.swift in Sources */,
 				87E7A5DA20F51279005B8BFA /* MonetaryAmountViewModel.swift in Sources */,
 				87E7A6A220F5127A005B8BFA /* NonFungibleCollectionViewCell.swift in Sources */,
 				87E7A5F720F51279005B8BFA /* TrustOperation.swift in Sources */,
 				87E7A61E20F51279005B8BFA /* String.swift in Sources */,
+				87609AD521109E5600FAD85A /* SearchViewController.swift in Sources */,
 				87E7A56C20F51279005B8BFA /* BiometryAuthenticationType.swift in Sources */,
 				87E7A67C20F5127A005B8BFA /* ExportPrivateKeyCoordinator.swift in Sources */,
 				87E7A67120F5127A005B8BFA /* WalletEntryPoint.swift in Sources */,
@@ -2765,6 +2844,7 @@
 				87E7A69420F5127A005B8BFA /* ERC20Token.swift in Sources */,
 				87E7A6D320F63CF8005B8BFA /* JsonDecoder.swift in Sources */,
 				8789C95D20F641C400307E4C /* HttpService.swift in Sources */,
+				87609ADD21109F2F00FAD85A /* Tour.swift in Sources */,
 				87E7A5B320F51279005B8BFA /* SendRawTransactionRequest.swift in Sources */,
 				87E7A6AA20F5127A005B8BFA /* R.generated.swift in Sources */,
 				87E7A5CB20F51279005B8BFA /* LockEnterPasscodeViewController.swift in Sources */,
@@ -2796,11 +2876,13 @@
 				87E7A64720F5127A005B8BFA /* BalanceCoordinator.swift in Sources */,
 				87E7A62620F51279005B8BFA /* Bundle.swift in Sources */,
 				87E7A66220F5127A005B8BFA /* TransactionsTableView.swift in Sources */,
+				87609ACF21109E5600FAD85A /* ToursHomeViewController.swift in Sources */,
 				87E7A58620F51279005B8BFA /* DepositCoordinator.swift in Sources */,
 				87E7A65420F5127A005B8BFA /* TransactionsTracker.swift in Sources */,
 				87E7A64B20F5127A005B8BFA /* BalanceBaseViewModel.swift in Sources */,
 				87E7A58020F51279005B8BFA /* PreferencesController.swift in Sources */,
 				87E7A5A420F51279005B8BFA /* ENSManager.swift in Sources */,
+				87609AD321109E5600FAD85A /* ToursViewController.swift in Sources */,
 				87E7A5FE20F51279005B8BFA /* Styles.swift in Sources */,
 				87E7A59720F51279005B8BFA /* JailbreakChecker.swift in Sources */,
 				8789C96420F6427D00307E4C /* LogsMgr.swift in Sources */,
@@ -2831,9 +2913,11 @@
 				87E7A67820F5127A005B8BFA /* PassphraseView.swift in Sources */,
 				87E7A57F20F51279005B8BFA /* NotificationsViewController.swift in Sources */,
 				87E7A66420F5127A005B8BFA /* AccountViewModel.swift in Sources */,
+				87609AD421109E5600FAD85A /* TourDetailsViewController.swift in Sources */,
 				87E7A5BB20F51279005B8BFA /* TrustClient.swift in Sources */,
 				87E7A5BC20F51279005B8BFA /* OperationType.swift in Sources */,
 				87E7A65020F5127A005B8BFA /* BalanceTokenViewModel.swift in Sources */,
+				87609ADE21109F2F00FAD85A /* Category.swift in Sources */,
 				87E7A69220F5127A005B8BFA /* TokenObject.swift in Sources */,
 				87E7A58A20F51279005B8BFA /* BranchCoordinator.swift in Sources */,
 				87E7A5EB20F51279005B8BFA /* ConfigureTransactionError.swift in Sources */,
@@ -2860,6 +2944,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		87609AD621109E7100FAD85A /* Main2.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87609AD721109E7100FAD85A /* Base */,
+			);
+			name = Main2.storyboard;
+			sourceTree = "<group>";
+		};
 		877D69D820F91619009FE9DA /* Toto.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

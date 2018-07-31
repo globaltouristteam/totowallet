@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  TickersHomeViewController.swift
 //  Toto
 //
 //  Created by Nhuan Vu on 7/11/18.
@@ -21,7 +21,7 @@ enum TickerSort: Int {
     case price = 3
 }
 
-class HomeViewController: UIViewController {
+class TickersHomeViewController: UIViewController {
     
     var adBannerView: GADBannerView?
     var interstitial: GADInterstitial?
@@ -192,7 +192,7 @@ class HomeViewController: UIViewController {
     }
 }
 
-extension HomeViewController: UISearchBarDelegate {
+extension TickersHomeViewController: UISearchBarDelegate {
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         removeSearchView()
     }
@@ -205,7 +205,7 @@ extension HomeViewController: UISearchBarDelegate {
     }
 }
 
-extension HomeViewController: TickersViewDelegate {
+extension TickersHomeViewController: TickersViewDelegate {
     func didSelectTicker(_ ticker: Ticker) {
         performSegue(withIdentifier: "TickerDetails", sender: ticker)
     }
@@ -220,7 +220,7 @@ extension HomeViewController: TickersViewDelegate {
 }
 
 // MARK: - ADS
-extension HomeViewController: GADBannerViewDelegate {
+extension TickersHomeViewController: GADBannerViewDelegate {
     func adViewDidReceiveAd(_ bannerView: GADBannerView) {
         LogDebug("GADBannerView Received")
         var frame = bannerView.frame
@@ -239,7 +239,7 @@ extension HomeViewController: GADBannerViewDelegate {
     }
 }
 
-extension HomeViewController: GADInterstitialDelegate {
+extension TickersHomeViewController: GADInterstitialDelegate {
     func interstitialDidReceiveAd(_ ad: GADInterstitial) {
         LogDebug("GADInterstitial Received")
         ad.present(fromRootViewController: self)

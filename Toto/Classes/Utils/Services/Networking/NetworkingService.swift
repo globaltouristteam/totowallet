@@ -15,10 +15,6 @@ open class NetworkingService {
     
     public required init() {
     }
-    
-    func serverUrl() -> String {
-        return "https://api.coinmarketcap.com/v2"
-    }
 
     public func callServer<T: JsonObject>(_ type: T.Type, _ params: NetworkingServiceParams, serviceCompletionBlock: JsonObjectCompletionHandler<T>?) {
         callServer(params, serviceCompletionBlock: { (result) in
