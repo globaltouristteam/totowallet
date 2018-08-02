@@ -46,7 +46,7 @@ class TickersHomeViewController: UIViewController {
     }
 
     func setupView() {
-        title = localizedString(forKey: "title_app")
+        title = localizedString(forKey: "title_marketcap")
         updateSortButton()
     }
     
