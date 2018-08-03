@@ -33,7 +33,7 @@ class TotoTabBarController: UITabBarController {
         if let tickers = viewControllers?[1] {
             tickers.title = localizedString(forKey: "title_marketcap")
             tickers.tabBarItem.title = localizedString(forKey: "title_marketcap")
-            tickers.tabBarItem.image = #imageLiteral(resourceName: "tab_tours")
+            tickers.tabBarItem.image = #imageLiteral(resourceName: "settings-currency")
             controllers.append(tickers)
         }
         if let c = TrustWalletApp.shared.coordinator.inCoordinator?.tokensCoordinator?.navigationController {
@@ -60,7 +60,7 @@ class TotoTabBarController: UITabBarController {
         if let tickers = viewControllers?[1] {
             tickers.title = localizedString(forKey: "title_marketcap")
             tickers.tabBarItem.title = localizedString(forKey: "title_marketcap")
-            tickers.tabBarItem.image = #imageLiteral(resourceName: "tab_tours")
+            tickers.tabBarItem.image = #imageLiteral(resourceName: "settings-currency")
             controllers.append(tickers)
         }
         
