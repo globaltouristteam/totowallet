@@ -30,17 +30,12 @@ class TickersViewController: UITableViewController {
     
     func setupView() {
         self.tableView.tableFooterView = UIView()
+        addPTR()
     }
     
     func addPTR() {
         refreshControl = UIRefreshControl()
         refreshControl?.addTarget(self, action: #selector(refreshData), for: .valueChanged)
-        tableView.addSubview(refreshControl!)
-    }
-    
-    func remnovePTR() {
-        refreshControl?.removeFromSuperview()
-        refreshControl = nil
     }
     
     func sortData(sortBy: TickerSort, sortAcending: Bool) {
