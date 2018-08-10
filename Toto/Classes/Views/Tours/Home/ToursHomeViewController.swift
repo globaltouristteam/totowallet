@@ -35,6 +35,8 @@ class ToursHomeViewController: UIViewController {
             toursView = tours
             toursView?.view.isHidden = true
             toursView?.showAll = false
+            toursView?.tourDelegate = self
+            toursView?.addPTR()
         default:
             break
         }
@@ -53,7 +55,10 @@ class ToursHomeViewController: UIViewController {
                     self.processLoadDataError(error)
                     return
                 }
-                self.processLoadData(categories: categories?.list ?? [], tours: tours?.list ?? [])
+                let tour = Tour()
+                tour.catId = "1"
+                tour.images = ""
+                self.processLoadData(categories: categories?.list ?? [], tours: [tour])
             })
         }
     }
@@ -80,5 +85,11 @@ class ToursHomeViewController: UIViewController {
         toursView?.data = result
         toursView?.view.isHidden = false
         viewTryAgain.isHidden = true
+    }
+}
+
+extension ToursHomeViewController: ToursViewControllerDelegate {
+    func startRefresh() {
+        loadData()
     }
 }
