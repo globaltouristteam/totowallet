@@ -55,10 +55,7 @@ class ToursHomeViewController: UIViewController {
                     self.processLoadDataError(error)
                     return
                 }
-                let tour = Tour()
-                tour.catId = "1"
-                tour.images = ""
-                self.processLoadData(categories: categories?.list ?? [], tours: [tour])
+                self.processLoadData(categories: categories?.list ?? [], tours: tours?.list ?? [])
             })
         }
     }

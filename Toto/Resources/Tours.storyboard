@@ -97,7 +97,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TourPreviewCell" id="4vK-kp-4oG" customClass="TourPreviewCell" customModule="Toto" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="TourPreviewCell" id="4vK-kp-4oG" customClass="TourPreviewCell" customModule="Toto" customModuleProvider="target">
                                 <rect key="frame" x="17" y="60" width="341" height="330"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -105,7 +105,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tAC-i7-cpm">
-                                            <rect key="frame" x="16" y="0.0" width="309" height="330"/>
+                                            <rect key="frame" x="16" y="0.0" width="309" height="266"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9o1-Te-wEx">
                                                     <rect key="frame" x="0.0" y="0.0" width="309" height="174"/>
@@ -211,7 +211,7 @@
                                     <segue destination="4Fw-Xh-bRd" kind="show" identifier="TourDetails" id="iD1-PX-aRo"/>
                                 </connections>
                             </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PopularPreviewCell" id="0ol-zs-YuE" customClass="PopularPreviewCell" customModule="Toto" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="PopularPreviewCell" id="0ol-zs-YuE" customClass="PopularPreviewCell" customModule="Toto" customModuleProvider="target">
                                 <rect key="frame" x="27" y="400" width="321" height="372"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -219,7 +219,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pbN-PD-2Mo">
-                                            <rect key="frame" x="0.0" y="8" width="321" height="319"/>
+                                            <rect key="frame" x="0.0" y="8" width="321" height="255"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="HNB-ad-Uh5">
                                                 <size key="itemSize" width="50" height="50"/>
@@ -229,7 +229,7 @@
                                             </collectionViewFlowLayout>
                                             <cells>
                                                 <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TourPreviewCell" id="M6m-vB-zHB" customClass="TourPreviewCell" customModule="Toto" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="13.5" width="341" height="292"/>
+                                                    <rect key="frame" x="0.0" y="-18.5" width="341" height="292"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                                         <rect key="frame" x="0.0" y="0.0" width="341" height="292"/>
@@ -348,7 +348,7 @@
                                             </connections>
                                         </collectionView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAR-R0-Qyx">
-                                            <rect key="frame" x="276" y="145" width="45" height="45"/>
+                                            <rect key="frame" x="276" y="113" width="45" height="45"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="45" id="0wG-sc-qoO"/>
                                                 <constraint firstAttribute="width" constant="45" id="cEA-59-o8b"/>
@@ -360,7 +360,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWs-08-eH8">
-                                            <rect key="frame" x="0.0" y="145" width="45" height="45"/>
+                                            <rect key="frame" x="0.0" y="113" width="45" height="45"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="45" id="e5i-5D-ppl"/>
                                                 <constraint firstAttribute="width" constant="45" id="lOy-z5-gEp"/>
@@ -372,7 +372,7 @@
                                             </connections>
                                         </button>
                                         <pageControl opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="4hO-EW-jvP">
-                                            <rect key="frame" x="141" y="327" width="39" height="37"/>
+                                            <rect key="frame" x="141" y="263" width="39" height="37"/>
                                             <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="currentPageIndicatorTintColor" red="0.36078431370000003" green="0.72156862749999995" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </pageControl>
@@ -405,13 +405,13 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AE1-w3-8xR">
-                                    <rect key="frame" x="16" y="30" width="568" height="24"/>
+                                    <rect key="frame" x="16" y="30" width="343" height="24"/>
                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="57I-xj-uYD">
-                                    <rect key="frame" x="503" y="24" width="73" height="36"/>
+                                    <rect key="frame" x="278" y="24" width="73" height="36"/>
                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                     <state key="normal" title="SEE ALL"/>
                                     <connections>
