@@ -61,8 +61,10 @@ class TotoTabBarController: UITabBarController {
             tours.tabBarItem.image = #imageLiteral(resourceName: "tab_tours")
             controllers.append(tours)
         }
- */
+ 
         if let tickers = viewControllers?[1] {
+         */
+        if let tickers = viewControllers?.first {
             tickers.title = localizedString(forKey: "title_marketcap")
             tickers.tabBarItem.title = localizedString(forKey: "title_marketcap")
             tickers.tabBarItem.image = #imageLiteral(resourceName: "settings-currency")

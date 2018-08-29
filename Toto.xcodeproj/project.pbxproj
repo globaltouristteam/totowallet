@@ -3118,16 +3118,19 @@
 			baseConfigurationReference = B47EA6F118147DC9B6C90F20 /* Pods-Toto.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C8SMH58642;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 9WL534PVC8;
 				INFOPLIST_FILE = Toto/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.crypto.wallet;
+				PRODUCT_BUNDLE_IDENTIFIER = io.goshisoft.totocryptowallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "baeed76e-3ff6-4c0b-8ad9-775440ae5f85";
+				PROVISIONING_PROFILE_SPECIFIER = Dis_TotoCryptoWallet;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -3138,16 +3141,19 @@
 			baseConfigurationReference = 575A0E6978445577ADF0037E /* Pods-Toto.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C8SMH58642;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 9WL534PVC8;
 				INFOPLIST_FILE = Toto/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.crypto.wallet;
+				PRODUCT_BUNDLE_IDENTIFIER = io.goshisoft.totocryptowallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "baeed76e-3ff6-4c0b-8ad9-775440ae5f85";
+				PROVISIONING_PROFILE_SPECIFIER = Dis_TotoCryptoWallet;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
