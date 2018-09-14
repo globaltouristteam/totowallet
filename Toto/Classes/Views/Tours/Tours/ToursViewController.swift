@@ -10,7 +10,12 @@ import UIKit
 
 let kTourLimit = 2
 
+protocol ToursViewControllerDelegate: class {
+    func startRefresh()
+}
+
 class ToursViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+    weak var tourDelegate: ToursViewControllerDelegate?
     
     var showAll: Bool = true
     var data: [Category] = [] {
@@ -31,6 +36,16 @@ class ToursViewController: UICollectionViewController, UICollectionViewDelegateF
             layout.minimumInteritemSpacing = 8
             layout.minimumLineSpacing = 8
         }
+    }
+    
+    func addPTR() {
+        let refresh = UIRefreshControl()
+        refresh.addTarget(self, action: #selector(startRefresh), for: .valueChanged)
+        self.collectionView?.addSubview(refresh)
+    }
+    
+    @objc func startRefresh() {
+        tourDelegate?.startRefresh()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

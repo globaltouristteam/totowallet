@@ -25,12 +25,16 @@ class TotoTabBarController: UITabBarController {
     func addWalletTabs() {
         var controllers: [UIViewController] = []
         if let tours = viewControllers?.first {
-            tours.tabBarItem = UITabBarItem(
-                title: localizedString(forKey: "title_app"),
-                image: #imageLiteral(resourceName: "tab_tours"),
-                selectedImage: nil
-            )
+            tours.title = localizedString(forKey: "title_tours")
+            tours.tabBarItem.title = localizedString(forKey: "title_tours")
+            tours.tabBarItem.image = #imageLiteral(resourceName: "tab_tours")
             controllers.append(tours)
+        }
+        if let tickers = viewControllers?[1] {
+            tickers.title = localizedString(forKey: "title_marketcap")
+            tickers.tabBarItem.title = localizedString(forKey: "title_marketcap")
+            tickers.tabBarItem.image = #imageLiteral(resourceName: "settings-currency")
+            controllers.append(tickers)
         }
         if let c = TrustWalletApp.shared.coordinator.inCoordinator?.tokensCoordinator?.navigationController {
             controllers.append(c)
@@ -48,13 +52,17 @@ class TotoTabBarController: UITabBarController {
     func addEmptyTabs() {
         var controllers: [UIViewController] = []
         if let tours = viewControllers?.first {
-            tours.title = localizedString(forKey: "title_app")
-            tours.tabBarItem = UITabBarItem(
-                title: localizedString(forKey: "title_app"),
-                image: #imageLiteral(resourceName: "tab_tours"),
-                selectedImage: nil
-            )
+            tours.title = localizedString(forKey: "title_tours")
+            tours.tabBarItem.title = localizedString(forKey: "title_tours")
+            tours.tabBarItem.image = #imageLiteral(resourceName: "tab_tours")
             controllers.append(tours)
+        }
+ 
+        if let tickers = viewControllers?[1] {
+            tickers.title = localizedString(forKey: "title_marketcap")
+            tickers.tabBarItem.title = localizedString(forKey: "title_marketcap")
+            tickers.tabBarItem.image = #imageLiteral(resourceName: "settings-currency")
+            controllers.append(tickers)
         }
         
         let viewModel = InCoordinatorViewModel(config: .current)
@@ -81,12 +89,13 @@ class TotoTabBarController: UITabBarController {
 extension TotoTabBarController: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         if !EtherKeystore.shared.hasWallets {
-            if let index = viewControllers?.index(of: viewController), index > 0 {
+            if let index = viewControllers?.index(of: viewController), index >= Tabs.wallet(.none).index {
                 // show add wallet
                 present(TrustWalletApp.shared.coordinator.navigationController, animated: true, completion: nil)
+                return false
             }
-            return false
         }
         return true
     }
 }
+

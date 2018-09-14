@@ -15,10 +15,6 @@ open class NetworkingService {
     
     public required init() {
     }
-    
-    func serverUrl() -> String {
-        return "https://globaltourist.io/mvp/api"
-    }
 
     public func callServer<T: JsonObject>(_ type: T.Type, _ params: NetworkingServiceParams, serviceCompletionBlock: JsonObjectCompletionHandler<T>?) {
         callServer(params, serviceCompletionBlock: { (result) in

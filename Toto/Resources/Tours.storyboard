@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -16,7 +15,7 @@
         <!--Tours-->
         <scene sceneID="1Ki-Mv-gp3">
             <objects>
-                <viewController id="Gx0-y8-H5k" customClass="HomeViewController" customModule="Toto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Gx0-y8-H5k" customClass="ToursHomeViewController" customModule="Toto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lpn-X7-oD1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,7 +27,7 @@
                                 </connections>
                             </containerView>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hiZ-ST-dWt">
-                                <rect key="frame" x="20" y="280" width="335" height="108"/>
+                                <rect key="frame" x="20" y="279.5" width="335" height="108"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ure-Kr-VZP">
                                         <rect key="frame" x="135.5" y="78" width="64" height="30"/>

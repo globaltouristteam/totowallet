@@ -6,9 +6,12 @@ target 'Toto' do
   use_frameworks!
 
   # App
+  pod 'Charts'
   pod 'CocoaLumberjack/Swift'
   pod 'SkyFloatingLabelTextField'
   pod 'AMTextFieldPickerExtension'
+  pod 'Firebase/Core'
+  pod 'Firebase/AdMob'
 
   # Trust wallet
   pod 'BigInt', '~> 3.0'

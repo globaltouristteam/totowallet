@@ -56,7 +56,7 @@
 "settings.donate.button.title" = "Donate";
 "settings.emailUs.button.title" = "Email Us";
 "settings.error.failedToSendEmail" = "Failed to send email. Make sure you have Mail app installed.";
-"settings.feedback.email.title" = "Trust Feedback";
+"settings.feedback.email.title" = "Crypto Wallet Feedback";
 "settings.navigation.title" = "Settings";
 "settings.network.button.title" = "Network";
 "settings.openSourceDevelopment.label.title" = "Open Source Development";

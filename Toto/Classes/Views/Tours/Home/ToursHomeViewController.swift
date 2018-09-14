@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  ToursHomeViewController.swift
 //  Toto
 //
 //  Created by Nhuan Vu on 7/11/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class ToursHomeViewController: UIViewController {
     
     var toursView: ToursViewController?
     
@@ -17,7 +17,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = localizedString(forKey: "title_app")
+        title = localizedString(forKey: "title_tours")
         loadData()
     }
     
@@ -35,6 +35,8 @@ class HomeViewController: UIViewController {
             toursView = tours
             toursView?.view.isHidden = true
             toursView?.showAll = false
+            toursView?.tourDelegate = self
+            toursView?.addPTR()
         default:
             break
         }
@@ -80,5 +82,11 @@ class HomeViewController: UIViewController {
         toursView?.data = result
         toursView?.view.isHidden = false
         viewTryAgain.isHidden = true
+    }
+}
+
+extension ToursHomeViewController: ToursViewControllerDelegate {
+    func startRefresh() {
+        loadData()
     }
 }

@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -36,22 +35,33 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Ewj-eD-fLp" kind="relationship" relationship="viewControllers" id="3sC-VQ-By3"/>
+                        <segue destination="9NJ-PC-fxC" kind="relationship" relationship="viewControllers" id="Cbd-xM-12z"/>
+                        <segue destination="Ewj-eD-fLp" kind="relationship" relationship="viewControllers" id="I8a-qY-TQW"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--Tours-->
+        <!--Tickers-->
         <scene sceneID="J32-25-bxl">
             <objects>
-                <viewControllerPlaceholder storyboardName="Tours" id="Ewj-eD-fLp" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Tickers" id="Ewj-eD-fLp" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="1ST-lL-kjh"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1xv-fg-sHN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="795" y="-329"/>
+        </scene>
+        <!--Tours-->
+        <scene sceneID="bXg-pB-54z">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Tours" id="9NJ-PC-fxC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="qdP-18-Mn8"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rba-ct-ebc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="853" y="196"/>
         </scene>
     </scenes>
 </document>

@@ -83,6 +83,7 @@ class TourDetailsViewController: UIViewController {
     }
     
     @IBAction func btnBookClicked(_ sender: Any) {
+        TrustWalletApp.shared.coordinator.inCoordinator?.showTab(.wallet(.none))
     }
 }
 
