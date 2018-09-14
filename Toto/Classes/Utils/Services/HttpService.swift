@@ -8,8 +8,6 @@
 
 import UIKit
 
-public typealias ProductionBuildCompletionHandler = (_ build: Int?) -> Void
-
 class HttpService: NetworkingService {
     static let shared = HttpService()
     
@@ -83,19 +81,4 @@ class HttpService: NetworkingService {
         }
     }
 
-    public func getProductionBuild(_ completionHandler: ProductionBuildCompletionHandler?) {
-        let params = NetworkingServiceParams()
-        params.requestMethod = .get
-        params.requestURL = "https://raw.githubusercontent.com/globaltouristteam/totowallet/master/settings/toto.json"
-        params.json = false
-        
-        callServer(params, serviceCompletionBlock: { (result) in
-            completionHandler?(result.data as? Int)
-        }) { (response) -> Any? in
-            if let json = response as? [String: Any], let build = json["production"] as? Int {
-                return build
-            }
-            return nil
-        }
-    }
 }
