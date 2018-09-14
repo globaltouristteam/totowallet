@@ -24,7 +24,6 @@ class TotoTabBarController: UITabBarController {
 
     func addWalletTabs() {
         var controllers: [UIViewController] = []
-        /*
         if let tours = viewControllers?.first {
             tours.title = localizedString(forKey: "title_tours")
             tours.tabBarItem.title = localizedString(forKey: "title_tours")
@@ -32,8 +31,6 @@ class TotoTabBarController: UITabBarController {
             controllers.append(tours)
         }
         if let tickers = viewControllers?[1] {
- */
-        if let tickers = viewControllers?.first {
             tickers.title = localizedString(forKey: "title_marketcap")
             tickers.tabBarItem.title = localizedString(forKey: "title_marketcap")
             tickers.tabBarItem.image = #imageLiteral(resourceName: "settings-currency")
@@ -54,7 +51,6 @@ class TotoTabBarController: UITabBarController {
     
     func addEmptyTabs() {
         var controllers: [UIViewController] = []
-        /*
         if let tours = viewControllers?.first {
             tours.title = localizedString(forKey: "title_tours")
             tours.tabBarItem.title = localizedString(forKey: "title_tours")
@@ -63,8 +59,6 @@ class TotoTabBarController: UITabBarController {
         }
  
         if let tickers = viewControllers?[1] {
-         */
-        if let tickers = viewControllers?.first {
             tickers.title = localizedString(forKey: "title_marketcap")
             tickers.tabBarItem.title = localizedString(forKey: "title_marketcap")
             tickers.tabBarItem.image = #imageLiteral(resourceName: "settings-currency")
