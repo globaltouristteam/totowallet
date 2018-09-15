@@ -29,6 +29,7 @@ class TickersHomeViewController: UIViewController {
     var tickersView: TickersViewController?
     
     var tickers: [Ticker] = []
+    var tickerLoader: TickersLoader?
     
     @IBOutlet var btnSearch: UIBarButtonItem!
     @IBOutlet var btnSorts: [UIButton]!
@@ -77,19 +78,18 @@ class TickersHomeViewController: UIViewController {
     // MARK: - Ticker Data
     func loadData(refresh: Bool) {
         displayLoading()
-        let offset = refresh ? 0 : tickers.count + 1
-        HttpService.shared.getTickers(offset: offset) { [weak self] (tickers, error) in
-            guard let `self` = self else { return }
-            self.hideLoading()
-            if let tickers = tickers?.data?.tickerData {
-                self.tickersView?.loadingMore = false
-                self.tickersView?.endOfList = tickers.count < 100
-                self.add(tickers: tickers, clear: refresh)
-            }
-            if error != nil && self.tickers.count == 0 {
-                self.viewTryAgain.isHidden = false
-            }
+        
+        if refresh {
+            self.tickerLoader?.delegate = nil
+            self.tickerLoader = nil
         }
+        
+        if self.tickerLoader == nil {
+            self.tickerLoader = TickersLoader()
+            self.tickerLoader?.delegate = self
+        }
+        
+        self.tickerLoader?.start()
     }
 
     func add(tickers array: [Ticker], clear: Bool) {
@@ -139,15 +139,12 @@ class TickersHomeViewController: UIViewController {
         searchBar.becomeFirstResponder()
         searchBar.enablesReturnKeyAutomatically = false
         navigationItem.titleView = searchBar
-        
-        tickersView?.endOfList = true
     }
     
     func removeSearchView() {
         navigationItem.titleView?.removeFromSuperview()
         navigationItem.titleView = nil
         navigationItem.rightBarButtonItem = btnSearch
-        tickersView?.endOfList = false
         if tickers.count != tickersView!.tickers.count {
             tickersView?.tickers = tickers
         }
@@ -156,7 +153,6 @@ class TickersHomeViewController: UIViewController {
     
     func filter(key: String) {
         let t = tickers.filter({ $0.name?.contains(key) == true })
-        tickersView?.endOfList = true
         tickersView?.tickers = t
         tickersView?.sortData(sortBy: sortBy, sortAcending: sortAcending)
     }
@@ -216,6 +212,17 @@ extension TickersHomeViewController: TickersViewDelegate {
     
     func didStartRefresh() {
         loadData(refresh: true)
+    }
+}
+
+extension TickersHomeViewController: TickersLoaderDelegate {
+    func didLoad(tickers: [Ticker], refresh: Bool) {
+        add(tickers: tickers, clear: refresh)
+        hideLoading()
+    }
+    
+    func tickerOffset() -> Int {
+        return tickers.count
     }
 }
 

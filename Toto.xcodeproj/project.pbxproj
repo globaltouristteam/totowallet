@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		26F93A6A74907465BD5B6542 /* Pods_Toto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC85183EFD336BCEE3B90203 /* Pods_Toto.framework */; };
 		8708E01F2100F09A00DC935B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8708E01E2100F09A00DC935B /* Utils.swift */; };
+		875D9DEE214CDCB50078B1B9 /* TickersLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875D9DED214CDCB50078B1B9 /* TickersLoader.swift */; };
 		87609ACF21109E5600FAD85A /* ToursHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87609AC521109E5400FAD85A /* ToursHomeViewController.swift */; };
 		87609AD021109E5600FAD85A /* CategoryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87609AC721109E5400FAD85A /* CategoryHeaderView.swift */; };
 		87609AD121109E5600FAD85A /* TourPreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87609AC821109E5400FAD85A /* TourPreviewCell.swift */; };
@@ -430,6 +431,7 @@
 /* Begin PBXFileReference section */
 		575A0E6978445577ADF0037E /* Pods-Toto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Toto.release.xcconfig"; path = "Pods/Target Support Files/Pods-Toto/Pods-Toto.release.xcconfig"; sourceTree = "<group>"; };
 		8708E01E2100F09A00DC935B /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		875D9DED214CDCB50078B1B9 /* TickersLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickersLoader.swift; sourceTree = "<group>"; };
 		87609AC521109E5400FAD85A /* ToursHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToursHomeViewController.swift; sourceTree = "<group>"; };
 		87609AC721109E5400FAD85A /* CategoryHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryHeaderView.swift; sourceTree = "<group>"; };
 		87609AC821109E5400FAD85A /* TourPreviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TourPreviewCell.swift; sourceTree = "<group>"; };
@@ -988,6 +990,7 @@
 			isa = PBXGroup;
 			children = (
 				8789C96720F65AB400307E4C /* TickersHomeViewController.swift */,
+				875D9DED214CDCB50078B1B9 /* TickersLoader.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -2696,6 +2699,7 @@
 				87E7A5A220F51279005B8BFA /* ENSStore.swift in Sources */,
 				87E7A61B20F51279005B8BFA /* NSAttributedString.swift in Sources */,
 				87E7A68520F5127A005B8BFA /* EditTokenViewModel.swift in Sources */,
+				875D9DEE214CDCB50078B1B9 /* TickersLoader.swift in Sources */,
 				87E7A64820F5127A005B8BFA /* TransactionCoordinator.swift in Sources */,
 				87E7A54C20F51278005B8BFA /* FloatLabelCell.swift in Sources */,
 				87E7A5E320F51279005B8BFA /* PaymentFlow.swift in Sources */,

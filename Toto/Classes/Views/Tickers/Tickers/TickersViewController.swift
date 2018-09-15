@@ -20,9 +20,6 @@ class TickersViewController: UITableViewController {
     weak var delegate: TickersViewDelegate?
     var tickers: [Ticker] = []
     
-    var loadingMore: Bool = false
-    var endOfList: Bool = false
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -69,7 +66,6 @@ class TickersViewController: UITableViewController {
         delegate?.didStartRefresh()
     }
 
-    
     // MARK: - Tableview View
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tickers.count
@@ -92,12 +88,5 @@ class TickersViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {        
         cell.contentView.backgroundColor = UIColor.darkGray
-        if loadingMore || endOfList {
-            return
-        }
-        if indexPath.row + 1 == tickers.count {
-            loadingMore = true
-            delegate?.didStartLoadMore()
-        }
     }
 }
