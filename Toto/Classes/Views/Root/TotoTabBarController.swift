@@ -8,10 +8,6 @@
 
 import UIKit
 
-extension NSNotification.Name {
-    static let nTotoTabBarUpdated = Notification.Name("nTotoTabBarUpdated")
-}
-
 class TotoTabBarController: UITabBarController {
 
     override func viewDidLoad() {
@@ -28,7 +24,6 @@ class TotoTabBarController: UITabBarController {
         
         getConfigForTotoTabBar()
         updateConfig()
-        processChangeConfig()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -101,7 +96,7 @@ class TotoTabBarController: UITabBarController {
         controllers.append(settings)
         
         viewControllers = controllers
-        selectedIndex = 0
+        selectedIndex = showFirstTab ? 0 : 1
     }
     
     // MARK: - Tab settings
@@ -122,21 +117,12 @@ class TotoTabBarController: UITabBarController {
                 let local = Bundle.main.infoDictionary?["CFBundleVersion"] as? String,
                 let localVersion = Int(local) {
                 
-                let oldConf = showFirstTab
                 showFirstTab = localVersion <= build
                 self.totoTabBar()?.updateTotoTab()
                 UserDefaults.standard.setValue(showFirstTab, forKey: "totoTabBar")
-                NotificationCenter.default.post(name: .nTotoTabBarUpdated, object: nil, userInfo: nil)
-                
-                if !showFirstTab && showFirstTab != oldConf {
-                    self.processChangeConfig()
-                }
+                self.tabBar.setNeedsLayout()
+                self.tabBar.layoutIfNeeded()
             }
-        }
-    }
-    func processChangeConfig() {
-        if !EtherKeystore.shared.hasWallets && showFirstTab == false {
-            present(TrustWalletApp.shared.coordinator.navigationController, animated: true, completion: nil)
         }
     }
 }
