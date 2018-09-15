@@ -48,7 +48,7 @@ class TickersViewController: UITableViewController {
                 }
                 
             case .volume24h:
-                if let r1 = t1.quotes?.with(currency: Utils.currentCurrency()).volume24h, let r2 = t2.quotes?.with(currency: Utils.currentCurrency()).volume24h {
+                if let r1 = t1.quotes?.with(currency: Utils.currentCurrency()).percentChange24h, let r2 = t2.quotes?.with(currency: Utils.currentCurrency()).percentChange24h {
                     return sortAcending ? r1 < r2 :  r1 > r2
                 }
             case .price:
